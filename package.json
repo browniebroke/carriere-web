@@ -19,15 +19,41 @@
   "keywords": [
     "gatsby"
   ],
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
+      "npm run lint:textfix",
+      "git add"
+    ]
+  },
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:text": "textlint src/pages/**/index.md",
+    "lint:textfix": "textlint --fix src/pages/**/index.md",
+    "test": "prettier --write \"**/*.+(js|jsx|json|css|scss)\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "eslint": "^5.8.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.2",
+    "lint-staged": "^8.0.2",
+    "prettier": "^1.14.2",
+    "textlint": "^11.0.1",
+    "textlint-rule-preset-ja-spacing": "^2.0.1"
   },
   "repository": {
     "type": "git",
