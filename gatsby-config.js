@@ -21,19 +21,8 @@ module.exports = {
         start_url: '/',
         background_color: '#fff',
         theme_color: '#f7e4bc',
-        display: 'standalone',
-        icons: [
-          {
-            src: '/img/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/img/android-chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
+        display: 'minimal-ui',
+        icon: 'static/img/icon.png',
       },
     },
     'gatsby-transformer-sharp',
