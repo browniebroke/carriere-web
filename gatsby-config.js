@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
+    description: 'Site de la carrière de pierre de Sauclières',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -38,6 +39,7 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-sass',
     'gatsby-plugin-offline',
   ],
 }
