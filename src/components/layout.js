@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import '../scss/main.scss'
 import Header from './header'
 
-const Layout = ({ children }) => (
+const Layout = ({ location, children }) => (
   <StaticQuery
     query={graphql`
       query SiteMetaQuery {
@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: data.site.siteMetadata.keywords },
           ]}
         />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header location={location} />
         <div
           style={{
             margin: '0 auto',
@@ -48,6 +48,7 @@ const Layout = ({ children }) => (
 )
 
 Layout.propTypes = {
+  location: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
 

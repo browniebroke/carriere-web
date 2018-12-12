@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import carriereIcon from '../images/carriere-icon.svg'
+import NavBav from './NavBar'
+import NavItem from './NavItem'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ location }) => (
   <header>
-    <nav className="navbar navbar-dark bg-primary">
+    <div className="navbar-dark bg-primary">
       <div className="container">
         <Link
           to="/"
@@ -13,13 +15,24 @@ const Header = ({ siteTitle }) => (
           <img
             src={carriereIcon}
             alt=""
-            style={{ width: '40px' }}
+            style={{ width: '60px' }}
             className="img-fluid mr-3"
           />
           S.A.R.L. <br /> Carriere <br /> ALLA
         </Link>
       </div>
-    </nav>
+    </div>
+    <NavBav>
+      <NavItem location={location} to="/">
+        Stuff
+      </NavItem>
+      <NavItem location={location} to="/">
+        Other thing
+      </NavItem>
+      <NavItem location={location} to="/">
+        Amazing stuff
+      </NavItem>
+    </NavBav>
   </header>
 )
 
