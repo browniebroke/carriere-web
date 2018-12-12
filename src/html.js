@@ -39,12 +39,10 @@ export default class HTML extends React.Component {
           <meta name="msapplication-config" content="/img/browserconfig.xml" />
         </head>
         <body>
-          <div className="container main-container">
-            <div
-              id="___gatsby"
-              dangerouslySetInnerHTML={{ __html: this.props.body }}
-            />
-          </div>
+          <div
+            id="___gatsby"
+            dangerouslySetInnerHTML={{ __html: this.props.body }}
+          />
           {this.props.postBodyComponents}
         </body>
       </html>

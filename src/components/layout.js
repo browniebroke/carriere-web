@@ -30,9 +30,7 @@ const Layout = ({ children }) => (
             },
             { name: 'keywords', content: data.site.siteMetadata.keywords },
           ]}
-        >
-          <html lang="en" />
-        </Helmet>
+        />
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
