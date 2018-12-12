@@ -26,10 +26,10 @@ const Header = ({ location }) => (
       <NavItem location={location} to="/">
         Stuff
       </NavItem>
-      <NavItem location={location} to="/">
+      <NavItem location={location} to="/page-2/">
         Other thing
       </NavItem>
-      <NavItem location={location} to="/">
+      <NavItem location={location} to="/page-3/">
         Amazing stuff
       </NavItem>
     </NavBav>

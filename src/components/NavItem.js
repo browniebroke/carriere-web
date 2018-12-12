@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const NavItem = ({ location, children, to }) => (
-  <li className={`nav-item ${location === to ? 'active' : ''}`}>
+  <li className={`nav-item ${location.pathname === to ? 'active' : ''}`}>
     <Link to={to} className="nav-link">
       {children}
     </Link>
@@ -12,7 +12,9 @@ const NavItem = ({ location, children, to }) => (
 
 NavItem.propTypes = {
   to: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }),
   children: PropTypes.node.isRequired,
 }
 

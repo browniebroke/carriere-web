@@ -48,7 +48,9 @@ const Layout = ({ location, children }) => (
 )
 
 Layout.propTypes = {
-  location: PropTypes.string.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }),
   children: PropTypes.node.isRequired,
 }
 
