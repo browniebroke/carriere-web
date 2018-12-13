@@ -1,6 +1,11 @@
+const description = 'Site de la carrière de pierre de Sauclières'
+const title = 'S.A.R.L Alla'
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: title,
+    description: description,
+    keywords: 'taille de pierre, construction, carrière, murs, piliers, voûtes',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -14,10 +19,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'S.A.R.L Alla',
-        short_name: 'S.A.R.L Alla',
-        description: 'Site du restaurant Chez Nicole',
-        homepage_url: 'https://www.chez-nicole.fr',
+        name: title,
+        short_name: title,
+        description: description,
+        homepage_url: 'https://www.carriere-alla.fr',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#f7e4bc',
@@ -38,6 +43,7 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-sass',
     'gatsby-plugin-offline',
   ],
 }

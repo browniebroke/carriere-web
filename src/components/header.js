@@ -1,33 +1,39 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import carriereIcon from '../images/carriere-icon.svg'
+import NavBav from './NavBar'
+import NavItem from './NavItem'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+const Header = ({ location }) => (
+  <header>
+    <div className="navbar-dark bg-primary">
+      <div className="container">
         <Link
           to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
+          className="navbar-brand d-flex align-items-center brand-font"
         >
-          {siteTitle}
+          <img
+            src={carriereIcon}
+            alt=""
+            style={{ width: '60px' }}
+            className="img-fluid mr-3"
+          />
+          S.A.R.L. <br /> Carriere <br /> ALLA
         </Link>
-      </h1>
+      </div>
     </div>
-  </div>
+    <NavBav>
+      <NavItem location={location} to="/">
+        Stuff
+      </NavItem>
+      <NavItem location={location} to="/page-2/">
+        Other thing
+      </NavItem>
+      <NavItem location={location} to="/page-3/">
+        Amazing stuff
+      </NavItem>
+    </NavBav>
+  </header>
 )
 
 export default Header
