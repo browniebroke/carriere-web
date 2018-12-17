@@ -28,14 +28,20 @@ exports.createPages = ({ graphql, actions }) => {
         allMarkdownRemark {
           edges {
             node {
+              frontmatter {
+                images
+                master
+              }
               fields {
                 slug
               }
+              html
             }
           }
         }
       }
     `).then(result => {
+      // console.log(result)
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
@@ -44,6 +50,9 @@ exports.createPages = ({ graphql, actions }) => {
             // Data passed to context is available
             // in page queries as GraphQL variables.
             slug: node.fields.slug,
+            imagePath: node.frontmatter.images,
+            master: node.frontmatter.master,
+            html: node.html,
           },
         })
       })
