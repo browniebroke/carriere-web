@@ -1,4 +1,7 @@
 import { graphql } from 'gatsby'
+import React from 'react'
+
+const GalleryPage = () => <div>Gallery here</div>
 
 // Assumes that $path == 'images/angles' for instance
 // Next is to create page dynamically
@@ -17,3 +20,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default GalleryPage
