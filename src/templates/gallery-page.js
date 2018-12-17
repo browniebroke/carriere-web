@@ -1,21 +1,47 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import Layout from '../components/layout'
+import Gallery from '../components/Gallery'
 
-const GalleryPage = () => <div>Gallery here</div>
+const GalleryPage = ({ data }) => {
+  const post = data.post
+  const images = data.images.edges
+  const fullSize = images.map(imageNode => imageNode.node.full.fixed.src)
+  const thumbs = images.map(imageNode => imageNode.node.thumb.fixed.src)
+  console.log(fullSize)
+  return (
+    <Layout>
+      <h1>{post.frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Gallery images={fullSize} thumbs={thumbs} />
+    </Layout>
+  )
+}
 
-// Assumes that $path == 'images/angles' for instance
-// Next is to create page dynamically
-// https://www.gatsbyjs.org/tutorial/part-seven/
-// Can work on regex as well relativeDirectory: { eq: "/angles/" }
 export const pageQuery = graphql`
-  query ImagesForCurrentGallery($path: String!) {
-    allFile(filter: { relativeDirectory: { eq: $path } }) {
+  query GalleryData($imagePath: String!, $slug: String!) {
+    images: allFile(filter: { relativeDirectory: { eq: $imagePath } }) {
       edges {
         node {
           id
-          relativePath
-          base
+          relativeDirectory
+          thumb: childImageSharp {
+            fixed(width: 270, height: 270) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+          full: childImageSharp {
+            fixed(width: 800, height: 600) {
+              ...GatsbyImageSharpFixed
+            }
+          }
         }
+      }
+    }
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
       }
     }
   }
