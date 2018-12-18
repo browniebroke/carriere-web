@@ -6,7 +6,7 @@ import Gallery from '../components/Gallery'
 const GalleryPage = ({ data }) => {
   const post = data.post
   const images = data.images.edges
-  const fullSize = images.map(imageNode => imageNode.node.full.fixed.src)
+  const fullSize = images.map(imageNode => imageNode.node.full.fluid.src)
   const thumbs = images.map(imageNode => imageNode.node.thumb.fixed.src)
   console.log(fullSize)
   return (
@@ -31,8 +31,8 @@ export const pageQuery = graphql`
             }
           }
           full: childImageSharp {
-            fixed(width: 800, height: 600) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 1024) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

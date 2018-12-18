@@ -41,17 +41,19 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(result => {
       // console.log(result)
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: path.resolve(`./src/templates/gallery-page.js`),
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: node.fields.slug,
-            imagePath: node.frontmatter.images,
-            masterImage: node.frontmatter.master,
-          },
-        })
+        if (node.fields.slug.startsWith('/galleries/')) {
+          createPage({
+            path: node.fields.slug,
+            component: path.resolve(`./src/templates/gallery-page.js`),
+            context: {
+              // Data passed to context is available
+              // in page queries as GraphQL variables.
+              slug: node.fields.slug,
+              imagePath: node.frontmatter.images,
+              masterImage: node.frontmatter.master,
+            },
+          })
+        }
       })
       resolve()
     })
