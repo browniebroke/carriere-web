@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(result => {
       // console.log(result)
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        if (node.fields.slug.startsWith('/galleries/')) {
+        if (node.fields.slug.startsWith('/photos/')) {
           createPage({
             path: node.fields.slug,
             component: path.resolve(`./src/templates/gallery-page.js`),
