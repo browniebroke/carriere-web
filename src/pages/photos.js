@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import { graphql, Link } from 'gatsby'
@@ -18,7 +19,7 @@ const PhotosPage = ({ location, data }) => {
     // Build the page object with the master image
     return {
       id: edge.node.id,
-      masterImage: thumbFixedImages[0].fixed,
+      masterImage: thumbFixedImages[0].fluid,
       slug: edge.node.fields.slug,
       title: edge.node.frontmatter.title,
     }
@@ -31,7 +32,7 @@ const PhotosPage = ({ location, data }) => {
         {galleryPage.map(page => (
           <div className="col-md-3 col-sm-6" key={page.id}>
             <Link to={page.slug}>
-              <img src={page.masterImage.src} alt={page.title} />
+              <Img fluid={page.masterImage} />
               <br />
               <span className="text-center">{page.title}</span>
             </Link>
@@ -70,8 +71,8 @@ export const pageQuery = graphql`
           id
           relativePath
           thumb: childImageSharp {
-            fixed(width: 270, height: 270) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 270, maxHeight: 270) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
