@@ -32,7 +32,7 @@ const PhotosPage = ({ location, data }) => {
         {galleryPage.map(page => (
           <div className="col-md-3 col-sm-6" key={page.id}>
             <Link to={page.slug}>
-              <Img fluid={page.masterImage} />
+              <Img fluid={page.masterImage} alt={page.title} />
               <br />
               <span className="text-center">{page.title}</span>
             </Link>
