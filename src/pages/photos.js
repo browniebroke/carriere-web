@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import { graphql, Link } from 'gatsby'
@@ -7,16 +8,18 @@ const PhotosPage = ({ location, data }) => {
   const { md, images } = data
   // Transform data
   const galleryPage = md.edges.map(edge => {
+    // Extract path of master image from page's front matter
     const masterImagePath = `${edge.node.frontmatter.images}/${
       edge.node.frontmatter.master
     }`
-    console.log(images)
+    // Filter master image from list of all images
     const thumbFixedImages = images.edges
       .filter(image => image.node.relativePath === masterImagePath)
       .map(image => image.node.thumb)
+    // Build the page object with the master image
     return {
       id: edge.node.id,
-      masterImage: thumbFixedImages[0],
+      masterImage: thumbFixedImages[0].fluid,
       slug: edge.node.fields.slug,
       title: edge.node.frontmatter.title,
     }
@@ -25,20 +28,27 @@ const PhotosPage = ({ location, data }) => {
     <Layout location={location}>
       <h1>Photos</h1>
       <p>Voici quelques photos pour donner un aperçu de nos produits</p>
-      <ul>
+      <div className="row">
         {galleryPage.map(page => (
-          <li key={page.id}>
-            <Link to={page.slug}>{page.title}</Link>
-          </li>
+          <div className="col-md-3 col-sm-6" key={page.id}>
+            <Link to={page.slug}>
+              <Img fluid={page.masterImage} alt={page.title} />
+              <br />
+              <span className="text-center">{page.title}</span>
+            </Link>
+          </div>
         ))}
-      </ul>
+      </div>
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
   query GalleriesList {
-    md: allMarkdownRemark(filter: { fields: { slug: { regex: "/photos/" } } }) {
+    md: allMarkdownRemark(
+      filter: { fields: { slug: { regex: "/photos/" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
       edges {
         node {
           id
@@ -61,8 +71,8 @@ export const pageQuery = graphql`
           id
           relativePath
           thumb: childImageSharp {
-            fixed(width: 270, height: 270) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 270, maxHeight: 270) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
