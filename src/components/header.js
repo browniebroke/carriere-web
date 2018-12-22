@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, StaticQuery, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import carriereIcon from '../images/carriere-icon.svg'
 import NavBav from './NavBar'
 import NavItem from './NavItem'
