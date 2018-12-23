@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Img from 'gatsby-image'
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
 
@@ -73,19 +74,13 @@ class Gallery extends Component {
         <div className="row">
           {this.state.thumbs.map((thumbnail, index) => {
             return (
-              <div className="col-md-3 col-sm-6" key={index}>
-                <div
-                  className="m-1"
-                  style={{
-                    width: '100%',
-                    paddingTop: '100%',
-                  }}
-                  onClick={() => this.openLightBox(index)}
-                >
-                  <span
-                    className="img-square-bg-image"
-                    style={{ backgroundImage: `url(${thumbnail})` }}
-                  />
+              <div
+                className="col-md-3 col-sm-6 px-0"
+                key={index}
+                onClick={() => this.openLightBox(index)}
+              >
+                <div className="m-1">
+                  <Img fluid={thumbnail} className="rounded" />
                 </div>
               </div>
             )
