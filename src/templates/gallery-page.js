@@ -7,7 +7,7 @@ const GalleryPage = ({ data }) => {
   const post = data.post
   const images = data.images.edges
   const fullSize = images.map(imageNode => imageNode.node.full.fluid.src)
-  const thumbs = images.map(imageNode => imageNode.node.thumb.fixed.src)
+  const thumbs = images.map(imageNode => imageNode.node.thumb.fluid)
   console.log(fullSize)
   return (
     <Layout>
@@ -26,8 +26,8 @@ export const pageQuery = graphql`
           id
           relativeDirectory
           thumb: childImageSharp {
-            fixed(width: 270, height: 270) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 270, maxHeight: 270) {
+              ...GatsbyImageSharpFluid
             }
           }
           full: childImageSharp {
