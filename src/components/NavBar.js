@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const NavBav = ({ children }) => (
+const NavBav = ({ containerClass, children }) => (
   <nav className="navbar navbar-expand bg-secondary">
-    <div className="container">
+    <div className={containerClass}>
       <ul className="navbar-nav mr-auto">{children}</ul>
     </div>
   </nav>
@@ -11,6 +11,7 @@ const NavBav = ({ children }) => (
 
 NavBav.propTypes = {
   children: PropTypes.node.isRequired,
+  containerClass: PropTypes.string.isRequired,
 }
 
 export default NavBav

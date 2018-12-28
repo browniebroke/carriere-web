@@ -3,11 +3,12 @@ import { Link } from 'gatsby'
 import carriereIcon from '../images/carriere-icon.svg'
 import NavBav from './NavBar'
 import NavItem from './NavItem'
+import PropTypes from 'prop-types'
 
-const Header = ({ location, data }) => (
+const Header = ({ location, data, containerClass }) => (
   <header>
     <div className="navbar-dark bg-primary">
-      <div className="container">
+      <div className={containerClass}>
         <Link
           to="/"
           className="navbar-brand d-flex align-items-center brand-font"
@@ -22,7 +23,7 @@ const Header = ({ location, data }) => (
         </Link>
       </div>
     </div>
-    <NavBav>
+    <NavBav containerClass={containerClass}>
       <NavItem location={location} to="/">
         Acceuil
       </NavItem>
@@ -35,5 +36,12 @@ const Header = ({ location, data }) => (
     </NavBav>
   </header>
 )
+
+Header.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }),
+  containerClass: PropTypes.string.isRequired,
+}
 
 export default Header
