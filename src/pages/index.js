@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 
 const IndexPage = ({ location, data }) => (
   <Layout location={location}>
-    <Img fluid={data.file.childImageSharp.fluid} />
+    <Img fluid={data.file.childImageSharp.fluid} className="mx-n3" />
     <p>Bienvenue sur notre site.</p>
   </Layout>
 )
