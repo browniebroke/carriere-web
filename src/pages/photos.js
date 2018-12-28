@@ -3,6 +3,7 @@ import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import { graphql, Link } from 'gatsby'
+import './photos.scss'
 
 const PhotosPage = ({ location, data }) => {
   const { md, images } = data
@@ -30,11 +31,12 @@ const PhotosPage = ({ location, data }) => {
       <p>Voici quelques photos pour donner un aperçu de nos produits</p>
       <div className="row">
         {galleryPage.map(page => (
-          <div className="col-md-3 col-sm-6" key={page.id}>
+          <div className="col-md-3 col-sm-6 px-1 py-1" key={page.id}>
             <Link to={page.slug}>
-              <Img fluid={page.masterImage} alt={page.title} />
-              <br />
-              <span className="text-center">{page.title}</span>
+              <div className="gallery-link-wrapper">
+                <Img fluid={page.masterImage} alt={page.title} />
+                <span className="gallery-label">{page.title}</span>
+              </div>
             </Link>
           </div>
         ))}
