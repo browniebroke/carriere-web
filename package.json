@@ -67,6 +67,10 @@
     {
       "path": "./public/component---src-pages*.js",
       "maxSize": "10 kB"
+    },
+    {
+      "path": "./public/component---src-templates*.js",
+      "maxSize": "10 kB"
     }
   ],
   "repository": {
