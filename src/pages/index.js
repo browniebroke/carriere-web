@@ -1,13 +1,26 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
-import heroImage from '../images/carriere-overview.jpg'
 
-const IndexPage = ({ location }) => (
+const IndexPage = ({ location, data }) => (
   <Layout location={location}>
-    <img src={heroImage} className="img-fluid" alt="Aperçu de la carrière" />
+    <Img fluid={data.file.childImageSharp.fluid} />
     <p>Bienvenue sur notre site.</p>
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "images/carriere-overview.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1300) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
