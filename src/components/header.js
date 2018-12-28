@@ -19,7 +19,7 @@ const Header = ({ location, data, containerClass }) => (
             style={{ width: '60px' }}
             className="img-fluid mr-3"
           />
-          S.A.R.L. <br /> Carriere <br /> ALLA
+          S.A.R.L. <br /> CARRIÈRE <br /> ALLA
         </Link>
       </div>
     </div>
