@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import '../scss/main.scss'
 import Header from './header'
 
-const Layout = ({ location, children, containerClass = 'container-fluid' }) => (
+const Layout = ({ location, children, containerClass = 'container' }) => (
   <StaticQuery
     query={graphql`
       query SiteMetaQuery {

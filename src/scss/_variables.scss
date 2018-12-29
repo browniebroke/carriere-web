@@ -8,15 +8,3 @@ $secondary: #e5e5e5;
 //$dark: $gray-800;
 
 $enable-rounded: false;
-
-@font-face {
-  font-family: 'FetteEgyptienne';
-  src: url('../fonts/FetteEgyptienne.ttf.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/FetteEgyptienne.ttf.eot?#iefix')
-      format('embedded-opentype'),
-    /* IE6-IE8 */ url('../fonts/FetteEgyptienne.ttf.woff') format('woff'),
-    /* Pretty Modern Browsers */ url('../fonts/FetteEgyptienne.ttf')
-      format('truetype'),
-    /* Safari, Android, iOS */
-      url('../fonts/FetteEgyptienne.ttf.svg#svgFontName') format('svg'); /* Legacy iOS */
-}

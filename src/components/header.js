@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import carriereIcon from '../images/carriere-icon.svg'
+import carriereIcon from '../images/logo-full.svg'
 import NavBav from './NavBar'
 import NavItem from './NavItem'
 import PropTypes from 'prop-types'
@@ -9,17 +9,13 @@ const Header = ({ location, data, containerClass }) => (
   <header>
     <div className="navbar-dark bg-primary">
       <div className={containerClass}>
-        <Link
-          to="/"
-          className="navbar-brand d-flex align-items-center brand-font"
-        >
+        <Link to="/" className="navbar-brand d-flex align-items-center">
           <img
             src={carriereIcon}
             alt=""
-            style={{ width: '60px' }}
+            style={{ width: '200px' }}
             className="img-fluid mr-3"
           />
-          S.A.R.L. <br /> CARRIÈRE <br /> ALLA
         </Link>
       </div>
     </div>
