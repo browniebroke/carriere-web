@@ -3,6 +3,9 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
+import HandShake from '../images/icons/hand-shake.svg'
+import HomeBuilding from '../images/icons/home-building.svg'
+import Shield from '../images/icons/shield.svg'
 
 const IndexPage = ({ location, data }) => (
   <Layout location={location}>
@@ -13,6 +16,19 @@ const IndexPage = ({ location, data }) => (
         <br />
         <span className="small">Carrière et taille de pierre</span>
       </h2>
+    </div>
+    <div className="my-5">
+      <div className="row">
+        <div className="col-md-4">
+          <HandShake className="selling-point" />
+        </div>
+        <div className="col-md-4">
+          <Shield className="selling-point" />
+        </div>
+        <div className="col-md-4">
+          <HomeBuilding className="selling-point" />
+        </div>
+      </div>
     </div>
   </Layout>
 )
