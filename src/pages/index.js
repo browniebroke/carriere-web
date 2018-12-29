@@ -6,11 +6,14 @@ import Layout from '../components/layout'
 
 const IndexPage = ({ location, data }) => (
   <Layout location={location}>
-    <Img
-      fluid={data.file.childImageSharp.fluid}
-      style={{ marginRight: '-15px', marginLeft: '-15px' }}
-    />
-    <p>Bienvenue sur notre site.</p>
+    <div className="hero-image-wrapper">
+      <Img fluid={data.file.childImageSharp.fluid} className="img-hero" />
+      <h2 className="headline text-center">
+        Toute la pierre de construction
+        <br />
+        <span className="small">Carrière et taille de pierre</span>
+      </h2>
+    </div>
   </Layout>
 )
 

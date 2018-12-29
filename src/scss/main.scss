@@ -1,2 +1,23 @@
 @import 'variables';
 @import 'custom-bootstrap';
+
+.hero-image-wrapper {
+  position: relative;
+
+  .img-hero {
+    margin-left: -15px;
+    margin-right: -15px;
+    filter: brightness(60%);
+  }
+
+  .headline {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    color: $white;
+
+    .small {
+      font-size: 0.8em;
+    }
+  }
+}
