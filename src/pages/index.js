@@ -20,13 +20,28 @@ const IndexPage = ({ location, data }) => (
     <div className="my-5">
       <div className="row">
         <div className="col-md-4">
-          <HandShake className="selling-point" />
+          <HandShake className="selling-point mb-4" />
+          <p className="text-center">
+            Notre équipe de confiance est là pour vous aider à réaliser vos
+            projets et nous travaillons main dans la main pour vous fournir ce
+            que vous recherchez.
+          </p>
         </div>
         <div className="col-md-4">
-          <Shield className="selling-point" />
+          <Shield className="selling-point mb-4" />
+          <p className="text-center">
+            Notre travail est réalisé de façon artisanale dans les meilleures
+            conditions possibles pour assurer une qualité maximale de nos
+            produits.
+          </p>
         </div>
         <div className="col-md-4">
-          <HomeBuilding className="selling-point" />
+          <HomeBuilding className="selling-point mb-4" />
+          <p className="text-center">
+            Nous travaillons avec particuliers, bâtisseurs, our collectivités
+            locales pour tous types de constructions, sur mesures en intérieurs
+            ou grand en extérieurs.
+          </p>
         </div>
       </div>
     </div>
