@@ -60,5 +60,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
+    `gatsby-plugin-netlify`, // Should be last
   ],
 }
