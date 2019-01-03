@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "^0.2.0",
+    "@browniebroke/gatsby-image-gallery": "https://github.com/browniebroke/gatsby-image-gallery",
     "gatsby": "2.0.82",
     "gatsby-image": "2.0.25",
     "gatsby-plugin-google-analytics": "2.0.8",
@@ -20,8 +20,7 @@
     "gatsby-transformer-sharp": "2.1.10",
     "react": "16.7.0",
     "react-dom": "16.7.0",
-    "react-helmet": "5.2.0",
-    "react-image-lightbox": "5.1.0"
+    "react-helmet": "5.2.0"
   },
   "devDependencies": {
     "bootstrap": "4.2.1",
