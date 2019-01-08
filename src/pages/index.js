@@ -11,11 +11,11 @@ const IndexPage = ({ location, data }) => (
   <Layout location={location}>
     <div className="hero-image-wrapper">
       <Img fluid={data.file.childImageSharp.fluid} className="img-hero" />
-      <h2 className="headline text-center">
+      <h1 className="headline text-center">
         Toute la pierre de construction
         <br />
         <span className="small">Carrière et taille de pierre</span>
-      </h2>
+      </h1>
     </div>
     <div className="my-5">
       <div className="row">
