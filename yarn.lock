@@ -5906,7 +5906,7 @@ gatsby-plugin-sass@2.0.7:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-sentry@^1.0.0:
+gatsby-plugin-sentry@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sentry/-/gatsby-plugin-sentry-1.0.0.tgz#746307a27f5382a9a787fa86ac812b947f8bebc5"
   integrity sha512-6eq9RBpXXL76Ag0jp33NoWofji1jr2dhkfcJBhzAtKlztgRpkiOwm0OXrBspAa0Nu6PEPrJsEWoLAZ96w8Hj9w==
