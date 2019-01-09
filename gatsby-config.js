@@ -56,6 +56,16 @@ module.exports = {
         trackingId: 'UA-131523635-1',
       },
     },
+    {
+      resolve: `gatsby-plugin-sentry`,
+      options: {
+        dsn: 'https://7b2edbed4f49486685ed4d9cdce45b0a@sentry.io/1368012',
+        // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
+        environment: process.env.NODE_ENV,
+        enabled: (() =>
+          ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
