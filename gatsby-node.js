@@ -39,7 +39,6 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
-      // console.log(result)
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         if (node.fields.slug.startsWith('/photos/')) {
           createPage({

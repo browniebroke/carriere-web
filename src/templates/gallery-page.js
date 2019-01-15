@@ -8,7 +8,6 @@ const GalleryPage = ({ data }) => {
   const images = data.images.edges
   const fullSize = images.map(imageNode => imageNode.node.full.fluid.src)
   const thumbs = images.map(imageNode => imageNode.node.thumb.fluid)
-  console.log(fullSize)
   return (
     <Layout>
       <h1>{post.frontmatter.title}</h1>
