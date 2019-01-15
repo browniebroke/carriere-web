@@ -4,4 +4,5 @@ images: 'images/photos/dallage'
 master: 'image-001.jpg'
 ---
 
-Voici quelques dallages.
+Voici des exemples de dallages et pas japonais.
+Des pas japonais sont essentiellement des élements de dallage dans de la pelouse.
