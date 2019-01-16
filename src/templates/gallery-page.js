@@ -10,9 +10,11 @@ const GalleryPage = ({ data }) => {
   const thumbs = images.map(imageNode => imageNode.node.thumb.fluid)
   return (
     <Layout>
-      <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <Gallery images={fullSize} thumbs={thumbs} />
+      <div className="my-4">
+        <h1>{post.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Gallery images={fullSize} thumbs={thumbs} />
+      </div>
     </Layout>
   )
 }
