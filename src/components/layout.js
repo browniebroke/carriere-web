@@ -33,7 +33,12 @@ const Layout = ({ location, children, containerClass = 'container' }) => (
           ]}
         />
         <Header location={location} containerClass={containerClass} />
-        <div className={containerClass}>{children}</div>
+        <div
+          className={containerClass}
+          style={{ minHeight: 'calc(100vh - 130px - 120px)' }}
+        >
+          {children}
+        </div>
         <Footer containerClass={containerClass} />
       </>
     )}
