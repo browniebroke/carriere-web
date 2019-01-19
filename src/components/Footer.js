@@ -26,47 +26,40 @@ const Footer = ({ containerClass }) => (
         <div className="col-md-4 pb-4">
           <a
             href="https://www.infogreffe.fr/entreprise-societe/812786986"
-            style={{ textDecoration: 'none' }}
+            className="small"
           >
-            <span style={{ fontSize: '0.8em' }}>
-              812 786 986 R.C.S. RODEZ
-              <br />
-              Greffe du Tribunal de Commerce de RODEZ
-            </span>
+            SIRET 812 786 986 R.C.S. RODEZ
           </a>
         </div>
       </div>
-      <div className="row justify-content-around small">
-        <div className="col-md-12 text-center">
-          <div>
-            Icônes:{' '}
-            <a href="https://www.freepik.com/" title="Freepik">
-              Freepik
-            </a>
-            ,{' '}
-            <a
-              href="https://www.flaticon.com/authors/gregor-cresnar"
-              title="Gregor Cresnar"
-            >
-              Gregor Cresnar
-            </a>{' '}
-            et{' '}
-            <a
-              href="https://www.flaticon.com/authors/pixel-perfect"
-              title="Pixel perfect"
-            >
-              Pixel perfect
-            </a>{' '}
-            (
-            <a
-              href="http://creativecommons.org/licenses/by/3.0/"
-              title="Creative Commons BY 3.0"
-              target="_blank"
-            >
-              CC 3.0 BY
-            </a>
-            )
-          </div>
+      <div className="row">
+        <div className="col-md-12 small text-center">
+          Icônes (
+          <a
+            href="http://creativecommons.org/licenses/by/3.0/"
+            title="Creative Commons BY 3.0"
+            target="_blank"
+          >
+            CC 3.0 BY
+          </a>
+          ):
+          <ul className="list-inline">
+            <li className="list-inline-item">
+              <a href="https://www.freepik.com/" title="Freepik">
+                Freepik
+              </a>
+            </li>
+            <li className="list-inline-item">
+              <a href="https://www.flaticon.com/authors/gregor-cresnar">
+                Gregor Cresnar
+              </a>
+            </li>
+            <li className="list-inline-item">
+              <a href="https://www.flaticon.com/authors/pixel-perfect">
+                Pixel perfect
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
