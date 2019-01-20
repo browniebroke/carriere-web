@@ -72,7 +72,11 @@ export const query = graphql`
       edges {
         node {
           image: childImageSharp {
-            fluid(maxWidth: 1700) {
+            fluid(
+              maxWidth: 1700
+              maxHeight: 980
+              srcSetBreakpoints: [576, 768, 992, 1200]
+            ) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
