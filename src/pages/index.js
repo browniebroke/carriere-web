@@ -10,7 +10,7 @@ import Shield from '../images/icons/shield.svg'
 
 const IndexPage = ({ location, data }) => (
   <Layout location={location}>
-    <div className="row">
+    <div className="row" style={{ minHeight: '400px' }}>
       <Carousel
         autoplay={true}
         renderCenterLeftControls={() => false}
