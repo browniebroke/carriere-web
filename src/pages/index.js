@@ -6,16 +6,21 @@ import Layout from '../components/layout'
 import HandShake from '../images/icons/hand-shake.svg'
 import HomeBuilding from '../images/icons/home-building.svg'
 import Shield from '../images/icons/shield.svg'
+import Slider from '../components/Slider'
 
 const IndexPage = ({ location, data }) => (
   <Layout location={location}>
-    <div className="hero-image-wrapper">
-      <Img fluid={data.file.childImageSharp.fluid} className="img-hero" />
-      <h2 className="headline text-center">
-        Toute la pierre de construction
-        <br />
-        <span className="small">Carrière et taille de pierre</span>
-      </h2>
+    <div className="row">
+      <Slider
+        autoplay={true}
+        renderCenterLeftControls={() => false}
+        renderCenterRightControls={() => false}
+        wrapAround={true}
+      >
+        {data.carrouselImages.edges.map((edge, id) => (
+          <Img fluid={edge.node.image.fluid} key={id} />
+        ))}
+      </Slider>
     </div>
     <div className="my-5">
       <div className="row">
@@ -52,10 +57,29 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "images/carriere-overview.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1700) {
-          ...GatsbyImageSharpFluid_withWebp
+    carrouselImages: allFile(
+      filter: {
+        relativePath: {
+          in: [
+            "images/photos/voutes/image-002.jpg"
+            "images/photos/murs/image-022.jpg"
+            "images/photos/encadrements/image-001.jpg"
+            "images/photos/bassins/image-001.jpg"
+          ]
+        }
+      }
+    ) {
+      edges {
+        node {
+          image: childImageSharp {
+            fluid(
+              maxWidth: 1700
+              maxHeight: 980
+              srcSetBreakpoints: [576, 768, 992, 1200]
+            ) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
         }
       }
     }
