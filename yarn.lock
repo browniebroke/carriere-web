@@ -9636,7 +9636,7 @@ nth-check@^1.0.1, nth-check@^1.0.2, nth-check@~1.0.1:
   dependencies:
     boolbase "~1.0.0"
 
-nuka-carousel@^4.4.6:
+nuka-carousel@4.4.6:
   version "4.4.6"
   resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.4.6.tgz#3aab08c09ace23bc3236234406eb114088ee9ea6"
   integrity sha512-mEv4vlzETAv0M/khrigYRqoFQvpgmq4Bo37xc2GOdLX0bMVBkJWH8MMBseQ0hLaL3fPNVGvFYCFJ/4t5A9Nx1A==
