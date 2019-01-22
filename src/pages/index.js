@@ -1,17 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import Carousel from 'nuka-carousel'
 
 import Layout from '../components/layout'
 import HandShake from '../images/icons/hand-shake.svg'
 import HomeBuilding from '../images/icons/home-building.svg'
 import Shield from '../images/icons/shield.svg'
+import Slider from '../components/Slider'
 
 const IndexPage = ({ location, data }) => (
   <Layout location={location}>
-    <div className="row" style={{ minHeight: '400px' }}>
-      <Carousel
+    <div className="row">
+      <Slider
         autoplay={true}
         renderCenterLeftControls={() => false}
         renderCenterRightControls={() => false}
@@ -20,7 +20,7 @@ const IndexPage = ({ location, data }) => (
         {data.carrouselImages.edges.map((edge, id) => (
           <Img fluid={edge.node.image.fluid} key={id} />
         ))}
-      </Carousel>
+      </Slider>
     </div>
     <div className="my-5">
       <div className="row">
