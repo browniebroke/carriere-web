@@ -32,7 +32,7 @@ const PhotosPage = ({ location, data }) => {
         <p>Voici quelques photos pour donner un aperçu de nos produits</p>
         <div className="row">
           {galleryPage.map(page => (
-            <div className="col-md-3 col-sm-6 px-1 py-1" key={page.id}>
+            <div className="col-6 col-sm-4 col-md-3 px-1 py-1" key={page.id}>
               <Link to={page.slug}>
                 <div className="gallery-link-wrapper">
                   <Img fluid={page.masterImage} alt={page.title} />
