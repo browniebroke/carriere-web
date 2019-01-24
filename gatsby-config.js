@@ -5,6 +5,7 @@ module.exports = {
   siteMetadata: {
     title: title,
     description: description,
+    siteUrl: `https://www.carriere-alla.fr`,
     keywords: 'taille de pierre, construction, carrière, murs, piliers, voûtes',
   },
   plugins: [
@@ -70,6 +71,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify`, // Should be last
   ],
 }
