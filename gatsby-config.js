@@ -71,7 +71,27 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(edge => {
+            let priority = 0.5
+            if (edge.node.path === '/photos/') {
+              priority = 0.7
+            }
+            if (edge.node.path === '/') {
+              priority = 1
+            }
+
+            return {
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: `weekly`,
+              priority: priority,
+            }
+          }),
+      },
+    },
     `gatsby-plugin-netlify`, // Should be last
   ],
 }
