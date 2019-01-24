@@ -1,11 +1,13 @@
-const description = 'Site de la carrière de pierre de Sauclières'
+const description =
+  'Carrière et atelier de taille de pierre situé à Sauclières, Aveyron'
 const title = 'S.A.R.L Alla'
+const baseUrl = `https://www.carriere-alla.fr`
 
 module.exports = {
   siteMetadata: {
     title: title,
     description: description,
-    siteUrl: `https://www.carriere-alla.fr`,
+    siteUrl: baseUrl,
     keywords: 'taille de pierre, construction, carrière, murs, piliers, voûtes',
   },
   plugins: [
@@ -32,7 +34,7 @@ module.exports = {
         name: title,
         short_name: title,
         description: description,
-        homepage_url: 'https://www.carriere-alla.fr',
+        homepage_url: baseUrl,
         start_url: '/',
         background_color: '#fff',
         theme_color: '#f7e4bc',
