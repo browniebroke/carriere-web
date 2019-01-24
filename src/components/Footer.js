@@ -7,7 +7,7 @@ const Footer = ({ containerClass }) => (
   <footer className="footer mt-auto bg-secondary py-5">
     <div className={containerClass}>
       <div className="row justify-content-between">
-        <div className="col-md-4 pb-4">
+        <div className="col-md-4 pb-4 text-center-left-md">
           <ul className="list-unstyled">
             <li>
               <a href="https://www.facebook.com/carrierealla/">
@@ -23,7 +23,7 @@ const Footer = ({ containerClass }) => (
             </li>
           </ul>
         </div>
-        <div className="col-md-4 pb-4">
+        <div className="col-md-4 pb-4 text-center-right-md">
           <a
             href="https://www.infogreffe.fr/entreprise-societe/812786986"
             className="small"
