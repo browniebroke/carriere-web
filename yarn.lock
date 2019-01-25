@@ -5930,10 +5930,10 @@ gatsby-plugin-sass@2.0.7:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-sentry@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sentry/-/gatsby-plugin-sentry-1.0.0.tgz#746307a27f5382a9a787fa86ac812b947f8bebc5"
-  integrity sha512-6eq9RBpXXL76Ag0jp33NoWofji1jr2dhkfcJBhzAtKlztgRpkiOwm0OXrBspAa0Nu6PEPrJsEWoLAZ96w8Hj9w==
+gatsby-plugin-sentry@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sentry/-/gatsby-plugin-sentry-1.0.1.tgz#d146e3851488c9545f2c0689cad62bf6e7d1c653"
+  integrity sha512-rKIngbFbBwwGYJi1ayUtEz34tXxpLXvSMD3WWVmdtXs0wrYrlGs30nFJ4JJIxcA7fWtx3hQ2yd5O2ZyQ832G2g==
   dependencies:
     "@sentry/browser" latest
 
