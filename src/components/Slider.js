@@ -6,14 +6,19 @@ import Carousel from 'nuka-carousel'
  * https://github.com/FormidableLabs/nuka-carousel/issues/103#issuecomment-246177101
  */
 class Slider extends Component {
+  constructor(props) {
+    super(props)
+    this.carousel = React.createRef()
+  }
+
   componentDidMount() {
     setTimeout(() => {
-      this.refs.carousel.setDimensions()
+      this.carousel.setDimensions()
     }, 0)
   }
 
   render() {
-    return <Carousel ref="carousel" {...this.props} />
+    return <Carousel ref={this.carousel} {...this.props} />
   }
 }
 
