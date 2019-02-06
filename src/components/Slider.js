@@ -6,14 +6,27 @@ import Carousel from 'nuka-carousel'
  * https://github.com/FormidableLabs/nuka-carousel/issues/103#issuecomment-246177101
  */
 class Slider extends Component {
+  constructor(props) {
+    super(props)
+    // Save a reference to the carousel component to
+    // be able to reference it in lifecycle methods
+    this.carousel = null
+    this.setCarouselRef = element => {
+      this.carousel = element
+    }
+  }
+
   componentDidMount() {
     setTimeout(() => {
-      this.refs.carousel.setDimensions()
+      this.carousel.setDimensions()
     }, 0)
   }
 
   render() {
-    return <Carousel ref="carousel" {...this.props} />
+    // Use a callback pattern rather then string ref from the Github issue:
+    // https://reactjs.org/docs/refs-and-the-dom.html#legacy-api-string-refs
+    // https://reactjs.org/docs/refs-and-the-dom.html#callback-refs
+    return <Carousel ref={this.setCarouselRef} {...this.props} />
   }
 }
 
