@@ -3,13 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const NavItem = ({ location, children, to }) => (
-  <li
-    className={`nav-item ${
-      // Note: this doesn't work in prod as site is
-      // statically generated, there is no location
-      location && location.pathname === to ? 'active' : ''
-    }`}
-  >
+  <li className="nav-item active">
     <Link to={to} className="nav-link">
       {children}
     </Link>
