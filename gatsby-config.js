@@ -1,6 +1,6 @@
 const description =
   'Carrière et atelier de taille de pierre situé à Sauclières, Aveyron'
-const title = 'S.A.R.L Alla'
+const title = 'S.A.R.L Carrière Alla'
 const baseUrl = `https://www.carriere-alla.fr`
 
 module.exports = {
