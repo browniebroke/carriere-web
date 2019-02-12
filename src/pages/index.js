@@ -22,7 +22,7 @@ const IndexPage = ({ location, data }) => (
         ))}
       </Slider>
     </div>
-    <div className="my-5">
+    <div className="py-5">
       <div className="row">
         <div className="col-md-4">
           <HandShake className="selling-point mb-4" />
