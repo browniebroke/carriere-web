@@ -32,7 +32,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: title,
-        short_name: title,
+        short_name: 'Carrière Alla',
         description: description,
         homepage_url: baseUrl,
         start_url: '/',
