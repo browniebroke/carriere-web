@@ -6,3 +6,6 @@ matrix:
       script: yarn run bundlesize
     - name: Test
       script: yarn test
+
+after_success:
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then yarn run lh -- https://deploy-preview-${TRAVIS_PULL_REQUEST}--carriere-alla.netlify.com ; fi'
