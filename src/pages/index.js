@@ -22,6 +22,18 @@ const IndexPage = ({ location, data }) => (
         ))}
       </Slider>
     </div>
+    <div className="pt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-10 text-center">
+          <h1>
+            Toute la pierre de construction <br />
+          </h1>
+          <p className="lead">
+            <em>Carrière et atelier de taille de pierre</em>
+          </p>
+        </div>
+      </div>
+    </div>
     <div className="py-5">
       <div className="row">
         <div className="col-md-4">
