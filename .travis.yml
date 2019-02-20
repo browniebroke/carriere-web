@@ -7,7 +7,7 @@ matrix:
         yarn run bundlesize
         if [ "$TRAVIS_PULL_REQUEST" != "false" ]
           then yarn run lh -- \
-          --perf 97 \
+          --perf 95 \
           --pwa 96 \
           --a11y 85 \
           --bp 87 \
