@@ -7,11 +7,11 @@ matrix:
         yarn run bundlesize
         if [ "$TRAVIS_PULL_REQUEST" != "false" ]
           then yarn run lh -- \
-          --perf 95 \
-          --pwa 96 \
-          --a11y 85 \
-          --bp 87 \
-          --seo 89 \
+          --perf 80 \
+          --pwa 80 \
+          --a11y 80 \
+          --bp 80 \
+          --seo 80 \
           https://deploy-preview-${TRAVIS_PULL_REQUEST}--carriere-alla.netlify.com
         fi
     - name: Test
