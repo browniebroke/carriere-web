@@ -6,7 +6,7 @@ matrix:
       script: |
         yarn run bundlesize
         if [ "$TRAVIS_PULL_REQUEST" != "false" ]
-          then sleep 300; yarn run lh -- \
+          then sleep 300; yarn run lh \
           --perf 80 \
           --pwa 80 \
           --a11y 80 \
