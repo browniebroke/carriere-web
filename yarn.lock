@@ -3605,6 +3605,11 @@ csstype@^2.2.0:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.5.7.tgz#bf9235d5872141eccfb2d16d82993c6b149179ff"
   integrity sha512-Nt5VDyOTIIV4/nRFswoCKps1R5CD1hkiyjBE9/thNaNZILLEviVw9yWQw15+O+CpNjQKB/uvdcxFFOrSflY3Yw==
 
+csstype@^2.6.3:
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.3.tgz#b701e5968245bf9b08d54ac83d00b624e622a9fa"
+  integrity sha512-rINUZXOkcBmoHWEyu7JdHu5JMzkGRoMX4ov9830WNgxf5UYxcBUO0QTKAqeJ5EZfSdlrcJYkC8WwfVW7JYi4yg==
+
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -9583,11 +9588,12 @@ nth-check@^1.0.1, nth-check@^1.0.2, nth-check@~1.0.1:
   dependencies:
     boolbase "~1.0.0"
 
-nuka-carousel@4.4.9:
-  version "4.4.9"
-  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.4.9.tgz#a009e6453692d44998da853b46c3e51aa98b7ace"
-  integrity sha512-+gUPforTPMLYHgG9jM/Y77H1UTBne+lCjh81iWkfCJ8mUKdlpaq5M5gbBgAEIITIvSCg1AfNuxs6RNKvC6gBTg==
+nuka-carousel@4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.5.1.tgz#c5c5733c67d91659f4f77d1b36d0dfdd418f07c5"
+  integrity sha512-T3BbaMKbwCNB1GbOiLx7MkKGt6clcIKzJ/URMbjq+ZsWcJluhPOgPb11PuS5OS7rgZC38EKjFYKG+zHXhI5d2w==
   dependencies:
+    csstype "^2.6.3"
     d3-ease "^1.0.3"
     exenv "^1.2.0"
     prop-types "^15.6.0"
