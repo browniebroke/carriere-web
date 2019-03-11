@@ -15,7 +15,7 @@
     "gatsby-plugin-react-svg": "2.1.0",
     "gatsby-plugin-sass": "2.0.10",
     "gatsby-plugin-sentry": "1.0.1",
-    "gatsby-plugin-sharp": "2.0.25",
+    "gatsby-plugin-sharp": "2.0.26",
     "gatsby-plugin-sitemap": "2.0.6",
     "gatsby-source-filesystem": "2.0.23",
     "gatsby-transformer-remark": "2.3.1",
