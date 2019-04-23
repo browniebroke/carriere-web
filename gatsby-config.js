@@ -94,13 +94,6 @@ module.exports = {
           }),
       },
     },
-    {
-      resolve: `gatsby-plugin-netlify`, // Needs to be last
-      options: {
-        headers: {
-          '/*': ['Referrer-Policy: same-origin'],
-        },
-      },
-    },
+    `gatsby-plugin-netlify`, // Needs to be last
   ],
 }
