@@ -37,7 +37,7 @@
     "lint-staged": "8.1.5",
     "node-sass": "4.12.0",
     "prettier": "1.17.0",
-    "textlint": "11.2.4",
+    "textlint": "11.2.5",
     "textlint-rule-preset-ja-spacing": "2.0.1"
   },
   "keywords": [
