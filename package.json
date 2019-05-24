@@ -20,7 +20,7 @@
     "gatsby-source-filesystem": "2.0.37",
     "gatsby-transformer-remark": "2.3.12",
     "gatsby-transformer-sharp": "2.1.19",
-    "nuka-carousel": "4.5.6",
+    "nuka-carousel": "4.5.8",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-helmet": "5.2.1"
