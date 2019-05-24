@@ -6,7 +6,7 @@
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "0.4.1",
     "gatsby": "2.7.1",
-    "gatsby-image": "2.1.0",
+    "gatsby-image": "2.1.1",
     "gatsby-plugin-google-analytics": "2.0.20",
     "gatsby-plugin-manifest": "2.1.1",
     "gatsby-plugin-netlify": "2.0.17",
@@ -15,7 +15,7 @@
     "gatsby-plugin-react-svg": "2.1.1",
     "gatsby-plugin-sass": "2.0.11",
     "gatsby-plugin-sentry": "1.0.1",
-    "gatsby-plugin-sharp": "2.1.0",
+    "gatsby-plugin-sharp": "2.1.1",
     "gatsby-plugin-sitemap": "2.1.0",
     "gatsby-source-filesystem": "2.0.37",
     "gatsby-transformer-remark": "2.3.12",
