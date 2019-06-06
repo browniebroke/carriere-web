@@ -8,4 +8,4 @@ Une rue caladée, ou plus simplement une calade, désigne une rue en pente pavé
 Celles-ci sont posées verticalement, sur champ (sur la tranche).
 
 Originairement trouvées dans des villages provencaux, et construites à base de pierres locales,
-nous pouvons fournir les pierres pre-taillés au bon format, donc prête à poser.
+nous pouvons fournir les pierres pre-taillées au bon format, donc prêtes à poser.
