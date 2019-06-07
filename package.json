@@ -36,7 +36,7 @@
     "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
     "lint-staged": "8.2.0",
     "node-sass": "4.12.0",
-    "prettier": "1.18.0",
+    "prettier": "1.18.2",
     "textlint": "11.2.5",
     "textlint-rule-preset-ja-spacing": "2.0.1"
   },
