@@ -18,7 +18,7 @@ class Slider extends Component {
 
   componentDidMount() {
     setTimeout(() => {
-      this.carousel.setDimensions()
+      this.carousel && this.carousel.setDimensions()
     }, 0)
   }
 
