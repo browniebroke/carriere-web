@@ -55,9 +55,9 @@ const IndexPage = ({ location, data }) => (
         <div className="col-md-4">
           <HomeBuilding className="selling-point mb-4" />
           <p className="text-center">
-            Nous travaillons avec particuliers, bâtisseurs, our collectivités
-            locales pour tous types de constructions, sur mesures en intérieurs
-            ou grand en extérieurs.
+            Nous travaillons avec les particuliers, bâtisseurs, ou collectivités
+            locales pour tout type de construction, sur mesure en intérieur ou
+            grand en extérieur.
           </p>
         </div>
       </div>
