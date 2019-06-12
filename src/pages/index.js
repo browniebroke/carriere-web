@@ -57,7 +57,7 @@ const IndexPage = ({ location, data }) => (
           <p className="text-center">
             Nous travaillons avec les particuliers, bâtisseurs, ou collectivités
             locales pour tout type de construction, sur mesure en intérieur ou
-            grand en extérieur.
+            en extérieur.
           </p>
         </div>
       </div>
