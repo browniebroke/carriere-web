@@ -5,7 +5,7 @@
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "0.4.1",
-    "gatsby": "2.9.2",
+    "gatsby": "2.9.4",
     "gatsby-image": "2.1.4",
     "gatsby-plugin-google-analytics": "2.0.21",
     "gatsby-plugin-manifest": "2.1.1",
@@ -18,7 +18,7 @@
     "gatsby-plugin-sharp": "2.1.5",
     "gatsby-plugin-sitemap": "2.1.0",
     "gatsby-source-filesystem": "2.0.39",
-    "gatsby-transformer-remark": "2.3.12",
+    "gatsby-transformer-remark": "2.4.0",
     "gatsby-transformer-sharp": "2.1.21",
     "nuka-carousel": "4.5.8",
     "react": "16.8.6",
