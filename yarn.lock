@@ -9123,13 +9123,6 @@ markdown-table@^1.1.0:
   resolved "https://registry.yarnpkg.com/markdown-table/-/markdown-table-1.1.2.tgz#c78db948fa879903a41bce522e3b96f801c63786"
   integrity sha512-NcWuJFHDA8V3wkDgR/j4+gZx+YQwstPgfQDV8ndUeWWzta3dnDTBxpVzqS9lkmJAuV5YX35lmyojl6HO5JXAgw==
 
-match-index@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/match-index/-/match-index-1.0.1.tgz#b4b673e99ab3ac5a6af303ccf4db709812bc3f58"
-  integrity sha1-tLZz6ZqzrFpq8wPM9NtwmBK8P1g=
-  dependencies:
-    regexp.prototype.flags "^1.1.1"
-
 math-random@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/math-random/-/math-random-1.0.1.tgz#8b3aac588b8a66e4975e3cdea67f7bb329601fac"
@@ -11790,13 +11783,6 @@ regexp-tree@^0.1.0:
   resolved "https://registry.yarnpkg.com/regexp-tree/-/regexp-tree-0.1.5.tgz#7cd71fca17198d04b4176efd79713f2998009397"
   integrity sha512-nUmxvfJyAODw+0B13hj8CFVAxhe7fDEAgJgaotBu3nnR+IgGgZq59YedJP5VYTlkEfqjuK6TuRpnymKdatLZfQ==
 
-regexp.prototype.flags@^1.1.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/regexp.prototype.flags/-/regexp.prototype.flags-1.2.0.tgz#6b30724e306a27833eeb171b66ac8890ba37e41c"
-  integrity sha512-ztaw4M1VqgMwl9HlPpOuiYgItcHlunW0He2fE6eNfT6E/CF2FtYi9ofOYe4mKntstYk0Fyh/rDRBdS3AnxjlrA==
-  dependencies:
-    define-properties "^1.1.2"
-
 regexpp@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-2.0.1.tgz#8d19d31cf632482b589049f8281f93dbcba4d07f"
@@ -11885,11 +11871,6 @@ regjsparser@^0.6.0:
   integrity sha512-RQ7YyokLiQBomUJuUG8iGVvkgOLxwyZM8k6d3q5SAXpg4r5TZJZigKFvC6PpD+qQ98bCDC5YelPeA3EucDoNeQ==
   dependencies:
     jsesc "~0.5.0"
-
-regx@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/regx/-/regx-1.0.4.tgz#a0ee32c308910902019ca1117ed41b9ddd041b2f"
-  integrity sha1-oO4ywwiRCQIBnKERftQbnd0EGy8=
 
 relay-runtime@2.0.0:
   version "2.0.0"
@@ -13584,83 +13565,6 @@ text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
-
-textlint-rule-helper@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-helper/-/textlint-rule-helper-2.0.1.tgz#f28dc20d3e06f60373aa04a97b965daa77d196b9"
-  integrity sha512-QNGSOemLVxm1b0qnH5VpRY8uyHgfx/8M+St8wSy/d6mZh0abd+KAvhQSuO8cxmVeRKr/LRkhAB3+0QU5LKhLGw==
-  dependencies:
-    unist-util-visit "^1.1.0"
-
-textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana/-/textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana-2.0.1.tgz#ea6f94cb9ced758fb2553dea2e9fe714f31f0aed"
-  integrity sha1-6m+Uy5ztdY+yVT3qLp/nFPMfCu0=
-  dependencies:
-    match-index "^1.0.1"
-    textlint-rule-helper "^2.0.0"
-
-textlint-rule-ja-no-space-around-parentheses@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-space-around-parentheses/-/textlint-rule-ja-no-space-around-parentheses-2.0.1.tgz#556a60e679da9b4c98244c67e7961ac2e540bec1"
-  integrity sha1-VWpg5nnam0yYJExn55YawuVAvsE=
-  dependencies:
-    match-index "^1.0.1"
-    textlint-rule-helper "^2.0.0"
-
-textlint-rule-ja-no-space-between-full-width@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-space-between-full-width/-/textlint-rule-ja-no-space-between-full-width-2.0.1.tgz#921f78561564dd00c8733c230254acd8a55ded67"
-  integrity sha1-kh94VhVk3QDIczwjAlSs2KVd7Wc=
-  dependencies:
-    match-index "^1.0.1"
-    regx "^1.0.4"
-    textlint-rule-helper "^2.0.0"
-
-textlint-rule-ja-space-after-exclamation@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-after-exclamation/-/textlint-rule-ja-space-after-exclamation-2.0.1.tgz#3bc5d48c13269bd9cb1b18eb82e3d4eae44dfba3"
-  integrity sha1-O8XUjBMmm9nLGxjrguPU6uRN+6M=
-  dependencies:
-    match-index "^1.0.1"
-    textlint-rule-helper "^2.0.0"
-
-textlint-rule-ja-space-after-question@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-after-question/-/textlint-rule-ja-space-after-question-2.0.1.tgz#122260cb97d203768820276b4d09bf5270b11dfa"
-  integrity sha1-EiJgy5fSA3aIICdrTQm/UnCxHfo=
-  dependencies:
-    match-index "^1.0.1"
-    textlint-rule-helper "^2.0.0"
-
-textlint-rule-ja-space-around-code@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-around-code/-/textlint-rule-ja-space-around-code-2.0.1.tgz#6b7011dab69488f1eddd445554e7cddeaf1a90d3"
-  integrity sha1-a3AR2raUiPHt3URVVOfN3q8akNM=
-  dependencies:
-    match-index "^1.0.1"
-    textlint-rule-helper "^2.0.0"
-
-textlint-rule-ja-space-between-half-and-full-width@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-between-half-and-full-width/-/textlint-rule-ja-space-between-half-and-full-width-2.0.1.tgz#a527f83bd833149763e4043965f796c9ec2192ba"
-  integrity sha1-pSf4O9gzFJdj5AQ5ZfeWyewhkro=
-  dependencies:
-    match-index "^1.0.1"
-    textlint-rule-helper "^2.0.0"
-
-textlint-rule-preset-ja-spacing@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-preset-ja-spacing/-/textlint-rule-preset-ja-spacing-2.0.1.tgz#4426e812b2fd525ed4c39d07ede2984ee9bf89d9"
-  integrity sha1-RCboErL9Ul7Uw50H7eKYTum/idk=
-  dependencies:
-    textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana "^2.0.1"
-    textlint-rule-ja-no-space-around-parentheses "^2.0.1"
-    textlint-rule-ja-no-space-between-full-width "^2.0.1"
-    textlint-rule-ja-space-after-exclamation "^2.0.1"
-    textlint-rule-ja-space-after-question "^2.0.1"
-    textlint-rule-ja-space-around-code "^2.0.1"
-    textlint-rule-ja-space-between-half-and-full-width "^2.0.1"
 
 textlint@11.2.6:
   version "11.2.6"
