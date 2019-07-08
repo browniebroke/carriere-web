@@ -32,9 +32,7 @@
     "eslint-config-prettier": "6.0.0",
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-react": "7.14.2",
-    "husky": "3.0.0",
     "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
-    "lint-staged": "9.1.0",
     "node-sass": "4.12.0",
     "prettier": "1.18.2",
     "textlint": "11.2.6",
@@ -43,12 +41,6 @@
   "keywords": [
     "gatsby"
   ],
-  "lint-staged": {
-    "*.{js,json,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -61,11 +53,6 @@
     "lint:text": "textlint src/pages/**/index.md",
     "lint:textfix": "textlint --fix src/pages/**/index.md",
     "test": "prettier --write \"**/*.+(js|jsx|json|css|scss)\""
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "bundlesize": [
     {
