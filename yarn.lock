@@ -8661,7 +8661,8 @@ levn@^0.3.0, levn@~0.3.0:
 
 "lighthousebot@https://github.com/GoogleChromeLabs/lighthousebot":
   version "0.2.0"
-  resolved "https://github.com/GoogleChromeLabs/lighthousebot#031d79232da151a694ae5f26406bffa4a875edcd"
+  uid "350d70440116928c6dd25c4daa83ca3dcc1c3dfc"
+  resolved "https://github.com/GoogleChromeLabs/lighthousebot#350d70440116928c6dd25c4daa83ca3dcc1c3dfc"
   dependencies:
     minimist "^1.2.0"
     node-fetch "^2.2.0"
@@ -9655,7 +9656,7 @@ node-fetch@2.1.2:
   resolved "http://registry.npmjs.org/node-fetch/-/node-fetch-2.1.2.tgz#ab884e8e7e57e38a944753cec706f788d1768bb5"
   integrity sha1-q4hOjn5X44qUR1POxwb3iNF2i7U=
 
-node-fetch@2.3.0, node-fetch@^2.2.0:
+node-fetch@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
   integrity sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
@@ -9668,7 +9669,7 @@ node-fetch@^1.0.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
-node-fetch@^2.6.0:
+node-fetch@^2.2.0, node-fetch@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
