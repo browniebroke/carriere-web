@@ -9847,10 +9847,10 @@ nth-check@^1.0.1, nth-check@^1.0.2, nth-check@~1.0.1:
   dependencies:
     boolbase "~1.0.0"
 
-nuka-carousel@4.5.8:
-  version "4.5.8"
-  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.5.8.tgz#fbcf2a7597a23f94ad751f72a8841066c2634114"
-  integrity sha512-wMqAaasLmZXq/HRxmPXvCyJkvntkseoH/I/pCUlE/hyXBQWWlefhZYtNaqGJoXm670ICzF7yP0229j2p4Nf4pg==
+nuka-carousel@4.5.9:
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.5.9.tgz#a300fcc37fbe3e3a7f9fea8464af49158e78e379"
+  integrity sha512-XjqiwenRk+25DdnUsh4Qnejsuuu0GLy1F8dKhnHA9JFdMQKsxwmqWUdobi8uvw3jG+fXj3h+1fZF22mGNbmtxg==
   dependencies:
     csstype "^2.6.3"
     d3-ease "^1.0.3"
