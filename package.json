@@ -18,7 +18,7 @@
     "gatsby-plugin-sharp": "2.2.8",
     "gatsby-plugin-sitemap": "2.2.3",
     "gatsby-source-filesystem": "2.1.5",
-    "gatsby-transformer-remark": "2.6.6",
+    "gatsby-transformer-remark": "2.6.7",
     "gatsby-transformer-sharp": "2.2.4",
     "nuka-carousel": "4.5.9",
     "react": "16.8.6",
