@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Facebook from '../images/icons/facebook.svg'
 import Phone from '../images/icons/phone.svg'
+import ExternalLink from './external-link'
 
 const Footer = ({ containerClass }) => (
   <footer className="footer mt-auto bg-secondary py-5">
@@ -10,10 +11,10 @@ const Footer = ({ containerClass }) => (
         <div className="col-md-4 pb-4 text-center-left-md">
           <ul className="list-unstyled">
             <li>
-              <a href="https://www.facebook.com/carrierealla/">
+              <ExternalLink to="https://www.facebook.com/carrierealla/">
                 <Facebook className="font-icon mr-1" />
                 Facebook
-              </a>
+              </ExternalLink>
             </li>
             <li>
               <a href="tel:+33565621365">
@@ -24,41 +25,39 @@ const Footer = ({ containerClass }) => (
           </ul>
         </div>
         <div className="col-md-4 pb-4 text-center-right-md">
-          <a
-            href="https://www.infogreffe.fr/entreprise-societe/812786986"
+          <ExternalLink
+            to="https://www.infogreffe.fr/entreprise-societe/812786986"
             className="small"
           >
             SIRET 812 786 986 R.C.S. RODEZ
-          </a>
+          </ExternalLink>
         </div>
       </div>
       <div className="row">
         <div className="col-md-12 small text-center">
           Icônes (
-          <a
-            href="http://creativecommons.org/licenses/by/3.0/"
+          <ExternalLink
+            to="http://creativecommons.org/licenses/by/3.0/"
             title="Creative Commons BY 3.0"
-            target="_blank"
-            rel="noreferrer"
           >
             CC 3.0 BY
-          </a>
+          </ExternalLink>
           ):
           <ul className="list-inline">
             <li className="list-inline-item">
-              <a href="https://www.freepik.com/" title="Freepik">
+              <ExternalLink to="https://www.freepik.com/" title="Freepik">
                 Freepik
-              </a>
+              </ExternalLink>
             </li>
             <li className="list-inline-item">
-              <a href="https://www.flaticon.com/authors/gregor-cresnar">
+              <ExternalLink to="https://www.flaticon.com/authors/gregor-cresnar">
                 Gregor Cresnar
-              </a>
+              </ExternalLink>
             </li>
             <li className="list-inline-item">
-              <a href="https://www.flaticon.com/authors/pixel-perfect">
+              <ExternalLink to="https://www.flaticon.com/authors/pixel-perfect">
                 Pixel perfect
-              </a>
+              </ExternalLink>
             </li>
           </ul>
         </div>
