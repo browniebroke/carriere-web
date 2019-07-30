@@ -10,9 +10,7 @@ const PhotosPage = ({ location, data }) => {
   // Transform data
   const galleryPage = md.edges.map(edge => {
     // Extract path of master image from page's front matter
-    const masterImagePath = `${edge.node.frontmatter.images}/${
-      edge.node.frontmatter.master
-    }`
+    const masterImagePath = `${edge.node.frontmatter.images}/${edge.node.frontmatter.master}`
     // Filter master image from list of all images
     const thumbFixedImages = images.edges
       .filter(image => image.node.relativePath === masterImagePath)
