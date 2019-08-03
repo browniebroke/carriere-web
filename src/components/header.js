@@ -9,6 +9,9 @@ const Header = ({ location, data, containerClass }) => (
       <NavItem location={location} to="/photos/">
         Photos
       </NavItem>
+      <NavItem location={location} to="/contact/">
+        Contact
+      </NavItem>
     </NavBav>
   </header>
 )
