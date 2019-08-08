@@ -1,6 +1,6 @@
 import React from 'react'
-import NavBav from './NavBar'
-import NavItem from './NavItem'
+import NavBav from './nav-bar'
+import NavItem from './nav-item'
 import PropTypes from 'prop-types'
 
 const Header = ({ location, data, containerClass }) => (

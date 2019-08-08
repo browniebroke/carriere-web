@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import HandShake from '../images/icons/hand-shake.svg'
 import HomeBuilding from '../images/icons/home-building.svg'
 import Shield from '../images/icons/shield.svg'
-import Slider from '../components/Slider'
+import Slider from '../components/slider'
 
 const IndexPage = ({ location, data }) => (
   <Layout location={location}>
@@ -88,6 +88,7 @@ export const query = graphql`
               maxWidth: 1700
               maxHeight: 980
               srcSetBreakpoints: [576, 768, 992, 1200]
+              quality: 100
             ) {
               ...GatsbyImageSharpFluid_withWebp
             }
