@@ -33,6 +33,12 @@ const Layout = ({ location, children, containerClass = 'container' }) => (
           ]}
         />
         <Header location={location} containerClass={containerClass} />
+        <div className="alert alert-info mb-0">
+          <div className="lead text-center p-2">
+            📢️ Nous sommes à présent en congés annuels et sommes fermés
+            jusqu'au lundi 26 août. 📢️
+          </div>
+        </div>
         <div
           className={containerClass}
           style={{ minHeight: 'calc(100vh - 130px - 120px)' }}
