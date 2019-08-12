@@ -42,7 +42,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // In case of errors, stop here
   if (result.errors) {
-    reporter.panic(`Error creating pages`, reporter.errors)
+    reporter.panicOnBuild(`Error creating pages`, reporter.errors)
+    return
   }
 
   // Otherwise, process result & create pages
