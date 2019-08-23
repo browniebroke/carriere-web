@@ -5,7 +5,7 @@
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "0.5.1",
-    "gatsby": "2.13.76",
+    "gatsby": "2.13.77",
     "gatsby-image": "2.2.12",
     "gatsby-plugin-google-analytics": "2.1.9",
     "gatsby-plugin-manifest": "2.2.8",
