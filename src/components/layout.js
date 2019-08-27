@@ -7,6 +7,22 @@ import '../scss/main.scss'
 import Header from './header'
 import Footer from './footer'
 
+function renderAlert() {
+  const startDate = new Date('2019/08/14')
+  const endDate = new Date('2019/08/26')
+  const today = new Date()
+  if (startDate < today && today < endDate) {
+    return (
+      <div className="alert alert-info mb-0">
+        <div className="lead text-center p-2">
+          📢️ Nous sommes à présent en congés annuels et sommes fermés jusqu'au
+          lundi 26 août. 📢️
+        </div>
+      </div>
+    )
+  }
+}
+
 const Layout = ({ location, children, containerClass = 'container' }) => (
   <StaticQuery
     query={graphql`
@@ -33,12 +49,7 @@ const Layout = ({ location, children, containerClass = 'container' }) => (
           ]}
         />
         <Header location={location} containerClass={containerClass} />
-        <div className="alert alert-info mb-0">
-          <div className="lead text-center p-2">
-            📢️ Nous sommes à présent en congés annuels et sommes fermés
-            jusqu'au lundi 26 août. 📢️
-          </div>
-        </div>
+        {renderAlert()}
         <div
           className={containerClass}
           style={{ minHeight: 'calc(100vh - 130px - 120px)' }}
