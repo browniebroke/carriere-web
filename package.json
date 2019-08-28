@@ -56,15 +56,15 @@
   "bundlesize": [
     {
       "path": "./public/app-*.js",
-      "maxSize": "100 kB"
+      "maxSize": "40 kB"
     },
     {
       "path": "./public/component---src-pages*.js",
-      "maxSize": "10 kB"
+      "maxSize": "25 kB"
     },
     {
       "path": "./public/component---src-templates*.js",
-      "maxSize": "10 kB"
+      "maxSize": "15 kB"
     }
   ],
   "repository": {
