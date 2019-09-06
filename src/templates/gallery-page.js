@@ -2,6 +2,7 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../components/layout'
 import Gallery from '@browniebroke/gatsby-image-gallery'
+import '@browniebroke/gatsby-image-gallery/dist/style.css'
 
 const GalleryPage = ({ data }) => {
   const post = data.post
