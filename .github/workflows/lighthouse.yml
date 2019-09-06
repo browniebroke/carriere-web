@@ -1,0 +1,24 @@
+name: Lighthouse
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Lighthouse Audit
+      uses: browniebroke/lighthouse-action@race-conditions
+      with:
+        url: 'https://www.carriere-alla.fr'
+        netlify_site: 'carriere-alla.netlify.com'
+        site_build_time: 300  # 5 mins in seconds
+    - uses: actions/upload-artifact@master
+      with:
+        name: report
+        path: './report'
