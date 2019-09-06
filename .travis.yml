@@ -6,3 +6,5 @@ matrix:
       script: yarn run bundlesize
     - name: Test
       script: yarn test
+    - name: Lint
+      script: yarn lint
