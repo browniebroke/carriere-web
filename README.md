@@ -37,4 +37,8 @@ $ yarn run build
 
 1. Create a branch from `master` for the change with a meaningful name
 2. Make the required change, test locally, then commit
-3. Create a pull request, which will trigger tests, static code analysis and a prod-like deploy preview on Netlify. Do this early as some React things might work locally but will break in the Gatsby production build.
+3. Create a pull request, which will trigger:
+   * Travis CI tests, linting
+   * A prod-like deploy preview on Netlify.
+ 
+ Do this early as some React things might work locally but will break in the Gatsby production build.
