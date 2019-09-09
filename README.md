@@ -10,6 +10,9 @@
   <a href="https://travis-ci.com/browniebroke/carriere-web">
     <img src="https://travis-ci.com/browniebroke/carriere-web.svg?branch=master"/>
   </a>
+  <a href="https://github.com/browniebroke/carriere-web/actions">
+    <img src="https://github.com/browniebroke/carriere-web/workflows/Lighthouse/badge.svg" alt="Lighthouse"/>
+  </a>
   <a href="https://www.netlify.com">
     <img src="https://img.shields.io/badge/deployed-netlify-00c7b7.svg" alt="Deployed on Netlify"/>
   </a>
