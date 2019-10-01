@@ -57,12 +57,16 @@
       "maxSize": "40 kB"
     },
     {
-      "path": "./public/component---src-pages*.js",
+      "path": "./public/component---src-pages-!(index)-*.js",
+      "maxSize": "1 kB"
+    },
+    {
+      "path": "./public/component---src-pages-index-*.js",
       "maxSize": "25 kB"
     },
     {
       "path": "./public/component---src-templates*.js",
-      "maxSize": "15 kB"
+      "maxSize": "30 kB"
     }
   ],
   "repository": {
