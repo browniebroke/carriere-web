@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "1.2.4",
+    "@browniebroke/gatsby-image-gallery": "2.0.0",
     "gatsby": "2.15.28",
     "gatsby-image": "2.2.23",
     "gatsby-plugin-google-analytics": "2.1.19",
@@ -57,12 +57,16 @@
       "maxSize": "40 kB"
     },
     {
-      "path": "./public/component---src-pages*.js",
+      "path": "./public/component---src-pages-!(index)-*.js",
+      "maxSize": "1 kB"
+    },
+    {
+      "path": "./public/component---src-pages-index-*.js",
       "maxSize": "25 kB"
     },
     {
       "path": "./public/component---src-templates*.js",
-      "maxSize": "15 kB"
+      "maxSize": "30 kB"
     }
   ],
   "repository": {

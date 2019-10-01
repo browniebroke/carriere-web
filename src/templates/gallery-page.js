@@ -14,7 +14,7 @@ const GalleryPage = ({ data }) => {
       <div className="my-4">
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <Gallery images={fullSize} thumbs={thumbs} colClass="col-4 col-md-3" />
+        <Gallery images={fullSize} thumbs={thumbs} />
       </div>
     </Layout>
   )
