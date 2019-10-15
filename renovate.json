@@ -1,9 +1,10 @@
 {
   "extends": ["config:js-app"],
   "automerge": true,
+  "prConcurrentLimit": 1,
   "major": {
     "automerge": false
   },
-  "schedule": ["before 3am on Tuesday"],
+  "schedule": ["before 3am on Thursday"],
   "supportPolicy": ["current"]
 }
