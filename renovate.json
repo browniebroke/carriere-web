@@ -5,6 +5,6 @@
   "major": {
     "automerge": false
   },
-  "schedule": ["before 3am on Thursday"],
+  "schedule": ["on Thursday"],
   "supportPolicy": ["current"]
 }
