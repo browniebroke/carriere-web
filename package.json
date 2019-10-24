@@ -21,8 +21,8 @@
     "gatsby-transformer-remark": "2.6.30",
     "gatsby-transformer-sharp": "2.3.0",
     "nuka-carousel": "4.5.12",
-    "react": "16.10.2",
-    "react-dom": "16.10.2",
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
     "react-helmet": "5.2.1"
   },
   "devDependencies": {
