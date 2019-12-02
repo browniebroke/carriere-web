@@ -1,4 +1,4 @@
-# Carriere
+# SARL Carrière Alla
 
 <p align="center">
   <a href="https://lgtm.com/projects/g/browniebroke/carriere-web/alerts/">
@@ -40,8 +40,5 @@ $ yarn run build
 
 1. Create a branch from `master` for the change with a meaningful name
 2. Make the required change, test locally, then commit
-3. Create a pull request, which will trigger:
-   * Travis CI tests, linting
-   * A prod-like deploy preview on Netlify.
+3. Create a pull request, which will trigger the buiold & a deploy preview on Netlify.
  
- Do this early as some React things might work locally but will break in the Gatsby production build.
