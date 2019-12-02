@@ -1,0 +1,5 @@
+[build]
+  base    = ""
+  publish = "public"
+  command = "yarn build"
+  environment = { GATSBY_CPU_COUNT = "1" }
