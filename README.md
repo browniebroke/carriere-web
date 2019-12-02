@@ -40,5 +40,5 @@ $ yarn run build
 
 1. Create a branch from `master` for the change with a meaningful name
 2. Make the required change, test locally, then commit
-3. Create a pull request, which will trigger the buiold & a deploy preview on Netlify.
+3. Create a pull request, which will trigger the build & a deploy preview on Netlify.
  
