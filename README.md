@@ -16,9 +16,6 @@
   <a href="https://www.netlify.com">
     <img src="https://img.shields.io/badge/deployed-netlify-00c7b7.svg" alt="Deployed on Netlify"/>
   </a>
-  <a href="https://github.com/browniebroke/carriere-web">
-    <img src="https://tokei.rs/b1/github/browniebroke/carriere-web" alt="Lines of Codes"/>
-  </a>
 </p>
 
 This site is built using [GatsbyJS](https://www.gatsbyjs.org/), a static code generator using [React](https://reactjs.org/) & [GraphQL](https://graphql.org/). It is deployed on [Netlify](https://www.netlify.com/) and the domain is coming from [OVH](https://www.ovh.co.uk/). Dependencies are kept up to date using the excellent [Renovate Bot](https://renovatebot.com/).
