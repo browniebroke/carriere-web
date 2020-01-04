@@ -36,6 +36,9 @@
     "prettier": "1.19.1",
     "textlint": "11.5.0"
   },
+  "resolutions": {
+    "set-value": "^2.0.1"
+  },
   "keywords": [
     "gatsby"
   ],
