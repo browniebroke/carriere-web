@@ -36,9 +36,6 @@
     "prettier": "1.19.1",
     "textlint": "11.6.1"
   },
-  "resolutions": {
-    "lodash.template": "^4.5.0"
-  },
   "keywords": [
     "gatsby"
   ],
