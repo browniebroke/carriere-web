@@ -1,0 +1,21 @@
+name: Lighthouse Prod
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Wait for deploy
+      run: sleep 360  # 6 mins in seconds
+    - name: Lighthouse Audit
+      uses: jakejarvis/lighthouse-action@master
+      with:
+        url: 'https://www.carriere-alla.fr'
+    - uses: actions/upload-artifact@master
+      with:
+        name: report
+        path: './report'
