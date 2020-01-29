@@ -9,7 +9,8 @@ const NavBav = ({ containerClass, children }) => (
       <Link to="/" className="navbar-brand d-flex align-items-center">
         <img
           src={carriereIcon}
-          alt=""
+          alt="Logo"
+          aria-label="Logo"
           style={{ width: '200px' }}
           className="img-fluid mr-3"
         />
