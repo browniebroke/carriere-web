@@ -7,8 +7,8 @@ import '@browniebroke/gatsby-image-gallery/dist/style.css'
 const GalleryPage = ({ data }) => {
   const post = data.post
   const images = data.images.edges
-  const fullSize = images.map(imageNode => imageNode.node.full.fluid.src)
-  const thumbs = images.map(imageNode => imageNode.node.thumb.fluid)
+  const fullSize = images.map((imageNode) => imageNode.node.full.fluid.src)
+  const thumbs = images.map((imageNode) => imageNode.node.thumb.fluid)
   return (
     <Layout>
       <div className="my-4">

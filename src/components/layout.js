@@ -36,7 +36,7 @@ const Layout = ({ location, children, containerClass = 'container' }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <Helmet
           title={data.site.siteMetadata.title}

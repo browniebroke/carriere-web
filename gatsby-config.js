@@ -77,7 +77,7 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => {
+          allSitePage.edges.map((edge) => {
             let priority = 0.5
             if (edge.node.path === '/photos/') {
               priority = 0.7
