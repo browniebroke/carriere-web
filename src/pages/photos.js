@@ -8,13 +8,13 @@ import './photos.scss'
 const PhotosPage = ({ location, data }) => {
   const { md, images } = data
   // Transform data
-  const galleryPage = md.edges.map(edge => {
+  const galleryPage = md.edges.map((edge) => {
     // Extract path of master image from page's front matter
     const masterImagePath = `${edge.node.frontmatter.images}/${edge.node.frontmatter.master}`
     // Filter master image from list of all images
     const thumbFixedImages = images.edges
-      .filter(image => image.node.relativePath === masterImagePath)
-      .map(image => image.node.thumb)
+      .filter((image) => image.node.relativePath === masterImagePath)
+      .map((image) => image.node.thumb)
     // Build the page object with the master image
     return {
       id: edge.node.id,
@@ -29,7 +29,7 @@ const PhotosPage = ({ location, data }) => {
         <h1>Photos</h1>
         <p>Voici quelques photos pour donner un aperçu de nos produits</p>
         <div className="row">
-          {galleryPage.map(page => (
+          {galleryPage.map((page) => (
             <div className="col-6 col-sm-4 col-md-3 px-1 py-1" key={page.id}>
               <Link to={page.slug}>
                 <div className="gallery-link-wrapper">

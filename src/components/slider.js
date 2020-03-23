@@ -11,7 +11,7 @@ class Slider extends Component {
     // Save a reference to the carousel component to
     // be able to reference it in lifecycle methods
     this.carousel = null
-    this.setCarouselRef = element => {
+    this.setCarouselRef = (element) => {
       this.carousel = element
     }
   }
