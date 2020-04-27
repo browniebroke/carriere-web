@@ -12,7 +12,7 @@ jobs:
     - name: Wait for deploy
       uses: maddox/actions/wait-for-200@master
       env:
-        URL: 'https://deploy-preview-${{ github.event.pull_request.number }}--carriere-alla.netlify.com/'
+        URL: 'https://deploy-preview-${{ github.event.pull_request.number }}--carriere-alla.netlify.app'
         SECONDS_BETWEEN_CHECKS: 20
         MAX_TRIES: 30
     - name: Lighthouse Audit
