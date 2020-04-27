@@ -19,7 +19,7 @@ jobs:
       uses: jakejarvis/lighthouse-action@master
       with:
         url: 'https://www.carriere-alla.fr'
-        netlify_site: 'chez-nicole.netlify.com'
+        netlify_site: 'carriere-alla.netlify.app'
     - uses: actions/upload-artifact@master
       with:
         name: report
