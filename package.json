@@ -56,19 +56,35 @@
   "bundlesize": [
     {
       "path": "./public/app-*.js",
-      "maxSize": "40 kB"
+      "maxSize": "35KB"
     },
     {
-      "path": "./public/component---src-pages-!(index)-*.js",
-      "maxSize": "1 kB"
+      "path": "./public/component---src-pages-404-*.js",
+      "maxSize": "400B"
+    },
+    {
+      "path": "./public/component---src-pages-contact-*.js",
+      "maxSize": "700B"
+    },
+    {
+      "path": "./public/component---src-pages-photos-*.js",
+      "maxSize": "3.2KB"
     },
     {
       "path": "./public/component---src-pages-index-*.js",
-      "maxSize": "25 kB"
+      "maxSize": "22KB"
     },
     {
-      "path": "./public/component---src-templates*.js",
-      "maxSize": "30 kB"
+      "path": "./public/component---src-templates-gallery-page-*.js",
+      "maxSize": "27KB"
+    },
+    {
+      "path": "./public/styles.*.css",
+      "maxSize": "13.1KB"
+    },
+    {
+      "path": "./public/styles-*.js",
+      "maxSize": "150B"
     }
   ],
   "repository": {
