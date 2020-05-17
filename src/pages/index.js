@@ -8,93 +8,72 @@ import HomeBuilding from '../images/icons/home-building.svg'
 import Shield from '../images/icons/shield.svg'
 import Slider from '../components/slider'
 
-const IndexPage = ({ location, data }) => (
-  <Layout location={location}>
-    <div className="row">
-      <Slider
-        autoplay={true}
-        renderCenterLeftControls={() => false}
-        renderCenterRightControls={() => false}
-        wrapAround={true}
-      >
-        {data.carrouselImages.edges.map((edge, id) => (
-          <Img fluid={edge.node.image.fluid} key={id} />
-        ))}
-      </Slider>
-    </div>
-    <div className="pt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-10 text-center">
-          <h1>
-            Toute la pierre de construction <br />
-          </h1>
-          <p className="lead">
-            <em>Carrière et atelier de taille de pierre</em>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div className="py-5">
+const IndexPage = ({ location, data }) => {
+  const homePage = data.datoCmsHomePage
+  return (
+    <Layout location={location}>
       <div className="row">
-        <div className="col-md-4">
-          <HandShake className="selling-point mb-4" />
-          <p className="text-center">
-            Notre équipe de confiance est là pour vous aider à réaliser vos
-            projets et nous travaillons main dans la main pour vous fournir ce
-            que vous recherchez.
-          </p>
-        </div>
-        <div className="col-md-4">
-          <Shield className="selling-point mb-4" />
-          <p className="text-center">
-            Notre travail est réalisé de façon artisanale dans les meilleures
-            conditions possibles pour assurer une qualité maximale de nos
-            produits.
-          </p>
-        </div>
-        <div className="col-md-4">
-          <HomeBuilding className="selling-point mb-4" />
-          <p className="text-center">
-            Nous travaillons avec les particuliers, bâtisseurs, ou collectivités
-            locales pour tout type de construction, sur mesure en intérieur ou
-            en extérieur.
-          </p>
+        <Slider
+          autoplay={true}
+          renderCenterLeftControls={() => false}
+          renderCenterRightControls={() => false}
+          wrapAround={true}
+        >
+          {homePage.carousel.map((image, id) => (
+            <Img fluid={image.fluid} key={id} />
+          ))}
+        </Slider>
+      </div>
+      <div className="pt-5">
+        <div className="row justify-content-center">
+          <div className="col-md-10 text-center">
+            <h1>
+              {homePage.title} <br />
+            </h1>
+            <p className="lead">
+              <em>{homePage.subtitle}</em>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </Layout>
-)
+      <div className="py-5">
+        <div className="row">
+          <div className="col-md-4">
+            <HandShake className="selling-point mb-4" />
+            <p className="text-center">{homePage.handshakeCopy}</p>
+          </div>
+          <div className="col-md-4">
+            <Shield className="selling-point mb-4" />
+            <p className="text-center">{homePage.qualityCopy}</p>
+          </div>
+          <div className="col-md-4">
+            <HomeBuilding className="selling-point mb-4" />
+            <p className="text-center">{homePage.collabCopy}</p>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+}
 
 export default IndexPage
 
-export const query = graphql`
-  query {
-    carrouselImages: allFile(
-      filter: {
-        relativePath: {
-          in: [
-            "images/photos/voutes/image-002.jpg"
-            "images/photos/murs/image-022.jpg"
-            "images/photos/encadrements/image-001.jpg"
-            "images/photos/bassins/image-001.jpg"
-          ]
+export const pageQuery = graphql`
+  query homePageQuery {
+    datoCmsHomePage {
+      carousel {
+        fluid(
+          maxWidth: 1700
+          imgixParams: { fit: "crop", w: "1700", h: "980" }
+        ) {
+          ...GatsbyDatoCmsFluid
         }
       }
-    ) {
-      edges {
-        node {
-          image: childImageSharp {
-            fluid(
-              maxWidth: 1700
-              maxHeight: 980
-              srcSetBreakpoints: [576, 768, 992, 1200]
-              quality: 85
-            ) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
+      title
+      subtitle
+      handshakeCopy
+      collabCopy
+      qualityCopy
     }
   }
 `
