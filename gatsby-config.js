@@ -19,7 +19,17 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        // It's under the Settings > API tokens
+        apiToken: `5c9510728aa44244b58d9c5fe89f7b`,
+        // Preview the latest version of records instead of the published one:
+        previewMode: false,
+        // Automatic reloading of content when some change occurs on DatoCMS:
+        disableLiveReload: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {

@@ -1,40 +1,26 @@
 import React from 'react'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
-import { graphql, Link } from 'gatsby'
+import { makeAlbumUrlPath } from '../utils/routes'
+
 import './photos.scss'
 
 const PhotosPage = ({ location, data }) => {
-  const { md, images } = data
-  // Transform data
-  const galleryPage = md.edges.map((edge) => {
-    // Extract path of master image from page's front matter
-    const masterImagePath = `${edge.node.frontmatter.images}/${edge.node.frontmatter.master}`
-    // Filter master image from list of all images
-    const thumbFixedImages = images.edges
-      .filter((image) => image.node.relativePath === masterImagePath)
-      .map((image) => image.node.thumb)
-    // Build the page object with the master image
-    return {
-      id: edge.node.id,
-      masterImage: thumbFixedImages[0].fluid,
-      slug: edge.node.fields.slug,
-      title: edge.node.frontmatter.title,
-    }
-  })
+  const albumNodesList = data.allDatoCmsAlbum.edges
   return (
     <Layout location={location}>
       <div className="my-4">
         <h1>Photos</h1>
         <p>Voici quelques photos pour donner un aperçu de nos produits</p>
         <div className="row">
-          {galleryPage.map((page) => (
-            <div className="col-6 col-sm-4 col-md-3 px-1 py-1" key={page.id}>
-              <Link to={page.slug}>
+          {albumNodesList.map(({ node }) => (
+            <div className="col-6 col-sm-4 col-md-3 px-1 py-1" key={node.id}>
+              <Link to={makeAlbumUrlPath(node.title)}>
                 <div className="gallery-link-wrapper">
-                  <Img fluid={page.masterImage} alt={page.title} />
-                  <span className="gallery-label">{page.title}</span>
+                  <Img fluid={node.mainPicture.fluid} alt={node.title} />
+                  <span className="gallery-label">{node.title}</span>
                 </div>
               </Link>
             </div>
@@ -45,36 +31,19 @@ const PhotosPage = ({ location, data }) => {
   )
 }
 
-export const pageQuery = graphql`
+export const photosPageQuery = graphql`
   query GalleriesList {
-    md: allMarkdownRemark(
-      filter: { fields: { slug: { regex: "/photos/" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
+    allDatoCmsAlbum(sort: { order: ASC, fields: title }) {
       edges {
         node {
-          id
-          frontmatter {
-            images
-            master
-            title
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-    images: allFile(
-      filter: { relativeDirectory: { regex: "/images/photos/" } }
-    ) {
-      edges {
-        node {
-          id
-          relativePath
-          thumb: childImageSharp {
-            fluid(maxWidth: 270, maxHeight: 270) {
-              ...GatsbyImageSharpFluid
+          title
+          description
+          mainPicture {
+            fluid(
+              maxWidth: 270
+              imgixParams: { fit: "crop", w: "270", h: "270" }
+            ) {
+              ...GatsbyDatoCmsFluid
             }
           }
         }
