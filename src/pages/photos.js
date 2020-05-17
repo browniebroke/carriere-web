@@ -31,7 +31,7 @@ const PhotosPage = ({ location, data }) => {
   )
 }
 
-export const pageQuery = graphql`
+export const photosPageQuery = graphql`
   query GalleriesList {
     allDatoCmsAlbum(sort: { order: ASC, fields: title }) {
       edges {

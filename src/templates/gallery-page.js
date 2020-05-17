@@ -19,7 +19,7 @@ const GalleryPage = ({ data }) => {
   )
 }
 
-export const pageQuery = graphql`
+export const galleryPageQuery = graphql`
   query GalleryData($albumId: String!) {
     datoCmsAlbum(id: { eq: $albumId }) {
       title

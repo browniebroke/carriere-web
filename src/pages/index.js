@@ -58,7 +58,7 @@ const IndexPage = ({ location, data }) => {
 
 export default IndexPage
 
-export const pageQuery = graphql`
+export const indexPageQuery = graphql`
   query homePageQuery {
     datoCmsHomePage {
       carousel {
