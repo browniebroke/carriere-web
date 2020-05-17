@@ -30,7 +30,6 @@ module.exports = {
         disableLiveReload: false,
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
