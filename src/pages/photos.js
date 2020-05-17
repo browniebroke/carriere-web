@@ -39,7 +39,10 @@ export const pageQuery = graphql`
           title
           description
           mainPicture {
-            fluid(maxWidth: 270) {
+            fluid(
+              maxWidth: 270
+              imgixParams: { fit: "crop", w: "270", h: "270" }
+            ) {
               ...GatsbyDatoCmsFluid
             }
           }

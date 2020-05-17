@@ -28,7 +28,10 @@ export const pageQuery = graphql`
         full: fluid(maxWidth: 1024) {
           ...GatsbyDatoCmsFluid
         }
-        thumb: fluid(maxWidth: 270, maxHeight: 270) {
+        thumb: fluid(
+          maxWidth: 270
+          imgixParams: { fit: "crop", w: "270", h: "270" }
+        ) {
           ...GatsbyDatoCmsFluid
         }
       }
