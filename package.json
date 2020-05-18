@@ -29,7 +29,7 @@
     "slugify": "1.4.0"
   },
   "devDependencies": {
-    "bootstrap": "4.4.1",
+    "bootstrap": "4.5.0",
     "bundlesize": "0.18.0",
     "eslint": "7.0.0",
     "eslint-config-prettier": "6.11.0",
@@ -80,7 +80,7 @@
     },
     {
       "path": "./public/styles.*.css",
-      "maxSize": "13.1KB"
+      "maxSize": "13.2KB"
     },
     {
       "path": "./public/styles-*.js",
