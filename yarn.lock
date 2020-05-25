@@ -10343,16 +10343,17 @@ nth-check@^1.0.2, nth-check@~1.0.1:
   dependencies:
     boolbase "~1.0.0"
 
-nuka-carousel@4.6.7:
-  version "4.6.7"
-  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.6.7.tgz#3f02ac1994ce1c20b76eec71368b7de1dfa55133"
-  integrity sha512-9dBj82VXKstlHo9m0zlHBrrLq/2Br3DQhlHq/398Er2JZ3+3mSPcvaZqwobvGCTHVRv800wKv+2EapHM4C7lkA==
+nuka-carousel@4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.7.0.tgz#30d56304fdf1de28ded2781be6cc280efc6bae0e"
+  integrity sha512-5ngBNwFnMqO9TXWsJdxQMUNbasbPFva5ukqB5GpJfdLGBVOP7q3dn7NLithqNVGcXvNgsp3UMXRwQZGZQrRlOw==
   dependencies:
     csstype "^2.6.6"
     d3-ease "^1.0.3"
     exenv "^1.2.0"
     prop-types "^15.6.0"
     react-move "^6.1.0"
+    wicg-inert "^3.0.3"
 
 null-loader@^3.0.0:
   version "3.0.0"
@@ -15185,6 +15186,11 @@ which@^2.0.1:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
+
+wicg-inert@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/wicg-inert/-/wicg-inert-3.0.3.tgz#7d05eaed64176887ee4c66fc0c4d6fe4b38ccce5"
+  integrity sha512-XwXf8K0NN4cpagjBlZ2/j/5Sjf6dW3HNbfywEy1y6Z8PJKvSHVGiuc5Id/9RZ6EmGq+GQCGTo7B2SK0Misbr6g==
 
 wide-align@^1.1.0:
   version "1.1.3"
