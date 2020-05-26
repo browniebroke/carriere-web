@@ -72,7 +72,7 @@
     },
     {
       "path": "./public/component---src-pages-index-*.js",
-      "maxSize": "22KB"
+      "maxSize": "24KB"
     },
     {
       "path": "./public/component---src-templates-gallery-page-*.js",
