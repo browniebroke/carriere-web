@@ -36,6 +36,7 @@ export const photosPageQuery = graphql`
     allDatoCmsAlbum(sort: { order: ASC, fields: title }) {
       edges {
         node {
+          id
           title
           description
           mainPicture {
