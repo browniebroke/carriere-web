@@ -5955,10 +5955,10 @@ date-fns@^2.14.0, date-fns@^2.8.1:
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.14.0.tgz#359a87a265bb34ef2e38f93ecf63ac453f9bc7ba"
   integrity sha512-1zD+68jhFgDIM0rF05rcwYO8cExdNqxjq4xP1QKM60Q45mnO6zaMWB4tOzrIr4M4GSLntsKeE4c9Bdl2jhL/yw==
 
-datocms-client@>=3.0.24:
-  version "3.0.27"
-  resolved "https://registry.yarnpkg.com/datocms-client/-/datocms-client-3.0.27.tgz#747fcef8b422dd84463e1aba57bf5b3e539264cd"
-  integrity sha512-u2nHecGaR83n3WbU8isi9SMQbYv6MLh9U/yyRw++m0cCDVXdVVL26EuqnTJXgmvppVqH4j2aCOTny/uPsGJd+Q==
+datocms-client@>=3.0.32:
+  version "3.0.32"
+  resolved "https://registry.yarnpkg.com/datocms-client/-/datocms-client-3.0.32.tgz#6780885a7efde85136ea911506c5a5747a21f097"
+  integrity sha512-jeamJkzVoftIm+xnJl/BDv8IxuSvmPCG1PtEU+vaWLbr3pN3f8e8AKjlEY8nkFlwZWTZ8dnKWSMjrW982nD3Vw==
   dependencies:
     "@iarna/toml" "^2.2.3"
     arr-diff "^4.0.0"
@@ -8351,13 +8351,13 @@ gatsby-recipes@^0.1.34:
     ws "^7.3.0"
     xstate "^4.9.1"
 
-gatsby-source-datocms@2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.2.4.tgz#37fa5eca4517ffdffab991a951a44392b5283341"
-  integrity sha512-A4YlKZjAYS+awcKYXVcQ644WKrZ8Zm/GTDO5JKCkS0hFkvFBOm8/vAultlKpAC+Jdcozo0YLsR8IudcO5bg+RA==
+gatsby-source-datocms@2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.2.5.tgz#f69d3615bf79fced8ddf407b713fb44d40c1b9c2"
+  integrity sha512-Zo0CksNlGuej/GG6vg5McSHn6xiGOf1DOiWmUcQYdIyqhWmRmTGNuMDuTNKrMt6itKqujY8vfZt+D4y+D0QZ5w==
   dependencies:
     core-js "^3.2.1"
-    datocms-client ">=3.0.24"
+    datocms-client ">=3.0.32"
     fs-extra ">=8.1.0"
     humps ">=2.0.1"
     imgix-url-params "11.2.0"
