@@ -7355,10 +7355,10 @@ gatsby-recipes@^0.1.49:
     ws "^7.3.0"
     xstate "^4.11.0"
 
-gatsby-source-datocms@2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.2.6.tgz#e2fbb201253855f5da7aac947919c9939a7f4f81"
-  integrity sha512-mAKbSaHRz5OAVkJOtbUXbIp2eF4OuUhCYspHek3OtidSj+nP5go3hdqZFZ7Hok7+mnk6rGe0aXNLnlIBx21Myw==
+gatsby-source-datocms@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.3.0.tgz#ab59b92da0ed18b2572a96032cce83971d25c4bb"
+  integrity sha512-K/GIdUBV2LmM5opu9SPbl2C0tcD2V3zBHotLVguyWvLSfaakHeK/El2bYU2vLnbvQ1tEgmDUFF7qe8ZUfwxstw==
   dependencies:
     core-js "^3.2.1"
     datocms-client ">=3.0.34"
