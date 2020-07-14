@@ -30,13 +30,12 @@
   },
   "devDependencies": {
     "bootstrap": "4.5.0",
-    "bundlesize": "0.18.0",
+    "bundlewatch": "0.2.7",
     "eslint": "7.4.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.20.3",
-    "prettier": "2.0.5",
-    "textlint": "11.6.3"
+    "prettier": "2.0.5"
   },
   "keywords": [
     "gatsby"
@@ -44,16 +43,14 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "prebundlesize": "yarn run build",
-    "bundlesize": "bundlesize",
+    "prebundlewatch": "yarn run build",
+    "bundlewatch": "bundlewatch",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:text": "textlint src/pages/**/index.md",
-    "lint:textfix": "textlint --fix src/pages/**/index.md",
-    "test": "prettier --check \"**/*.+(js|jsx|json|css|scss)\""
+    "lint:eslint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:prettier": "prettier --check \"**/*.+(js|jsx|json|css|scss)\""
   },
-  "bundlesize": [
+  "bundlewatch": [
     {
       "path": "./public/app-*.js",
       "maxSize": "35KB"
@@ -86,9 +83,5 @@
       "path": "./public/styles-*.js",
       "maxSize": "150B"
     }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  }
+  ]
 }
