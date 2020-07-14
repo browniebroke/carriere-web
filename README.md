@@ -13,7 +13,7 @@
   <a href="https://github.com/browniebroke/carriere-web/actions?query=workflow%3ALighthouse">
     <img src="https://img.shields.io/github/workflow/status/browniebroke/carriere-web/Lighthouse/master?label=Lighthouse&logo=github&logoColor=white&style=flat-square" alt="Lighthouse"/>
   </a>
-  <a href="https://app.netlify.com/sites/chez-nicole/deploys">
+  <a href="https://app.netlify.com/sites/carriere-alla/deploys">
     <img src="https://img.shields.io/netlify/10c50357-1953-4307-9c1b-c40f1f826885?label=Netlify&logo=netlify&logoColor=white&style=flat-square" alt="Deployed on Netlify"/>
   </a>
 </p>
