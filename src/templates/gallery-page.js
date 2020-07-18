@@ -8,12 +8,20 @@ import '@browniebroke/gatsby-image-gallery/dist/style.css'
 
 const GalleryPage = ({ data }) => {
   const album = data.datoCmsAlbum
+  const lightboxOptions = {
+    imageLoadErrorMessage: 'Impossible de charger cette image',
+    nextLabel: 'Image suivante',
+    prevLabel: 'Image précédente',
+    zoomInLabel: 'Zoomer',
+    zoomOutLabel: 'Dézoomer',
+    closeLabel: 'Fermer',
+  }
   return (
     <Layout>
       <div className="my-4">
         <h1>{album.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: album.description }} />
-        <Gallery images={album.photos} />
+        <Gallery images={album.photos} lightboxOptions={lightboxOptions} />
       </div>
     </Layout>
   )
@@ -34,6 +42,8 @@ export const galleryPageQuery = graphql`
         ) {
           ...GatsbyDatoCmsFluid
         }
+        caption: title
+        thumbAlt: alt
       }
     }
   }
