@@ -29,7 +29,7 @@
     "slugify": "1.4.5"
   },
   "devDependencies": {
-    "bootstrap": "4.5.0",
+    "bootstrap": "4.5.2",
     "bundlewatch": "0.2.7",
     "eslint": "7.6.0",
     "eslint-config-prettier": "6.11.0",
