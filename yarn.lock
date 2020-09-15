@@ -7079,10 +7079,10 @@ gatsby-recipes@^0.2.26:
     yoga-layout-prebuilt "^1.9.6"
     yup "^0.27.0"
 
-gatsby-source-datocms@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.4.0.tgz#9f6d6310a7e564ddffc8b31fc4981352ba2b67ce"
-  integrity sha512-3xoPdc2+qUY0URgEBgZ1X3o6VB9KSFC77NRWUsRqbnV1tBWpwWfaSsu86iJHFtBZC2qwpVgFMPVh/c7+2hVQUA==
+gatsby-source-datocms@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.4.1.tgz#3f413f5c2d2197fae82b42d3e4401ef5aebc6bda"
+  integrity sha512-MR6JrAHcQhUs+KRJtUd2qKpQd2fA84nrj8KO4vl6G6xP9ATN5mh5wsVEBYE75RxCVfADAfzMIvAhAtTuY75HqQ==
   dependencies:
     core-js "^3.2.1"
     datocms-client ">=3.0.34"
