@@ -4753,10 +4753,10 @@ date-fns@^2.0.1, date-fns@^2.14.0, date-fns@^2.8.1:
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
   integrity sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
 
-datocms-client@>=3.0.34:
-  version "3.0.38"
-  resolved "https://registry.yarnpkg.com/datocms-client/-/datocms-client-3.0.38.tgz#00186f74063dd06c40e2cd5efc7e7b861193ae8c"
-  integrity sha512-3bZlBLZzE7B9DeL2ewi86hdNTWVNumzr6tF8MdujxZHzvy2n1O6Kp3VATKbI30xb92MyCAvihOLddQ+NN+JNhg==
+datocms-client@>=3.1.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/datocms-client/-/datocms-client-3.1.1.tgz#eb54a5fa26662cbb17bf390d1d831a4b97baaa62"
+  integrity sha512-6i4ZK/TjcYvoRLZfNz46aNc4EoINe619f7TsrcD6OgHCH2YvWv2Yu1Z4V1dXPHVnssvGn9Kgm+F8Zs3vsemdJA==
   dependencies:
     "@iarna/toml" "^2.2.3"
     arr-diff "^4.0.0"
@@ -4785,6 +4785,7 @@ datocms-client@>=3.0.34:
     ora "4.0.3"
     pluralize "^8.0.0"
     pretty-error "^2.1.1"
+    promise-limit "^2.7.0"
     proxy-polyfill "^0.3.0"
     pusher-js "^5.0.3"
     qs "^6.9.1"
@@ -7091,16 +7092,16 @@ gatsby-recipes@^0.2.26:
     yoga-layout-prebuilt "^1.9.6"
     yup "^0.27.0"
 
-gatsby-source-datocms@2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.4.1.tgz#3f413f5c2d2197fae82b42d3e4401ef5aebc6bda"
-  integrity sha512-MR6JrAHcQhUs+KRJtUd2qKpQd2fA84nrj8KO4vl6G6xP9ATN5mh5wsVEBYE75RxCVfADAfzMIvAhAtTuY75HqQ==
+gatsby-source-datocms@2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.5.4.tgz#ba9c0de1a510757ff120f19a99459ce205e30e89"
+  integrity sha512-7zDTmj8DwreUF8HoVOaOs1QAx5isQjpCUmTVZ4VYNMxBSCZ1Jzqlk2+ECmueTMI33WhpeaSe7Tc32EJoOdvucQ==
   dependencies:
     core-js "^3.2.1"
-    datocms-client ">=3.0.34"
+    datocms-client ">=3.1.0"
     fs-extra ">=8.1.0"
     humps ">=2.0.1"
-    imgix-url-params "11.2.0"
+    imgix-url-params ">=11.2.0"
     json-stringify-safe ">=5.0.1"
     md5 "2.2.1"
     object-assign "^4.1.1"
@@ -8267,10 +8268,10 @@ imagemin@^7.0.1:
     p-pipe "^3.0.0"
     replace-ext "^1.0.0"
 
-imgix-url-params@11.2.0:
-  version "11.2.0"
-  resolved "https://registry.yarnpkg.com/imgix-url-params/-/imgix-url-params-11.2.0.tgz#77dace7df4980067b35b49da5c5db68bec2d9112"
-  integrity sha512-KSSnTUFMOlbgUr4S2jKhiDGfsmtH18MCV27OhbhQhB2obUM/XXrdx8B6ZyG5t/xaJKJHD/nB8cCLqNYm3ypDrg==
+imgix-url-params@>=11.2.0:
+  version "11.8.1"
+  resolved "https://registry.yarnpkg.com/imgix-url-params/-/imgix-url-params-11.8.1.tgz#0d52ebf9fcdd3362557e03444d9e1f87ff48f547"
+  integrity sha512-vqEh5AS4GpRviKA5kNir+3Y+NvfR359zXzsDhIZ/GuSqxiRpyiVth70ZUbbD0l0NJTey2Z/aH9JUXT2/bG4jeQ==
 
 import-cwd@^2.0.0:
   version "2.1.0"
@@ -11929,6 +11930,11 @@ promise-inflight@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
+
+promise-limit@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/promise-limit/-/promise-limit-2.7.0.tgz#eb5737c33342a030eaeaecea9b3d3a93cb592b26"
+  integrity sha512-7nJ6v5lnJsXwGprnGXga4wx6d1POjvi5Qmf1ivTRxTjH4Z/9Czja/UCMLVmB9N93GeWOU93XaFaEt6jbuoagNw==
 
 promise-queue@2.2.5:
   version "2.2.5"
