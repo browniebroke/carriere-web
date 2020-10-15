@@ -57,11 +57,11 @@
     },
     {
       "path": "./public/component---src-pages-404-*.js",
-      "maxSize": "400B"
+      "maxSize": "500B"
     },
     {
       "path": "./public/component---src-pages-contact-*.js",
-      "maxSize": "700B"
+      "maxSize": "800B"
     },
     {
       "path": "./public/component---src-pages-photos-*.js",
