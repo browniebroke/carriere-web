@@ -17,7 +17,7 @@
 
 This site is built using [GatsbyJS](https://www.gatsbyjs.org/), a static code generator using [React](https://reactjs.org/) & [GraphQL](https://graphql.org/). It is deployed on [Netlify](https://www.netlify.com/) and the domain is coming from [OVH](https://www.ovh.co.uk/). Dependencies are kept up to date using the excellent [Renovate Bot](https://renovatebot.com/).
 
-## Development 
+## Development
 
 It uses yarn to manage dependencies, so getting started should be easy:
 
@@ -35,4 +35,3 @@ $ yarn run build
 1. Create a branch from `main` for the change with a meaningful name
 2. Make the required change, test locally, then commit
 3. Create a pull request, which will trigger the build & a deploy preview on Netlify.
- 
