@@ -3,6 +3,7 @@ name: CI
 on:
   push:
     branches: [ main ]
+  pull_request:
 
 jobs:
   lint:
@@ -71,7 +72,15 @@ jobs:
       with:
         url: 'https://www.carriere-alla.fr'
         netlify_site: 'carriere-alla.netlify.app'
-    - uses: actions/upload-artifact@master
-      with:
-        name: report
-        path: './report'
+    - name: Upload report to Zeit
+      run: |
+        vercel -t ${{ secrets.VERCEL_TOKEN }} deploy ./report/https*.html | tee zeit-now.log
+        TARGET_URL=`tail -n1 zeit-now.log`
+        curl -X POST https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -d "{
+            \"state\": \"success\",
+            \"target_url\": \"${TARGET_URL}\",
+            \"description\": \"Lighthouse report\",
+            \"context\": \"lighthouse-report\"
+          }"
