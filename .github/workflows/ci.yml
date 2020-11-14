@@ -72,15 +72,7 @@ jobs:
       with:
         url: 'https://www.carriere-alla.fr'
         netlify_site: 'carriere-alla.netlify.app'
-    - name: Upload report to Zeit
-      run: |
-        vercel -t ${{ secrets.VERCEL_TOKEN }} deploy ./report/https*.html | tee zeit-now.log
-        TARGET_URL=`tail -n1 zeit-now.log`
-        curl -X POST https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
-          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-          -d "{
-            \"state\": \"success\",
-            \"target_url\": \"${TARGET_URL}\",
-            \"description\": \"Lighthouse report\",
-            \"context\": \"lighthouse-report\"
-          }"
+    - uses: browniebroke/deploy-lighthouse-report-action@main
+      with:
+        vercel_token: ${{ secrets.VERCEL_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
