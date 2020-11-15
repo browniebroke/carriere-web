@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Facebook from '../images/icons/facebook.svg'
 import Phone from '../images/icons/phone.svg'
-import ExternalLink from './external-link'
+import { ExternalLink } from '@browniebroke/react-ui-components'
 
 const Footer = ({ containerClass }) => (
   <footer className="footer mt-auto bg-secondary py-5">
