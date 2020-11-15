@@ -1009,6 +1009,13 @@
     react-image-lightbox "^5.1.1"
     styled-components "^5.0.0"
 
+"@browniebroke/react-ui-components@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@browniebroke/react-ui-components/-/react-ui-components-1.0.3.tgz#307006efc7d3838fc2f6774cc277c5b1d6ef0e53"
+  integrity sha512-2/NppLdc1MsxL1fPyuyghP1TGTgCgZKm7wnr+In5ySyNYfsp3sBxuh2rwLlJTqeQPultfI1Xl0NwFaLVbkJMkg==
+  dependencies:
+    styled-components "^5.0.0"
+
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
