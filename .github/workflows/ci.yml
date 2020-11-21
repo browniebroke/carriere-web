@@ -2,77 +2,74 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
 
 jobs:
   lint:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         linter:
-        - eslint
-        - prettier
+          - eslint
+          - prettier
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    # Setup node based on .nvmrc
-    # https://github.com/actions/setup-node/issues/32#issuecomment-539794249
-    - name: Read .nvmrc
-      run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-      id: nvm
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '${{ steps.nvm.outputs.NVMRC }}'
+      # Setup node based on .nvmrc
+      # https://github.com/actions/setup-node/issues/32#issuecomment-539794249
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
-    - run: yarn
-    - run: |
-        yarn lint:${{ matrix.linter }}
-
+      - run: yarn
+      - run: |
+          yarn lint:${{ matrix.linter }}
 
   bundlewatch:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    # Setup node based on .nvmrc
-    # https://github.com/actions/setup-node/issues/32#issuecomment-539794249
-    - name: Read .nvmrc
-      run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-      id: nvm
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '${{ steps.nvm.outputs.NVMRC }}'
+      # Setup node based on .nvmrc
+      # https://github.com/actions/setup-node/issues/32#issuecomment-539794249
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
-    - run: yarn
-    - run: yarn bundlewatch
-      env:
-        BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
-
+      - run: yarn
+      - run: yarn bundlewatch
+        env:
+          BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
 
   lighthouse:
     runs-on: ubuntu-latest
 
     steps:
-    - run: sleep 360  # 6 mins in seconds
-      if: ${{ github.event_name == 'push' }}
-    - name: Wait for deploy
-      if: ${{ github.event_name == 'pull_request' }}
-      uses: maddox/actions/wait-for-200@master
-      env:
-        URL: 'https://deploy-preview-${{ github.event.pull_request.number }}--carriere-alla.netlify.app'
-        SECONDS_BETWEEN_CHECKS: 20
-        MAX_TRIES: 30
-    - name: Lighthouse Audit
-      uses: jakejarvis/lighthouse-action@master
-      with:
-        url: 'https://www.carriere-alla.fr'
-        netlify_site: 'carriere-alla.netlify.app'
-    - uses: browniebroke/deploy-lighthouse-report-action@main
-      with:
-        vercel_token: ${{ secrets.VERCEL_TOKEN }}
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      - run: sleep 360 # 6 mins in seconds
+        if: ${{ github.event_name == 'push' }}
+      - name: Wait for deploy
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: maddox/actions/wait-for-200@master
+        env:
+          URL: 'https://deploy-preview-${{ github.event.pull_request.number }}--carriere-alla.netlify.app'
+          SECONDS_BETWEEN_CHECKS: 20
+          MAX_TRIES: 30
+      - name: Lighthouse Audit
+        uses: jakejarvis/lighthouse-action@master
+        with:
+          url: 'https://www.carriere-alla.fr'
+          netlify_site: 'carriere-alla.netlify.app'
+      - uses: browniebroke/deploy-lighthouse-report-action@main
+        with:
+          vercel_token: ${{ secrets.VERCEL_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
