@@ -15,21 +15,3 @@
 .text-color {
   color: currentColor;
 }
-
-.font-icon {
-  fill: currentColor;
-  height: 1.2em;
-}
-
-.text-center-left-md {
-  text-align: center;
-  @include media-breakpoint-up(md) {
-    text-align: left;
-  }
-}
-.text-center-right-md {
-  text-align: center;
-  @include media-breakpoint-up(md) {
-    text-align: right;
-  }
-}
