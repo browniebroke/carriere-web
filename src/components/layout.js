@@ -2,13 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import { ThemeProvider } from 'styled-components'
 
 import '../scss/main.scss'
 import Header from './header'
 import Footer from './footer'
 import SiteAlert from './site-alert'
+import theme from '../theme'
 
-const Layout = ({ location, children, containerClass = 'container' }) => (
+const Layout = ({ location, children }) => (
   <StaticQuery
     query={graphql`
       query SiteMetaQuery {
@@ -23,25 +25,27 @@ const Layout = ({ location, children, containerClass = 'container' }) => (
     `}
     render={(data) => (
       <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            {
-              name: 'description',
-              content: data.site.siteMetadata.description,
-            },
-            { name: 'keywords', content: data.site.siteMetadata.keywords },
-          ]}
-        />
-        <Header location={location} containerClass={containerClass} />
-        <SiteAlert />
-        <div
-          className={containerClass}
-          style={{ minHeight: 'calc(100vh - 130px - 120px)' }}
-        >
-          {children}
-        </div>
-        <Footer containerClass={containerClass} />
+        <ThemeProvider theme={theme}>
+          <Helmet
+            title={data.site.siteMetadata.title}
+            meta={[
+              {
+                name: 'description',
+                content: data.site.siteMetadata.description,
+              },
+              { name: 'keywords', content: data.site.siteMetadata.keywords },
+            ]}
+          />
+          <Header location={location} />
+          <SiteAlert />
+          <div
+            className="container"
+            style={{ minHeight: 'calc(100vh - 130px - 120px)' }}
+          >
+            {children}
+          </div>
+          <Footer />
+        </ThemeProvider>
       </>
     )}
   />
@@ -52,7 +56,6 @@ Layout.propTypes = {
     pathname: PropTypes.string.isRequired,
   }),
   children: PropTypes.node.isRequired,
-  containerClass: PropTypes.string,
 }
 
 export default Layout

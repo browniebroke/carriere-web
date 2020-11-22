@@ -1,17 +1,20 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Facebook from '../images/icons/facebook.svg'
-import Phone from '../images/icons/phone.svg'
 import { ExternalLink } from '@browniebroke/react-ui-components'
 
-const Footer = ({ containerClass }) => (
+import Facebook from '../images/icons/facebook.svg'
+import Phone from '../images/icons/phone.svg'
+
+const Footer = ({ containerClass = 'container' }) => (
   <footer className="footer mt-auto bg-secondary py-5">
     <div className={containerClass}>
       <div className="row justify-content-between">
         <div className="col-md-4 pb-4 text-center-left-md">
           <ul className="list-unstyled">
             <li>
-              <ExternalLink to="https://www.facebook.com/carrierealla/">
+              <ExternalLink
+                to="https://www.facebook.com/carrierealla/"
+                title="Notre Page Facebook"
+              >
                 <Facebook className="font-icon mr-1" />
                 Facebook
               </ExternalLink>
@@ -28,6 +31,7 @@ const Footer = ({ containerClass }) => (
           <ExternalLink
             to="https://www.infogreffe.fr/entreprise-societe/812786986"
             className="small"
+            title="Info Greffe"
           >
             SIRET 812 786 986 R.C.S. RODEZ
           </ExternalLink>
@@ -50,12 +54,18 @@ const Footer = ({ containerClass }) => (
               </ExternalLink>
             </li>
             <li className="list-inline-item">
-              <ExternalLink to="https://www.flaticon.com/authors/gregor-cresnar">
+              <ExternalLink
+                to="https://www.flaticon.com/authors/gregor-cresnar"
+                title=""
+              >
                 Gregor Cresnar
               </ExternalLink>
             </li>
             <li className="list-inline-item">
-              <ExternalLink to="https://www.flaticon.com/authors/pixel-perfect">
+              <ExternalLink
+                to="https://www.flaticon.com/authors/pixel-perfect"
+                title=""
+              >
                 Pixel perfect
               </ExternalLink>
             </li>
@@ -65,9 +75,5 @@ const Footer = ({ containerClass }) => (
     </div>
   </footer>
 )
-
-Footer.propTypes = {
-  containerClass: PropTypes.string.isRequired,
-}
 
 export default Footer
