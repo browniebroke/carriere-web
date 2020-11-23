@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
+import { Container, ContentWrapper } from '@browniebroke/react-ui-components'
 
 import '../scss/main.scss'
 import Header from './header'
@@ -38,12 +39,11 @@ const Layout = ({ location, children }) => (
           />
           <Header location={location} />
           <SiteAlert />
-          <div
-            className="container"
-            style={{ minHeight: 'calc(100vh - 130px - 120px)' }}
-          >
-            {children}
-          </div>
+          <Container>
+            <ContentWrapper headerHeight="130px" footerHeight="120px">
+              {children}
+            </ContentWrapper>
+          </Container>
           <Footer />
         </ThemeProvider>
       </>
