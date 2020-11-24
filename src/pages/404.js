@@ -1,21 +1,28 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 import Layout from '../components/layout'
 
+const ContentStyles = styled.div`
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
 const NotFoundPage = () => (
   <Layout>
-    <div className="row my-5 text-center">
-      <div className="col-md-12">
-        <h1>Page introuvable</h1>
-        <p>
-          Pas moyen de trouver la page recherchée... <br />
-        </p>
-        <p>
-          <Link to="/">Retour à l'acceuil</Link>
-        </p>
-      </div>
-    </div>
+    <ContentStyles>
+      <h1>Page introuvable</h1>
+      <p>
+        Cette page n'existe pas... <br />
+      </p>
+      <p>
+        <Link to="/">Retour à l'acceuil</Link>
+      </p>
+    </ContentStyles>
   </Layout>
 )
 
