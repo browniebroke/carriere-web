@@ -7,12 +7,14 @@ import Slider from '../components/slider'
 import HandShake from '../images/icons/hand-shake.svg'
 import HomeBuilding from '../images/icons/home-building.svg'
 import Shield from '../images/icons/shield.svg'
+import Row from '../components/row'
+import Col from '../components/column'
 
 const IndexPage = ({ location, data }) => {
   const homePage = data.datoCmsHomePage
   return (
     <Layout location={location} pt={0}>
-      <div className="row">
+      <Row>
         <Slider
           autoplay={true}
           renderCenterLeftControls={() => false}
@@ -23,19 +25,17 @@ const IndexPage = ({ location, data }) => {
             <Img fluid={image.fluid} key={id} />
           ))}
         </Slider>
-      </div>
-      <div className="pt-5">
-        <div className="row justify-content-center">
-          <div className="col-md-10 text-center">
-            <h1>
-              {homePage.title} <br />
-            </h1>
-            <p className="lead">
-              <em>{homePage.subtitle}</em>
-            </p>
-          </div>
-        </div>
-      </div>
+      </Row>
+      <Row topPadding={5} justifyContent="center">
+        <Col textAlign="center">
+          <h1>
+            {homePage.title} <br />
+          </h1>
+          <p style={{ fontSize: '1.5em' }}>
+            <em>{homePage.subtitle}</em>
+          </p>
+        </Col>
+      </Row>
       <div className="py-5">
         <div className="row">
           <div className="col-md-4">

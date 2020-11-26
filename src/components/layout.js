@@ -3,7 +3,11 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
-import { Container, ContentWrapper } from '@browniebroke/react-ui-components'
+import {
+  Container,
+  ContentWrapper,
+  GlobalStyles,
+} from '@browniebroke/react-ui-components'
 
 import '../scss/main.scss'
 import Header from './header'
@@ -36,6 +40,7 @@ const Layout = ({ pt, location, children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
+        {/*<GlobalStyles />*/}
         <Helmet
           title={site.siteMetadata.title}
           meta={[
