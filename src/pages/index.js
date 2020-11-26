@@ -3,10 +3,10 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
+import Slider from '../components/slider'
 import HandShake from '../images/icons/hand-shake.svg'
 import HomeBuilding from '../images/icons/home-building.svg'
 import Shield from '../images/icons/shield.svg'
-import Slider from '../components/slider'
 
 const IndexPage = ({ location, data }) => {
   const homePage = data.datoCmsHomePage
