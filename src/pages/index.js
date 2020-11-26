@@ -11,7 +11,7 @@ import Slider from '../components/slider'
 const IndexPage = ({ location, data }) => {
   const homePage = data.datoCmsHomePage
   return (
-    <Layout location={location}>
+    <Layout location={location} pt={0}>
       <div className="row">
         <Slider
           autoplay={true}

@@ -10,8 +10,16 @@ import Header from './header'
 import Footer from './footer'
 import SiteAlert from './site-alert'
 import theme from '../theme'
+import styled from 'styled-components'
 
-const Layout = ({ location, children }) => {
+// TODO: find a better solution
+const PageContentWrapper = styled(ContentWrapper)`
+  padding-top: ${(props) =>
+    props.pt !== undefined ? props.pt : props.theme.spacings[4]};
+  padding-bottom: ${(props) => props.theme.spacings[4]};
+`
+
+const Layout = ({ pt, location, children }) => {
   const { site } = useStaticQuery(
     graphql`
       query SiteMetaQuery {
@@ -41,9 +49,9 @@ const Layout = ({ location, children }) => {
         <Header location={location} />
         <SiteAlert />
         <Container>
-          <ContentWrapper headerHeight="130px" footerHeight="120px">
+          <PageContentWrapper headerHeight="130px" footerHeight="120px" pt={pt}>
             {children}
-          </ContentWrapper>
+          </PageContentWrapper>
         </Container>
         <Footer />
       </ThemeProvider>

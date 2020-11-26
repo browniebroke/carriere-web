@@ -11,7 +11,7 @@ const PhotosPage = ({ location, data }) => {
   const albumNodesList = data.allDatoCmsAlbum.edges
   return (
     <Layout location={location}>
-      <div className="my-4">
+      <div>
         <h1>Photos</h1>
         <p>Voici quelques photos pour donner un aperçu de nos produits</p>
         <div className="row">

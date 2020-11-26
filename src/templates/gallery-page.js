@@ -18,7 +18,7 @@ const GalleryPage = ({ data }) => {
   }
   return (
     <Layout>
-      <div className="my-4">
+      <div>
         <h1>{album.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: album.description }} />
         <Gallery images={album.photos} lightboxOptions={lightboxOptions} />
