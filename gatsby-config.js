@@ -11,7 +11,7 @@ module.exports = {
     keywords: 'taille de pierre, construction, carrière, murs, piliers, voûtes',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -75,9 +75,10 @@ module.exports = {
         omitGoogleFont: true,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-offline',
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
