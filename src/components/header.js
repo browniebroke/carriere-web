@@ -11,7 +11,7 @@ import SiteLogo from '../images/icons/logo-full.svg'
 const StyledLogo = styled(SiteLogo)`
   width: 200px;
   path {
-    fill: ${(props) => props.theme.colors.secondary};
+    fill: currentColor;
   }
 `
 
