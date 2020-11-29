@@ -3,12 +3,10 @@ import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-import Row from '../components/row'
+import { Col, Row } from '@browniebroke/react-ui-components'
 
 import Layout from '../components/layout'
 import { makeAlbumUrlPath } from '../utils/routes'
-
-import Col from '../components/column'
 
 const GalleryLinkWrapper = styled.div`
   position: relative;

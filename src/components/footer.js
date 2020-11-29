@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import {
   Container,
   ExternalLink,
@@ -8,7 +9,6 @@ import {
 
 import Facebook from '../images/icons/facebook.svg'
 import Phone from '../images/icons/phone.svg'
-import styled from 'styled-components'
 
 const FooterStyles = styled.footer`
   background-color: ${(props) => props.theme.colors.secondary};

@@ -1009,10 +1009,10 @@
     react-image-lightbox "^5.1.1"
     styled-components "^5.0.0"
 
-"@browniebroke/react-ui-components@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@browniebroke/react-ui-components/-/react-ui-components-1.4.0.tgz#a025ab3e4841a43e69ca30dab193591c9342707d"
-  integrity sha512-bHwn/L2DI+BREFGAy52IGx+Woe1hJeCNDGZ30LaXOLPh6boenmlAPmSnwJk1fZBali8uhCE3ehpuH/k/ST5z7g==
+"@browniebroke/react-ui-components@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@browniebroke/react-ui-components/-/react-ui-components-1.5.0.tgz#e9ebf77e11a9535855a822e78b1aecf12ea829a4"
+  integrity sha512-Fi4fPxeUJb2J8oTbu9ZhReZ7UFm8GI5HtYDCI5ZyL+jgLbQBUNfvNhuTHvX40ZVn40/Evgn9OWrSSexKfPRnzA==
   dependencies:
     color "^3.1.3"
     gray-percentage "^2.0.0"

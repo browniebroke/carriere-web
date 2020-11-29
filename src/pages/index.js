@@ -3,8 +3,8 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-import Row from '../components/row'
-import Col from '../components/column'
+import { Col, Row } from '@browniebroke/react-ui-components'
+
 import Layout from '../components/layout'
 import Slider from '../components/slider'
 import HandShake from '../images/icons/hand-shake.svg'
