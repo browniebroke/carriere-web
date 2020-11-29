@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import { Alert } from '@browniebroke/react-ui-components'
 
 const SiteAlert = () => {
   const { alertData } = useStaticQuery(graphql`
@@ -16,11 +17,7 @@ const SiteAlert = () => {
   const endDate = new Date(alertData.endDate)
   const today = new Date()
   if (alertData.isActive && startDate < today && today < endDate) {
-    return (
-      <div className="alert alert-info mb-0">
-        <div className="lead text-center p-2">{alertData.content}</div>
-      </div>
-    )
+    return <Alert alertType="info">{alertData.content}</Alert>
   }
   return null
 }

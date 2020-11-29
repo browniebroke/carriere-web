@@ -1,18 +1,42 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
+
+import { Col, Row } from '@browniebroke/react-ui-components'
 
 import Layout from '../components/layout'
+import Slider from '../components/slider'
 import HandShake from '../images/icons/hand-shake.svg'
 import HomeBuilding from '../images/icons/home-building.svg'
 import Shield from '../images/icons/shield.svg'
-import Slider from '../components/slider'
+
+const getLogoStyles = (props) => `
+  margin: auto;
+  width: 100%;
+  max-height: 8rem;
+  margin-bottom: ${props.theme.spacings[3]};
+  
+  path {
+    fill: ${props.theme.colors.primary};
+  }
+  `
+
+const StyledHandShake = styled(HandShake)`
+  ${getLogoStyles}
+`
+const StyledShield = styled(Shield)`
+  ${getLogoStyles}
+`
+const StyledHomeBuilding = styled(HomeBuilding)`
+  ${getLogoStyles}
+`
 
 const IndexPage = ({ location, data }) => {
   const homePage = data.datoCmsHomePage
   return (
-    <Layout location={location}>
-      <div className="row">
+    <Layout location={location} pt={0}>
+      <Row>
         <Slider
           autoplay={true}
           renderCenterLeftControls={() => false}
@@ -23,35 +47,31 @@ const IndexPage = ({ location, data }) => {
             <Img fluid={image.fluid} key={id} />
           ))}
         </Slider>
-      </div>
-      <div className="pt-5">
-        <div className="row justify-content-center">
-          <div className="col-md-10 text-center">
-            <h1>
-              {homePage.title} <br />
-            </h1>
-            <p className="lead">
-              <em>{homePage.subtitle}</em>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="py-5">
-        <div className="row">
-          <div className="col-md-4">
-            <HandShake className="selling-point mb-4" />
-            <p className="text-center">{homePage.handshakeCopy}</p>
-          </div>
-          <div className="col-md-4">
-            <Shield className="selling-point mb-4" />
-            <p className="text-center">{homePage.qualityCopy}</p>
-          </div>
-          <div className="col-md-4">
-            <HomeBuilding className="selling-point mb-4" />
-            <p className="text-center">{homePage.collabCopy}</p>
-          </div>
-        </div>
-      </div>
+      </Row>
+      <Row yPadding={5} justifyContent="center">
+        <Col textAlign="center">
+          <h1>
+            {homePage.title} <br />
+          </h1>
+          <p style={{ fontSize: '1.5em' }}>
+            <em>{homePage.subtitle}</em>
+          </p>
+        </Col>
+      </Row>
+      <Row>
+        <Col textAlign="center" mdMaxWidth={`${100 / 3}%`}>
+          <StyledHandShake />
+          <p>{homePage.handshakeCopy}</p>
+        </Col>
+        <Col textAlign="center" mdMaxWidth={`${100 / 3}%`}>
+          <StyledShield />
+          <p>{homePage.qualityCopy}</p>
+        </Col>
+        <Col textAlign="center" mdMaxWidth={`${100 / 3}%`}>
+          <StyledHomeBuilding />
+          <p>{homePage.collabCopy}</p>
+        </Col>
+      </Row>
     </Layout>
   )
 }

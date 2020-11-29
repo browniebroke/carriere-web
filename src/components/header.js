@@ -1,26 +1,30 @@
 import React from 'react'
-import NavBav from './nav-bar'
-import NavItem from './nav-item'
-import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
+import {
+  Header as HeaderContainer,
+  Navigation,
+} from '@browniebroke/react-ui-components'
 
-const Header = ({ location, data, containerClass }) => (
-  <header>
-    <NavBav containerClass={containerClass}>
-      <NavItem location={location} to="/photos/">
-        Photos
-      </NavItem>
-      <NavItem location={location} to="/contact/">
-        Contact
-      </NavItem>
-    </NavBav>
-  </header>
+import SiteLogo from '../images/icons/logo-full.svg'
+
+const StyledLogo = styled(SiteLogo)`
+  width: 200px;
+  path {
+    fill: ${(props) => props.theme.colors.secondary};
+  }
+`
+
+const Header = () => (
+  <HeaderContainer>
+    <Link to="/" title="Acceuil" aria-label="Acceuil">
+      <StyledLogo />
+    </Link>
+    <Navigation direction="row">
+      <Link to="/photos/">Photos</Link>
+      <Link to="/contact/">Contact</Link>
+    </Navigation>
+  </HeaderContainer>
 )
-
-Header.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }),
-  containerClass: PropTypes.string.isRequired,
-}
 
 export default Header
