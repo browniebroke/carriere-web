@@ -58,7 +58,7 @@
   "bundlewatch": [
     {
       "path": "./public/app-*.js",
-      "maxSize": "35KB"
+      "maxSize": "20KB"
     },
     {
       "path": "./public/component---src-pages-404-*.js",
@@ -66,27 +66,27 @@
     },
     {
       "path": "./public/component---src-pages-contact-*.js",
-      "maxSize": "800B"
+      "maxSize": "1.5KB"
     },
     {
       "path": "./public/component---src-pages-photos-*.js",
-      "maxSize": "3.2KB"
+      "maxSize": "4.1KB"
     },
     {
       "path": "./public/component---src-pages-index-*.js",
-      "maxSize": "24KB"
+      "maxSize": "25KB"
     },
     {
       "path": "./public/component---src-templates-gallery-page-*.js",
-      "maxSize": "29KB"
+      "maxSize": "14KB"
     },
     {
       "path": "./public/styles.*.css",
-      "maxSize": "13.2KB"
+      "maxSize": "16KB"
     },
     {
       "path": "./public/styles-*.js",
-      "maxSize": "150B"
+      "maxSize": "130B"
     }
   ]
 }
