@@ -9,7 +9,6 @@ import {
   GlobalStyles,
 } from '@browniebroke/react-ui-components'
 
-import '../scss/main.scss'
 import Header from './header'
 import Footer from './footer'
 import SiteAlert from './site-alert'
@@ -40,7 +39,7 @@ const Layout = ({ pt, location, children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        {/*<GlobalStyles />*/}
+        <GlobalStyles />
         <Helmet
           title={site.siteMetadata.title}
           meta={[
