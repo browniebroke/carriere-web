@@ -1,11 +1,38 @@
 import React from 'react'
+import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
+
+import Row from '../components/row'
 
 import Layout from '../components/layout'
 import { makeAlbumUrlPath } from '../utils/routes'
 
-import './photos.scss'
+import Col from '../components/column'
+
+const GalleryLinkWrapper = styled.div`
+  position: relative;
+
+  &:hover {
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.2s;
+
+    img {
+      filter: brightness(50%);
+    }
+  }
+`
+
+const GalleryLabel = styled.span`
+  font-weight: 900;
+  font-size: 1.2em;
+  color: white;
+  position: absolute;
+  z-index: 5;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+`
 
 const PhotosPage = ({ location, data }) => {
   const albumNodesList = data.allDatoCmsAlbum.edges
@@ -14,18 +41,24 @@ const PhotosPage = ({ location, data }) => {
       <div>
         <h1>Photos</h1>
         <p>Voici quelques photos pour donner un aperçu de nos produits</p>
-        <div className="row">
+        <Row>
           {albumNodesList.map(({ node }) => (
-            <div className="col-6 col-sm-4 col-md-3 px-1 py-1" key={node.id}>
+            <Col
+              width="50%"
+              smMaxWidth={`${100 / 3}%`}
+              mdMaxWidth="25%"
+              sidePadding={1}
+              key={node.id}
+            >
               <Link to={makeAlbumUrlPath(node.title)}>
-                <div className="gallery-link-wrapper">
+                <GalleryLinkWrapper>
                   <Img fluid={node.mainPicture.fluid} alt={node.title} />
-                  <span className="gallery-label">{node.title}</span>
-                </div>
+                  <GalleryLabel>{node.title}</GalleryLabel>
+                </GalleryLinkWrapper>
               </Link>
-            </div>
+            </Col>
           ))}
-        </div>
+        </Row>
       </div>
     </Layout>
   )
