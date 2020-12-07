@@ -11,25 +11,15 @@ import HandShake from '../images/icons/hand-shake.svg'
 import HomeBuilding from '../images/icons/home-building.svg'
 import Shield from '../images/icons/shield.svg'
 
-const getLogoStyles = (props) => `
+const IconStyles = styled.svg`
   margin: auto;
   width: 100%;
   max-height: 8rem;
-  margin-bottom: ${props.theme.spacings[3]};
-  
-  path {
-    fill: ${props.theme.colors.primary};
-  }
-  `
+  margin-bottom: ${(props) => props.theme.spacings[3]};
 
-const StyledHandShake = styled(HandShake)`
-  ${getLogoStyles}
-`
-const StyledShield = styled(Shield)`
-  ${getLogoStyles}
-`
-const StyledHomeBuilding = styled(HomeBuilding)`
-  ${getLogoStyles}
+  path {
+    fill: ${(props) => props.theme.colors.primary};
+  }
 `
 
 const IndexPage = ({ location, data }) => {
@@ -60,15 +50,15 @@ const IndexPage = ({ location, data }) => {
       </Row>
       <Row>
         <Col textAlign="center" mdMaxWidth={`${100 / 3}%`}>
-          <StyledHandShake />
+          <IconStyles as={HandShake} />
           <p>{homePage.handshakeCopy}</p>
         </Col>
         <Col textAlign="center" mdMaxWidth={`${100 / 3}%`}>
-          <StyledShield />
+          <IconStyles as={Shield} />
           <p>{homePage.qualityCopy}</p>
         </Col>
         <Col textAlign="center" mdMaxWidth={`${100 / 3}%`}>
-          <StyledHomeBuilding />
+          <IconStyles as={HomeBuilding} />
           <p>{homePage.collabCopy}</p>
         </Col>
       </Row>
