@@ -82,7 +82,7 @@
     },
     {
       "path": "./public/styles.*.css",
-      "maxSize": "16KB"
+      "maxSize": "25KB"
     },
     {
       "path": "./public/styles-*.js",
