@@ -1040,6 +1040,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/montserrat@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.1.0.tgz#a5f4d334b3702699af88c5e6c5c6972095c2c947"
+  integrity sha512-Dqd+sGHfKg3TGlNs7f8VFQLjSgLcu6ZzlDS10rVDIs/YZVCWt9BMgdLF3n19QQt8HsuUteK+YOhswGL23W3Lgw==
+
 "@graphql-tools/batch-execute@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@graphql-tools/batch-execute/-/batch-execute-7.0.0.tgz#e79d11bd5b39f29172f6ec2eafa71103c6a6c85b"
@@ -6367,11 +6372,6 @@ follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.1.tgz#5f69b813376cee4fd0474a3aba835df04ab763b7"
   integrity sha512-SSG5xmZh1mkPGyKzjZP8zLjltIfpW32Y5QpdNJyjcfGxK3qo3NDDkZOZSFiGn1A6SclQxY9GzEwAHQ3dmYRWpg==
-
-fontsource-montserrat@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/fontsource-montserrat/-/fontsource-montserrat-4.0.0.tgz#3af39e31e2f77d3b131288ad4fdc4968c4b34975"
-  integrity sha512-0mpa23YJBLxE5fEVVBgcHbuhjiH98EA4XjRVocP/sCJAGoODvXCRqLTSVLmoVFBas4X8WnHU4rv5QOxB1e4TZw==
 
 for-in@^1.0.2:
   version "1.0.2"
