@@ -6,8 +6,8 @@
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "4.0.2",
     "@browniebroke/react-ui-components": "1.6.0",
+    "@fontsource/montserrat": "4.1.0",
     "babel-plugin-styled-components": "1.12.0",
-    "fontsource-montserrat": "4.0.0",
     "gatsby": "2.29.3",
     "gatsby-image": "2.8.0",
     "gatsby-plugin-google-analytics": "2.8.0",
@@ -82,7 +82,7 @@
     },
     {
       "path": "./public/styles.*.css",
-      "maxSize": "16KB"
+      "maxSize": "25KB"
     },
     {
       "path": "./public/styles-*.js",
