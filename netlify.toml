@@ -9,3 +9,11 @@
 
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
+
+[[redirects]]
+  from = "/photos/"
+  to = "/produits/"
+
+[[redirects]]
+  from = "/photos/:slug/"
+  to = "/produits/:slug/"
