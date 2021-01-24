@@ -21,7 +21,7 @@ const Header = () => (
       <StyledLogo />
     </Link>
     <Navigation direction="row">
-      <Link to="/photos/">Photos</Link>
+      <Link to="/produits/">Produits</Link>
       <Link to="/contact/">Contact</Link>
     </Navigation>
   </HeaderContainer>

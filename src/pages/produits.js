@@ -32,13 +32,16 @@ const GalleryLabel = styled.span`
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 `
 
-const PhotosPage = ({ location, data }) => {
+const ProductsListPage = ({ location, data }) => {
   const albumNodesList = data.allDatoCmsAlbum.edges
   return (
     <Layout location={location}>
       <div>
-        <h1>Photos</h1>
-        <p>Voici quelques photos pour donner un aperçu de nos produits</p>
+        <h1>Produits</h1>
+        <p>
+          Voici un aperçu de nos produits. Cliquez sur une catégorie pour en
+          savoir plus.
+        </p>
         <Row>
           {albumNodesList.map(({ node }) => (
             <Col
@@ -84,4 +87,4 @@ export const photosPageQuery = graphql`
   }
 `
 
-export default PhotosPage
+export default ProductsListPage
