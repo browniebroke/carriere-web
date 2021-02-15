@@ -1022,10 +1022,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/montserrat@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.1.0.tgz#a5f4d334b3702699af88c5e6c5c6972095c2c947"
-  integrity sha512-Dqd+sGHfKg3TGlNs7f8VFQLjSgLcu6ZzlDS10rVDIs/YZVCWt9BMgdLF3n19QQt8HsuUteK+YOhswGL23W3Lgw==
+"@fontsource/montserrat@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.2.1.tgz#7c3aa481593427beb0be732a49da39689c4b5c16"
+  integrity sha512-9uEUTj1ANylbaaQbGTBZESv56D5XuV2Jk8XwpjI/gAXqs2Ig/HX9cB8EnCa67cKIY+ybqWL/bY8rEeBcFlXjGA==
 
 "@graphql-tools/batch-execute@^7.0.0":
   version "7.0.0"
