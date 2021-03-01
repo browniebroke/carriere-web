@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "prettier",
-    "prettier/react"
-  ],
+  "extends": ["prettier"],
   "plugins": [
     "react",
     "prettier"
