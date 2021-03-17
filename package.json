@@ -4,26 +4,26 @@
   "version": "1.0.0",
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "4.0.2",
+    "@browniebroke/gatsby-image-gallery": "6.0.0",
     "@browniebroke/react-ui-components": "1.7.1",
     "@fontsource/montserrat": "4.2.1",
     "babel-plugin-styled-components": "1.12.0",
-    "gatsby": "2.32.9",
-    "gatsby-image": "2.11.0",
-    "gatsby-plugin-google-analytics": "2.11.0",
-    "gatsby-plugin-manifest": "2.12.1",
-    "gatsby-plugin-netlify": "2.11.0",
-    "gatsby-plugin-offline": "3.10.2",
-    "gatsby-plugin-react-helmet": "3.10.0",
+    "gatsby": "3.1.0",
+    "gatsby-plugin-image": "1.1.0",
+    "gatsby-plugin-google-analytics": "3.1.0",
+    "gatsby-plugin-manifest": "3.1.0",
+    "gatsby-plugin-netlify": "3.1.0",
+    "gatsby-plugin-offline": "4.1.0",
+    "gatsby-plugin-react-helmet": "4.1.0",
     "gatsby-plugin-react-svg": "3.0.0",
     "gatsby-plugin-sentry": "1.0.1",
-    "gatsby-plugin-sharp": "2.14.3",
-    "gatsby-plugin-sitemap": "2.12.0",
-    "gatsby-plugin-styled-components": "3.10.0",
-    "gatsby-plugin-typography": "2.12.0",
-    "gatsby-source-datocms": "2.5.17",
-    "gatsby-source-filesystem": "2.11.1",
-    "gatsby-transformer-sharp": "2.12.0",
+    "gatsby-plugin-sharp": "3.1.0",
+    "gatsby-plugin-sitemap": "3.1.0",
+    "gatsby-plugin-styled-components": "4.1.0",
+    "gatsby-plugin-typography": "3.1.0",
+    "gatsby-source-datocms": "2.6.6",
+    "gatsby-source-filesystem": "3.1.0",
+    "gatsby-transformer-sharp": "3.1.0",
     "nuka-carousel": "4.7.5",
     "prop-types": "15.7.2",
     "react": "17.0.1",
@@ -58,7 +58,7 @@
   "bundlewatch": [
     {
       "path": "./public/app-*.js",
-      "maxSize": "20KB"
+      "maxSize": "25KB"
     },
     {
       "path": "./public/component---src-pages-404-*.js",
@@ -66,11 +66,11 @@
     },
     {
       "path": "./public/component---src-pages-contact-*.js",
-      "maxSize": "1.5KB"
+      "maxSize": "1KB"
     },
     {
       "path": "./public/component---src-pages-produits-*.js",
-      "maxSize": "4.1KB"
+      "maxSize": "3.5KB"
     },
     {
       "path": "./public/component---src-pages-index-*.js",
@@ -83,10 +83,6 @@
     {
       "path": "./public/styles.*.css",
       "maxSize": "25KB"
-    },
-    {
-      "path": "./public/styles-*.js",
-      "maxSize": "130B"
     }
   ]
 }

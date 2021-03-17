@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 import { Col, Row } from '@browniebroke/react-ui-components'
@@ -34,7 +34,7 @@ const IndexPage = ({ location, data }) => {
           wrapAround={true}
         >
           {homePage.carousel.map((image, id) => (
-            <Img fluid={image.fluid} key={id} />
+            <GatsbyImage image={getImage(image)} key={id} alt="" />
           ))}
         </Slider>
       </Row>
@@ -72,12 +72,11 @@ export const indexPageQuery = graphql`
   query homePageQuery {
     datoCmsHomePage {
       carousel {
-        fluid(
-          maxWidth: 1700
+        gatsbyImageData(
+          width: 1700
+          placeholder: BLURRED
           imgixParams: { fit: "crop", w: "1700", h: "980" }
-        ) {
-          ...GatsbyDatoCmsFluid
-        }
+        )
       }
       title
       subtitle
