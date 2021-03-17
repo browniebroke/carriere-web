@@ -4,8 +4,6 @@ import Gallery from '@browniebroke/gatsby-image-gallery'
 
 import Layout from '../components/layout'
 
-import '@browniebroke/gatsby-image-gallery/dist/style.css'
-
 const GalleryPage = ({ data }) => {
   const album = data.datoCmsAlbum
   const lightboxOptions = {
@@ -33,15 +31,13 @@ export const galleryPageQuery = graphql`
       title
       description
       photos {
-        full: fluid(maxWidth: 1024) {
-          ...GatsbyDatoCmsFluid
-        }
-        thumb: fluid(
-          maxWidth: 270
+        full: gatsbyImageData(layout: FULL_WIDTH)
+        thumb: gatsbyImageData(
+          width: 270
+          height: 270
+          placeholder: BLURRED
           imgixParams: { fit: "crop", w: "270", h: "270" }
-        ) {
-          ...GatsbyDatoCmsFluid
-        }
+        )
         caption: title
         thumbAlt: alt
       }

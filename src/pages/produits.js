@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import { Col, Row } from '@browniebroke/react-ui-components'
 
@@ -10,6 +10,8 @@ import { makeAlbumUrlPath } from '../utils/routes'
 
 const GalleryLinkWrapper = styled.div`
   position: relative;
+  width: 270px;
+  height: 270px;
 
   &:hover {
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
@@ -53,7 +55,10 @@ const ProductsListPage = ({ location, data }) => {
             >
               <Link to={makeAlbumUrlPath(node.title)}>
                 <GalleryLinkWrapper>
-                  <Img fluid={node.mainPicture.fluid} alt={node.title} />
+                  <GatsbyImage
+                    image={getImage(node.mainPicture)}
+                    alt={node.title}
+                  />
                   <GalleryLabel>{node.title}</GalleryLabel>
                 </GalleryLinkWrapper>
               </Link>
@@ -74,12 +79,11 @@ export const photosPageQuery = graphql`
           title
           description
           mainPicture {
-            fluid(
-              maxWidth: 270
+            gatsbyImageData(
+              width: 270
+              placeholder: BLURRED
               imgixParams: { fit: "crop", w: "270", h: "270" }
-            ) {
-              ...GatsbyDatoCmsFluid
-            }
+            )
           }
         }
       }
