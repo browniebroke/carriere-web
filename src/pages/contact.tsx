@@ -8,10 +8,21 @@ import {
 
 import Layout from '../components/layout'
 
-const ContactPage = ({ location, data }) => {
+interface ContactPageProps {
+  data: {
+    datoCmsContactPage: {
+      title: string
+      intro: string
+      mapTitle: string
+      workshopLocation: string
+    }
+  }
+}
+
+const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
   const contactPage = data.datoCmsContactPage
   return (
-    <Layout location={location}>
+    <Layout>
       <Row>
         <Col>
           <h1>{contactPage.title}</h1>

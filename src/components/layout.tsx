@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
@@ -8,6 +7,7 @@ import {
   ContentWrapper,
   GlobalStyles,
 } from '@browniebroke/react-ui-components'
+import { Theme } from '@browniebroke/react-ui-components/src/types'
 
 import Header from './header'
 import Footer from './footer'
@@ -15,14 +15,23 @@ import SiteAlert from './site-alert'
 import theme from '../theme'
 import styled from 'styled-components'
 
+interface PageContentWrapperProps {
+  theme: Theme
+  pt?: string
+}
+
 // TODO: find a better solution
-const PageContentWrapper = styled(ContentWrapper)`
+const PageContentWrapper = styled(ContentWrapper)<PageContentWrapperProps>`
   padding-top: ${(props) =>
     props.pt !== undefined ? props.pt : props.theme.spacings[4]};
   padding-bottom: ${(props) => props.theme.spacings[4]};
 `
 
-const Layout = ({ pt, location, children }) => {
+interface LayoutProps {
+  pt?: string
+}
+
+const Layout: React.FC<LayoutProps> = ({ pt, children }) => {
   const { site } = useStaticQuery(
     graphql`
       query SiteMetaQuery {
@@ -50,7 +59,7 @@ const Layout = ({ pt, location, children }) => {
             { name: 'keywords', content: site.siteMetadata.keywords },
           ]}
         />
-        <Header location={location} />
+        <Header />
         <SiteAlert />
         <Container>
           <PageContentWrapper headerHeight="130px" footerHeight="120px" pt={pt}>
@@ -61,13 +70,6 @@ const Layout = ({ pt, location, children }) => {
       </ThemeProvider>
     </>
   )
-}
-
-Layout.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }),
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

@@ -1,17 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import Carousel from 'nuka-carousel'
 
 import { Col, Row } from '@browniebroke/react-ui-components'
+import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
 import Layout from '../components/layout'
 import HandShake from '../images/icons/hand-shake.svg'
 import HomeBuilding from '../images/icons/home-building.svg'
 import Shield from '../images/icons/shield.svg'
 
-const IconStyles = styled.svg`
+const IconStyles = styled.svg<ThemeProps>`
   margin: auto;
   width: 100%;
   max-height: 8rem;
@@ -22,10 +23,27 @@ const IconStyles = styled.svg`
   }
 `
 
-const IndexPage = ({ location, data }) => {
+interface CarouselImage {
+  image: IGatsbyImageData
+}
+
+interface IndexPageProps {
+  data: {
+    datoCmsHomePage: {
+      carousel: CarouselImage[]
+      title: string
+      subtitle: string
+      handshakeCopy: string
+      collabCopy: string
+      qualityCopy: string
+    }
+  }
+}
+
+const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   const homePage = data.datoCmsHomePage
   return (
-    <Layout location={location} pt={0}>
+    <Layout pt={'0'}>
       <Row>
         <Carousel
           autoplay={true}
@@ -33,8 +51,8 @@ const IndexPage = ({ location, data }) => {
           renderCenterRightControls={() => false}
           wrapAround={true}
         >
-          {homePage.carousel.map((image, id) => (
-            <GatsbyImage image={getImage(image)} key={id} alt="" />
+          {homePage.carousel.map((carouselImage, id) => (
+            <GatsbyImage image={carouselImage.image} key={id} alt="" />
           ))}
         </Carousel>
       </Row>
@@ -72,7 +90,7 @@ export const indexPageQuery = graphql`
   query homePageQuery {
     datoCmsHomePage {
       carousel {
-        gatsbyImageData(
+        image: gatsbyImageData(
           width: 1700
           placeholder: BLURRED
           imgixParams: { fit: "crop", w: "1700", h: "980" }

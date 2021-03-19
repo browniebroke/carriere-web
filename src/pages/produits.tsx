@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 import { Col, Row } from '@browniebroke/react-ui-components'
 
 import Layout from '../components/layout'
+// @ts-ignore
 import { makeAlbumUrlPath } from '../utils/routes'
 
 const GalleryLinkWrapper = styled.div`
@@ -34,10 +35,29 @@ const GalleryLabel = styled.span`
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 `
 
-const ProductsListPage = ({ location, data }) => {
+interface ProductPageEdge {
+  node: {
+    id: string
+    title: string
+    description: string
+    mainPicture: {
+      gatsbyImageData: IGatsbyImageData
+    }
+  }
+}
+
+interface ProductListPageProps {
+  data: {
+    allDatoCmsAlbum: {
+      edges: ProductPageEdge[]
+    }
+  }
+}
+
+const ProductsListPage: React.FC<ProductListPageProps> = ({ data }) => {
   const albumNodesList = data.allDatoCmsAlbum.edges
   return (
-    <Layout location={location}>
+    <Layout>
       <div>
         <h1>Produits</h1>
         <p>
@@ -56,7 +76,7 @@ const ProductsListPage = ({ location, data }) => {
               <Link to={makeAlbumUrlPath(node.title)}>
                 <GalleryLinkWrapper>
                   <GatsbyImage
-                    image={getImage(node.mainPicture)}
+                    image={node.mainPicture.gatsbyImageData}
                     alt={node.title}
                   />
                   <GalleryLabel>{node.title}</GalleryLabel>

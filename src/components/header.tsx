@@ -15,7 +15,7 @@ const StyledLogo = styled(SiteLogo)`
   }
 `
 
-const Header = () => (
+const Header: React.FC = () => (
   <HeaderContainer>
     <Link to="/" title="Acceuil" aria-label="Acceuil">
       <StyledLogo />

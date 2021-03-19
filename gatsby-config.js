@@ -75,6 +75,7 @@ module.exports = {
         omitGoogleFont: true,
       },
     },
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
