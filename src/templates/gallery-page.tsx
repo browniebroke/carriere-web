@@ -1,10 +1,28 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 
 import Layout from '../components/layout'
 
-const GalleryPage = ({ data }) => {
+interface PhotoData {
+  full: IGatsbyImageData
+  thumb: IGatsbyImageData
+  caption: string
+  thumbAlt: string
+}
+
+interface GalleryProps {
+  data: {
+    datoCmsAlbum: {
+      title: string
+      description: string
+      photos: PhotoData[]
+    }
+  }
+}
+
+const GalleryPage: React.FC<GalleryProps> = ({ data }) => {
   const album = data.datoCmsAlbum
   const lightboxOptions = {
     imageLoadErrorMessage: 'Impossible de charger cette image',

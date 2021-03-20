@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const urlPath = makeAlbumUrlPath(node.title)
     actions.createPage({
       path: urlPath,
-      component: path.resolve(`./src/templates/gallery-page.js`),
+      component: path.resolve(`./src/templates/gallery-page.tsx`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.

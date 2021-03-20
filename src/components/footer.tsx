@@ -6,11 +6,12 @@ import {
   ListInline,
   Row,
 } from '@browniebroke/react-ui-components'
+import { Theme, ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
 import Facebook from '../images/icons/facebook.svg'
 import Phone from '../images/icons/phone.svg'
 
-const FooterStyles = styled.footer`
+const FooterStyles = styled.footer<ThemeProps>`
   background-color: ${(props) => props.theme.colors.secondary};
   padding-top: ${(props) => props.theme.spacings[4]};
   padding-bottom: ${(props) => props.theme.spacings[4]};
@@ -26,7 +27,14 @@ const FooterRowStyles = styled(Row)`
   justify-content: space-between;
 `
 
-const FooterColumn = styled.div`
+interface FooterColumnProps {
+  theme: Theme
+  alignment: string
+  fontSize?: string
+  mdWidth?: number
+}
+
+const FooterColumn = styled.div<FooterColumnProps>`
   text-align: center;
   padding-bottom: ${(props) => props.theme.spacings[3]};
   width: 100%;
@@ -44,7 +52,7 @@ const ListUnstyled = styled.ul`
   padding: 0;
 `
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <FooterStyles>
     <Container>
       <FooterRowStyles>

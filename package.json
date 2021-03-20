@@ -5,12 +5,12 @@
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "6.0.0",
-    "@browniebroke/react-ui-components": "1.7.1",
+    "@browniebroke/react-ui-components": "1.7.2",
     "@fontsource/montserrat": "4.2.1",
     "babel-plugin-styled-components": "1.12.0",
     "gatsby": "3.1.0",
-    "gatsby-plugin-image": "1.1.0",
     "gatsby-plugin-google-analytics": "3.1.0",
+    "gatsby-plugin-image": "1.1.0",
     "gatsby-plugin-manifest": "3.1.0",
     "gatsby-plugin-netlify": "3.1.0",
     "gatsby-plugin-offline": "4.1.0",
@@ -20,21 +20,26 @@
     "gatsby-plugin-sharp": "3.1.0",
     "gatsby-plugin-sitemap": "3.1.0",
     "gatsby-plugin-styled-components": "4.1.0",
+    "gatsby-plugin-typescript": "3.1.0",
     "gatsby-plugin-typography": "3.1.0",
     "gatsby-source-datocms": "2.6.6",
     "gatsby-source-filesystem": "3.1.0",
     "gatsby-transformer-sharp": "3.1.0",
     "nuka-carousel": "4.7.5",
-    "prop-types": "15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
     "react-typography": "0.16.19",
     "slugify": "1.4.7",
     "styled-components": "5.2.1",
+    "typescript": "4.2.3",
     "typography": "0.16.19"
   },
   "devDependencies": {
+    "@types/react": "17.0.3",
+    "@types/react-dom": "17.0.2",
+    "@types/react-helmet": "6.1.0",
+    "@types/styled-components": "5.1.9",
     "bundlewatch": "0.3.2",
     "eslint": "7.21.0",
     "eslint-config-prettier": "8.1.0",
@@ -51,9 +56,50 @@
     "prebundlewatch": "yarn run build",
     "bundlewatch": "bundlewatch",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
+    "format": "prettier --write .",
     "lint:eslint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:prettier": "prettier --check \"**/*.+(js|jsx|json|css|scss)\""
+    "lint:prettier": "prettier --check .",
+    "lint:tsc": "tsc"
+  },
+  "renovate": {
+    "extends": [
+      "github>browniebroke/renovate-configs:js-app"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "prettier"
+    ],
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "semi": false,
+          "singleQuote": true,
+          "trailingComma": "es5"
+        }
+      ]
+    }
   },
   "bundlewatch": [
     {

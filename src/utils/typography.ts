@@ -1,3 +1,4 @@
+// @ts-ignore
 import Typography from 'typography'
 import { typographyTheme } from '@browniebroke/react-ui-components'
 
