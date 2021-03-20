@@ -58,7 +58,8 @@
     "develop": "gatsby develop",
     "format": "prettier --write .",
     "lint:eslint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:prettier": "prettier --check ."
+    "lint:prettier": "prettier --check .",
+    "lint:tsc": "tsc"
   },
   "renovate": {
     "extends": [
