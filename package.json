@@ -56,9 +56,9 @@
     "prebundlewatch": "yarn run build",
     "bundlewatch": "bundlewatch",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
+    "format": "prettier --write .",
     "lint:eslint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:prettier": "prettier --check \"**/*.+(js|jsx|json|css|scss)\""
+    "lint:prettier": "prettier --check ."
   },
   "renovate": {
     "extends": [
