@@ -2,11 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
+import Carousel from 'nuka-carousel'
 
 import { Col, Row } from '@browniebroke/react-ui-components'
 
 import Layout from '../components/layout'
-import Slider from '../components/slider'
 import HandShake from '../images/icons/hand-shake.svg'
 import HomeBuilding from '../images/icons/home-building.svg'
 import Shield from '../images/icons/shield.svg'
@@ -27,7 +27,7 @@ const IndexPage = ({ location, data }) => {
   return (
     <Layout location={location} pt={0}>
       <Row>
-        <Slider
+        <Carousel
           autoplay={true}
           renderCenterLeftControls={() => false}
           renderCenterRightControls={() => false}
@@ -36,7 +36,7 @@ const IndexPage = ({ location, data }) => {
           {homePage.carousel.map((image, id) => (
             <GatsbyImage image={getImage(image)} key={id} alt="" />
           ))}
-        </Slider>
+        </Carousel>
       </Row>
       <Row yPadding={5} justifyContent="center">
         <Col textAlign="center">
