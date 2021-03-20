@@ -60,6 +60,46 @@
     "lint:eslint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:prettier": "prettier --check \"**/*.+(js|jsx|json|css|scss)\""
   },
+  "renovate": {
+    "extends": [
+      "github>browniebroke/renovate-configs:js-app"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "prettier"
+    ],
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "semi": false,
+          "singleQuote": true,
+          "trailingComma": "es5"
+        }
+      ]
+    }
+  },
   "bundlewatch": [
     {
       "path": "./public/app-*.js",
