@@ -40,6 +40,7 @@
     "@types/react-dom": "17.0.2",
     "@types/react-helmet": "6.1.0",
     "@types/styled-components": "5.1.9",
+    "@typescript-eslint/parser": "4.19.0",
     "bundlewatch": "0.3.2",
     "eslint": "7.21.0",
     "eslint-config-prettier": "8.1.0",
@@ -57,7 +58,7 @@
     "bundlewatch": "bundlewatch",
     "develop": "gatsby develop",
     "format": "prettier --write .",
-    "lint:eslint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:eslint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:prettier": "prettier --check .",
     "lint:tsc": "tsc"
   },
@@ -72,6 +73,7 @@
     "trailingComma": "es5"
   },
   "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
     "extends": [
       "prettier"
     ],
