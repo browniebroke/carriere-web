@@ -25,7 +25,7 @@
     "gatsby-source-datocms": "2.6.10",
     "gatsby-source-filesystem": "3.1.0",
     "gatsby-transformer-sharp": "3.1.0",
-    "nuka-carousel": "4.7.5",
+    "nuka-carousel": "4.7.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
