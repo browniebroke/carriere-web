@@ -998,10 +998,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@browniebroke/gatsby-image-gallery@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@browniebroke/gatsby-image-gallery/-/gatsby-image-gallery-6.0.0.tgz#cdb5700249d8bc7e73fe847d0625af817c3efc34"
-  integrity sha512-n9osBl/+FJG0JHFG1Iu3aIi5HlAUX9M+2SEG8I4QPvFMFhWqO4OJboWieeVHwA2d9UjMSpOIHCAJCDqCQQbeDA==
+"@browniebroke/gatsby-image-gallery@6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@browniebroke/gatsby-image-gallery/-/gatsby-image-gallery-6.1.0.tgz#fe2649b58fd48a84ab76c23ab112920fea24ee08"
+  integrity sha512-pep1AbDpLsYmp/8KQnMUKiVzFXz7zRXtGQE6eKSVNHGnKI4G8M6hsub1nxLwb3sAkVNDtP/29DfxFYLxsjZedw==
   dependencies:
     react-image-lightbox "5.1.1"
     styled-components "5.2.1"
