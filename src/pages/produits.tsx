@@ -10,9 +10,8 @@ import Layout from '../components/layout'
 import { makeAlbumUrlPath } from '../utils/routes'
 
 const GalleryLinkWrapper = styled.div`
+  display: flex;
   position: relative;
-  width: 270px;
-  height: 270px;
 
   &:hover {
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
