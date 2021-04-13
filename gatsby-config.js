@@ -44,7 +44,6 @@ module.exports = {
         name: title,
         short_name: 'Carrière Alla',
         description: description,
-        homepage_url: baseUrl,
         start_url: '/',
         background_color: '#fff',
         theme_color: '#f7e4bc',
