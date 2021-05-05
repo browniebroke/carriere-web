@@ -118,7 +118,7 @@
     },
     {
       "path": "./public/component---src-pages-produits-*.js",
-      "maxSize": "3.5KB"
+      "maxSize": "4KB"
     },
     {
       "path": "./public/component---src-pages-index-*.js",
