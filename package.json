@@ -18,7 +18,7 @@
     "gatsby-plugin-react-svg": "3.0.1",
     "gatsby-plugin-sentry": "1.0.1",
     "gatsby-plugin-sharp": "3.4.2",
-    "gatsby-plugin-sitemap": "3.3.0",
+    "gatsby-plugin-sitemap": "4.0.0",
     "gatsby-plugin-styled-components": "4.4.0",
     "gatsby-plugin-typescript": "3.4.0",
     "gatsby-plugin-typography": "3.4.0",
@@ -54,6 +54,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "prebundlewatch": "yarn run build",
     "bundlewatch": "bundlewatch",
     "develop": "gatsby develop",

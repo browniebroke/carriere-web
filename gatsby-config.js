@@ -1,7 +1,12 @@
 const description =
   'Carrière et atelier de taille de pierre situé à Sauclières, Aveyron'
 const title = 'S.A.R.L Carrière Alla'
-const baseUrl = `https://www.carriere-alla.fr`
+const baseUrl =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:8000'
+    : process.env.REVIEW_ID
+    ? `https://deploy-preview-${process.env.REVIEW_ID}--carriere-alla.netlify.app`
+    : `https://www.carriere-alla.fr`
 
 module.exports = {
   siteMetadata: {
@@ -83,22 +88,23 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => {
-            let priority = 0.5
-            if (edge.node.path === '/photos/') {
-              priority = 0.7
-            }
-            if (edge.node.path === '/') {
-              priority = 1
-            }
-
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-              changefreq: `weekly`,
-              priority: priority,
-            }
-          }),
+        output: '/',
+        resolveSiteUrl: () => baseUrl,
+        serialize: (page, tools) => {
+          let priority = 0.5
+          const pagePath = tools.resolvePagePath(page)
+          if (pagePath.includes('/photos/')) {
+            priority = 0.7
+          }
+          if (pagePath === '/') {
+            priority = 1
+          }
+          return {
+            url: `${baseUrl}${pagePath}`,
+            changefreq: `monthly`,
+            priority: priority,
+          }
+        },
       },
     },
     {
