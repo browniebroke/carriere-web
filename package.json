@@ -54,6 +54,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "prebundlewatch": "yarn run build",
     "bundlewatch": "bundlewatch",
     "develop": "gatsby develop",
