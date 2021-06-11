@@ -6,7 +6,7 @@
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "6.2.1",
     "@browniebroke/react-ui-components": "1.7.3",
-    "@fontsource/montserrat": "4.4.2",
+    "@fontsource/montserrat": "4.4.5",
     "babel-plugin-styled-components": "1.12.0",
     "gatsby": "3.6.1",
     "gatsby-plugin-google-analytics": "3.6.0",
@@ -22,7 +22,7 @@
     "gatsby-plugin-styled-components": "4.7.1",
     "gatsby-plugin-typescript": "3.6.0",
     "gatsby-plugin-typography": "3.6.0",
-    "gatsby-source-datocms": "2.6.15",
+    "gatsby-source-datocms": "2.6.16",
     "gatsby-source-filesystem": "3.6.0",
     "gatsby-transformer-sharp": "3.6.0",
     "nuka-carousel": "4.7.8",
@@ -36,17 +36,17 @@
     "typography": "0.16.21"
   },
   "devDependencies": {
-    "@types/react": "17.0.8",
-    "@types/react-dom": "17.0.5",
+    "@types/react": "17.0.11",
+    "@types/react-dom": "17.0.7",
     "@types/react-helmet": "6.1.1",
     "@types/styled-components": "5.1.10",
-    "@typescript-eslint/parser": "4.26.0",
+    "@typescript-eslint/parser": "4.26.1",
     "bundlewatch": "0.3.2",
     "eslint": "7.27.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-react": "7.24.0",
-    "prettier": "2.3.0"
+    "prettier": "2.3.1"
   },
   "keywords": [
     "gatsby"
