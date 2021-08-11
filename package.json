@@ -6,7 +6,7 @@
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "6.2.2",
     "@browniebroke/react-ui-components": "1.8.1",
-    "@fontsource/montserrat": "4.5.0",
+    "@fontsource/montserrat": "4.5.1",
     "babel-plugin-styled-components": "1.13.2",
     "gatsby": "3.11.1",
     "gatsby-plugin-google-analytics": "3.11.0",
