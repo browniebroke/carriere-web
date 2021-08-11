@@ -36,7 +36,7 @@
     "typography": "0.16.21"
   },
   "devDependencies": {
-    "@types/react": "17.0.15",
+    "@types/react": "17.0.16",
     "@types/react-dom": "17.0.9",
     "@types/react-helmet": "6.1.2",
     "@types/styled-components": "5.1.11",
