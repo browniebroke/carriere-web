@@ -127,7 +127,7 @@
     },
     {
       "path": "./public/component---src-templates-gallery-page-*.js",
-      "maxSize": "16KB"
+      "maxSize": "25KB"
     },
     {
       "path": "./public/styles.*.css",
