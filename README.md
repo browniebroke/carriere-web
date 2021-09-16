@@ -19,15 +19,15 @@ This site is built using [GatsbyJS](https://www.gatsbyjs.org/), a static code ge
 
 ## Development
 
-It uses yarn to manage dependencies, so getting started should be easy:
+It uses npm to manage dependencies, so getting started should be easy:
 
 ```bash
 # Install deps
-$ yarn
+$ npm i
 # Start the development server
-$ yarn run develop
+$ npm run develop
 # Build production
-$ yarn run build
+$ npm run build
 ```
 
 ## Git flow
