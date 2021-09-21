@@ -107,7 +107,7 @@
   "bundlewatch": [
     {
       "path": "./public/app-*.js",
-      "maxSize": "25KB"
+      "maxSize": "40KB"
     },
     {
       "path": "./public/component---src-pages-404-*.js",
