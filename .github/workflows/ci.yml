@@ -6,7 +6,9 @@ on:
   pull_request:
 
 jobs:
-  ci:
-    uses: browniebroke/github-actions/.github/workflows/gatsby-site.yml@main
+  lint:
+    uses: browniebroke/github-actions/.github/workflows/ts-lint.yml@v1
+  bundlewatch:
+    uses: browniebroke/github-actions/.github/workflows/bundlewatch.yml@v1
     secrets:
       bundlewatch_token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
