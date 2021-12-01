@@ -18,16 +18,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      # Setup node based on .nvmrc
-      # https://github.com/actions/setup-node/issues/32#issuecomment-539794249
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
       - uses: actions/setup-node@v2
         with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
-
+          cache: 'npm'
+          node-version-file: '.nvmrc'
       - run: npm i
       - run: npm run lint:${{ matrix.linter }}
 
@@ -36,16 +30,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      # Setup node based on .nvmrc
-      # https://github.com/actions/setup-node/issues/32#issuecomment-539794249
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
       - uses: actions/setup-node@v2
         with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
-
+          cache: 'npm'
+          node-version-file: '.nvmrc'
       - run: npm i
       - run: npm run build
       - run: npm run bundlewatch
