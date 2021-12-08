@@ -5,7 +5,7 @@
   environment = { GATSBY_CPU_COUNT = "1" }
 
 [context.production]
-  environment = { GA_TRACKING_ID = "UA-131523635-1" }
+  environment = { GA_TRACKING_ID = "G-7XHZBQDB2E" }
 
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
