@@ -25,14 +25,14 @@
     "gatsby-source-datocms": "3.0.11",
     "gatsby-source-filesystem": "4.2.0",
     "gatsby-transformer-sharp": "4.2.0",
-    "nuka-carousel": "4.8.3",
+    "nuka-carousel": "4.8.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-helmet": "6.1.0",
     "react-typography": "0.16.20",
     "slugify": "1.6.3",
     "styled-components": "5.3.3",
-    "typescript": "4.5.2",
+    "typescript": "4.5.3",
     "typography": "0.16.21"
   },
   "devDependencies": {
@@ -46,7 +46,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.27.1",
-    "prettier": "2.5.0"
+    "prettier": "2.5.1"
   },
   "keywords": [
     "gatsby"
