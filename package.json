@@ -6,7 +6,7 @@
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "7.0.3",
     "@browniebroke/react-ui-components": "1.8.2",
-    "@fontsource/montserrat": "4.5.3",
+    "@fontsource/montserrat": "4.5.5",
     "babel-plugin-styled-components": "2.0.2",
     "gatsby": "4.7.1",
     "gatsby-plugin-google-gtag": "4.7.0",
@@ -22,7 +22,7 @@
     "gatsby-plugin-styled-components": "5.7.0",
     "gatsby-plugin-typescript": "4.7.0",
     "gatsby-plugin-typography": "4.7.0",
-    "gatsby-source-datocms": "3.0.14",
+    "gatsby-source-datocms": "3.0.15",
     "gatsby-source-filesystem": "4.7.0",
     "gatsby-transformer-sharp": "4.7.0",
     "nuka-carousel": "4.8.4",
@@ -36,7 +36,7 @@
     "typography": "0.16.21"
   },
   "devDependencies": {
-    "@types/react": "17.0.38",
+    "@types/react": "17.0.39",
     "@types/react-dom": "17.0.11",
     "@types/react-helmet": "6.1.5",
     "@types/styled-components": "5.1.22",
