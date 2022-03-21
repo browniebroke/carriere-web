@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "7.0.4",
+    "@browniebroke/gatsby-image-gallery": "7.0.5",
     "@browniebroke/react-ui-components": "1.8.2",
     "@fontsource/montserrat": "4.5.5",
     "babel-plugin-styled-components": "2.0.6",
@@ -22,7 +22,7 @@
     "gatsby-plugin-styled-components": "5.9.0",
     "gatsby-plugin-typescript": "4.9.1",
     "gatsby-plugin-typography": "4.9.0",
-    "gatsby-source-datocms": "3.0.16",
+    "gatsby-source-datocms": "3.0.17",
     "gatsby-source-filesystem": "4.9.1",
     "gatsby-transformer-sharp": "4.9.0",
     "nuka-carousel": "5.0.7",
@@ -36,8 +36,8 @@
     "typography": "0.16.21"
   },
   "devDependencies": {
-    "@types/react": "17.0.40",
-    "@types/react-dom": "17.0.13",
+    "@types/react": "17.0.41",
+    "@types/react-dom": "17.0.14",
     "@types/react-helmet": "6.1.5",
     "@types/styled-components": "5.1.24",
     "@typescript-eslint/parser": "5.14.0",
@@ -45,7 +45,7 @@
     "eslint": "8.10.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-react": "7.29.3",
+    "eslint-plugin-react": "7.29.4",
     "prettier": "2.5.1"
   },
   "keywords": [
