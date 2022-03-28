@@ -64,7 +64,8 @@
   },
   "renovate": {
     "extends": [
-      "github>browniebroke/renovate-configs:js-app"
+      "github>browniebroke/renovate-configs:js-app",
+      "github>browniebroke/renovate-configs:netlify"
     ]
   },
   "prettier": {
