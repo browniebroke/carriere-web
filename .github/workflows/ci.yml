@@ -16,3 +16,9 @@ jobs:
     uses: browniebroke/github-actions/.github/workflows/bundlewatch.yml@v1
     secrets:
       bundlewatch_token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
+  deploy:
+    uses: browniebroke/github-actions/.github/workflows/netlify-deploy.yml@v1
+    with:
+      netlify_site_id: '10c50357-1953-4307-9c1b-c40f1f826885'
+    secrets:
+      netlify_auth_token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
