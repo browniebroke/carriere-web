@@ -22,7 +22,7 @@
     "gatsby-plugin-styled-components": "5.11.0",
     "gatsby-plugin-typescript": "4.11.1",
     "gatsby-plugin-typography": "4.11.0",
-    "gatsby-source-datocms": "3.0.18",
+    "gatsby-source-datocms": "3.0.19",
     "gatsby-source-filesystem": "4.11.1",
     "gatsby-transformer-sharp": "4.11.0",
     "nuka-carousel": "5.0.8",
