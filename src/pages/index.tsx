@@ -7,7 +7,7 @@ import Carousel from 'nuka-carousel'
 import { Col, Row } from '@browniebroke/react-ui-components'
 import { ThemeProps } from '@browniebroke/react-ui-components/src/types'
 
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 import HandShake from '../images/icons/hand-shake.svg'
 import HomeBuilding from '../images/icons/home-building.svg'
 import Shield from '../images/icons/shield.svg'

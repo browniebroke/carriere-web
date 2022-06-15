@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
-import { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 import {
   Container,
   ContentWrapper,
@@ -9,11 +9,10 @@ import {
 } from '@browniebroke/react-ui-components'
 import { Theme } from '@browniebroke/react-ui-components/src/types'
 
-import Header from './header'
-import Footer from './footer'
-import SiteAlert from './site-alert'
-import theme from '../theme'
-import styled from 'styled-components'
+import { Header } from './header'
+import { Footer } from './footer'
+import { SiteAlert } from './site-alert'
+import { theme } from '../theme'
 
 interface PageContentWrapperProps {
   theme: Theme
@@ -31,7 +30,7 @@ interface LayoutProps {
   pt?: string
 }
 
-const Layout: React.FC<LayoutProps> = ({ pt, children }) => {
+export const Layout: React.FC<LayoutProps> = ({ pt, children }) => {
   const { site } = useStaticQuery(
     graphql`
       query SiteMetaQuery {
@@ -71,5 +70,3 @@ const Layout: React.FC<LayoutProps> = ({ pt, children }) => {
     </>
   )
 }
-
-export default Layout

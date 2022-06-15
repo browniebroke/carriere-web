@@ -5,7 +5,7 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 import { Col, Row } from '@browniebroke/react-ui-components'
 
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 // @ts-ignore
 import { makeAlbumUrlPath } from '../utils/routes'
 

@@ -6,7 +6,7 @@ import {
   Row,
 } from '@browniebroke/react-ui-components'
 
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 
 interface ContactPageProps {
   data: {

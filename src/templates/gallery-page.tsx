@@ -3,7 +3,7 @@ import React from 'react'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 
 interface PhotoData {
   full: IGatsbyImageData

@@ -30,7 +30,7 @@ const LogoWrapper = styled.div`
   display: flex;
 `
 
-const Header: React.FC = () => (
+export const Header: React.FC = () => (
   <HeaderContainer>
     <Link to="/" title="Acceuil" aria-label="Acceuil">
       <LogoWrapper>
@@ -44,5 +44,3 @@ const Header: React.FC = () => (
     </Navigation>
   </HeaderContainer>
 )
-
-export default Header

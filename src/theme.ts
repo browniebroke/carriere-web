@@ -1,6 +1,6 @@
 import { styledComponentsTheme } from '@browniebroke/react-ui-components'
 
-const theme = {
+export const theme = {
   ...styledComponentsTheme,
   colors: {
     primary: '#c71f16',
@@ -13,5 +13,3 @@ const theme = {
     danger: '#dc3545',
   },
 }
-
-export default theme
