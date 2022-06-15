@@ -52,7 +52,7 @@ const ListUnstyled = styled.ul`
   padding: 0;
 `
 
-const Footer: React.FC = () => (
+export const Footer: React.FC = () => (
   <FooterStyles>
     <Container>
       <FooterRowStyles>
@@ -116,5 +116,3 @@ const Footer: React.FC = () => (
     </Container>
   </FooterStyles>
 )
-
-export default Footer
