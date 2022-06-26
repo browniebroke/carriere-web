@@ -53,7 +53,7 @@ interface ProductListPageProps {
   }
 }
 
-const ProductsListPage: React.FC<ProductListPageProps> = ({ data }) => {
+const ProductsListPage = ({ data }: ProductListPageProps) => {
   const albumNodesList = data.allDatoCmsAlbum.edges
   return (
     <Layout>

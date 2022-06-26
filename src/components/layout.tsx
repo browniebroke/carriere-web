@@ -28,9 +28,10 @@ const PageContentWrapper = styled(ContentWrapper)<PageContentWrapperProps>`
 
 interface LayoutProps {
   pt?: string
+  children?: React.ReactNode
 }
 
-export const Layout: React.FC<LayoutProps> = ({ pt, children }) => {
+export const Layout = ({ pt, children }: LayoutProps) => {
   const { site } = useStaticQuery(
     graphql`
       query SiteMetaQuery {
