@@ -40,7 +40,7 @@ interface IndexPageProps {
   }
 }
 
-const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
+const IndexPage = ({ data }: IndexPageProps) => {
   const homePage = data.datoCmsHomePage
   return (
     <Layout pt={'0'}>

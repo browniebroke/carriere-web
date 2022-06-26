@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Alert } from '@browniebroke/react-ui-components'
 
-export const SiteAlert: React.FC = () => {
+export const SiteAlert = () => {
   const { alertData } = useStaticQuery(graphql`
     query siteAlertQuery {
       alertData: datoCmsSiteAlert {

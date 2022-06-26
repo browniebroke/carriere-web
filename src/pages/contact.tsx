@@ -19,7 +19,7 @@ interface ContactPageProps {
   }
 }
 
-const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
+const ContactPage = ({ data }: ContactPageProps) => {
   const contactPage = data.datoCmsContactPage
   return (
     <Layout>

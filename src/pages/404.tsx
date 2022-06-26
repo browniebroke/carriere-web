@@ -12,7 +12,7 @@ const ContentStyles = styled.div`
   justify-content: center;
 `
 
-const NotFoundPage: React.FC = () => (
+const NotFoundPage = () => (
   <Layout>
     <ContentStyles>
       <h1>Page introuvable</h1>

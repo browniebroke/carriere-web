@@ -22,7 +22,7 @@ interface GalleryProps {
   }
 }
 
-const GalleryPage: React.FC<GalleryProps> = ({ data }) => {
+const GalleryPage = ({ data }: GalleryProps) => {
   const album = data.datoCmsAlbum
   const lightboxOptions = {
     imageLoadErrorMessage: 'Impossible de charger cette image',
