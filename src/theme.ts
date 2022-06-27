@@ -1,9 +1,18 @@
 import { styledComponentsTheme } from '@browniebroke/react-ui-components'
 
 export type SiteTheme = {
-  white: string
-  black: string
-  blue: string
+  colors: {
+    primary: string
+    secondary: string
+    navbar: string
+    navbarText: string
+    success: string
+    info: string
+    warning: string
+    danger: string
+    black: string
+    white: string
+  }
   spacings: string[]
   mdBreakpoint: string
   containerMaxWidth: string
@@ -33,10 +42,12 @@ export const theme: SiteTheme = {
     info: '#17a2b8',
     warning: '#ffc107',
     danger: '#dc3545',
+    black: 'hsla(204,12.449720506%,0%,0.77)',
+    white: '#ffffff',
   },
   fontSizes: {
     base: `${baseFontSize}rem`,
-    h1: `${baseFontSize * 1.7}rem`,
+    h1: `${baseFontSize * 2}rem`,
     h2: `${baseFontSize * 1.3}rem`,
     h3: `${baseFontSize * 1.15}rem`,
     h4: `${baseFontSize * 1.1}rem`,

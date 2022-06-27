@@ -11,9 +11,11 @@ export const GlobalStyles = createGlobalStyle<SiteThemeProps>`
   ${sanitizeCss}
   :root {}
   html {
-    font: ${({ theme }) => theme.fontSizes.base} ${({ theme }) =>
-  theme.baseFont};
-    letter-spacing: .03em;
+    --black: ${({ theme }) => theme.colors.black};
+    --white: ${({ theme }) => theme.colors.white};
+    --primary: ${({ theme }) => theme.colors.primary};
+    
+    font: 100%/1.5 ${({ theme }) => theme.baseFont};
     overflow-y: scroll;
     
     h1,
@@ -24,8 +26,8 @@ export const GlobalStyles = createGlobalStyle<SiteThemeProps>`
     h6 {
       font-family: ${({ theme }) => theme.headersFont};
       color: var(--black);
-      font-weight: 400;
-      margin: 0 0 1.4rem 0;
+      font-weight: 600;
+      margin: 0;
       text-rendering: optimizeLegibility;
       line-height: 1.1;
     }
@@ -37,12 +39,14 @@ export const GlobalStyles = createGlobalStyle<SiteThemeProps>`
     margin: 0 0 1.4rem 0;
   }
   a {
-    color: inherit;
     text-decoration: none;
-  }
-  a:active,
-  a:hover {
-    color: var(--blue);
+    color: var(--primary);
+    
+    &:active,
+    &:hover {
+      text-decoration: underlined;
+      color: rgb(159, 25, 18);;
+    }
   }
   h1 {
     font-size: ${({ theme }) => theme.fontSizes.h1};
