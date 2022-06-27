@@ -2,16 +2,13 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
-import {
-  Container,
-  ContentWrapper,
-  GlobalStyles,
-} from '@browniebroke/react-ui-components'
+import { Container, ContentWrapper } from '@browniebroke/react-ui-components'
 import { Theme } from '@browniebroke/react-ui-components/src/types'
 
 import { Header } from './header'
 import { Footer } from './footer'
 import { SiteAlert } from './site-alert'
+import { GlobalStyles } from './global-styles'
 import { theme } from '../theme'
 
 interface PageContentWrapperProps {

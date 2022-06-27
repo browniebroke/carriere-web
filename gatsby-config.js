@@ -89,13 +89,6 @@ module.exports = {
           ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
       },
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-        omitGoogleFont: true,
-      },
-    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
