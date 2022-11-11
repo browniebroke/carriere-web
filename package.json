@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "7.0.7",
+    "@browniebroke/gatsby-image-gallery": "7.2.0",
     "@browniebroke/react-ui-components": "2.0.1",
     "@fontsource/montserrat": "4.5.13",
     "babel-plugin-styled-components": "2.0.7",
