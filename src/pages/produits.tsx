@@ -91,7 +91,7 @@ const ProductsListPage = ({ data }: ProductListPageProps) => {
 
 export const photosPageQuery = graphql`
   query GalleriesList {
-    allDatoCmsAlbum(sort: { order: ASC, fields: title }) {
+    allDatoCmsAlbum(sort: { title: ASC }) {
       edges {
         node {
           id
