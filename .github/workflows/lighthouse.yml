@@ -1,0 +1,25 @@
+name: Lighthouse
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '56 9 * * *'
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          urls: |
+            https://www.carriere-alla.fr
+            https://www.carriere-alla.fr/produits/
+            https://www.carriere-alla.fr/produits/murs/
+            https://www.carriere-alla.fr/contact/
+          # budgetPath: ./budget.json
+          # configPath: ./lighthouserc.json
+          uploadArtifacts: true
+          serverBaseUrl: ${{ secrets.LHCI_SERVER_URL }}
+          serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
