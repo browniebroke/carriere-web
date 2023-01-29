@@ -7,7 +7,7 @@
   <a href="https://david-dm.org/browniebroke/carriere-web">
     <img src="https://img.shields.io/david/browniebroke/carriere-web?logo=npm&logoColor=white&style=flat-square" alt="dependencies Status"/>
   </a>
-  <a href="https://github.com/browniebroke/carriere-web/actions?query=workflow%3ACI">
+  <a href="https://github.com/browniebroke/carriere-web/actions/workflows/ci.yml?query=branch%3Amain">
     <img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/browniebroke/carriere-web/ci.yml?branch=main&label=CI&logo=github&logoColor=white&style=flat-square">
   </a>
   <a href="https://app.netlify.com/sites/carriere-alla/deploys">
