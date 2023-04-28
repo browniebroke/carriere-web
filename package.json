@@ -21,7 +21,7 @@
     "gatsby-plugin-sitemap": "6.9.0",
     "gatsby-plugin-styled-components": "6.9.0",
     "gatsby-plugin-typescript": "5.9.0",
-    "gatsby-source-datocms": "5.0.4",
+    "gatsby-source-datocms": "5.1.0",
     "gatsby-source-filesystem": "5.9.0",
     "gatsby-transformer-sharp": "5.9.0",
     "nuka-carousel": "6.0.2",
