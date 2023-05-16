@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import { ChakraProvider } from '@chakra-ui/react'
 import styled, { ThemeProvider } from 'styled-components'
 import { Container, ContentWrapper } from '@browniebroke/react-ui-components'
 import { Theme } from '@browniebroke/react-ui-components/src/types'
@@ -10,6 +11,7 @@ import { Footer } from './footer'
 import { SiteAlert } from './site-alert'
 import { GlobalStyles } from './global-styles'
 import { theme } from '../theme'
+import { theme as chakraTheme } from '../utils/theme'
 
 interface PageContentWrapperProps {
   theme: Theme
@@ -44,27 +46,33 @@ export const Layout = ({ pt, children }: LayoutProps) => {
   )
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <Helmet
-          title={site.siteMetadata.title}
-          meta={[
-            {
-              name: 'description',
-              content: site.siteMetadata.description,
-            },
-            { name: 'keywords', content: site.siteMetadata.keywords },
-          ]}
-        />
-        <Header />
-        <SiteAlert />
-        <Container>
-          <PageContentWrapper headerHeight="130px" footerHeight="120px" pt={pt}>
-            {children}
-          </PageContentWrapper>
-        </Container>
-        <Footer />
-      </ThemeProvider>
+      <ChakraProvider theme={chakraTheme}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <Helmet
+            title={site.siteMetadata.title}
+            meta={[
+              {
+                name: 'description',
+                content: site.siteMetadata.description,
+              },
+              { name: 'keywords', content: site.siteMetadata.keywords },
+            ]}
+          />
+          <Header />
+          <SiteAlert />
+          <Container>
+            <PageContentWrapper
+              headerHeight="130px"
+              footerHeight="120px"
+              pt={pt}
+            >
+              {children}
+            </PageContentWrapper>
+          </Container>
+          <Footer />
+        </ThemeProvider>
+      </ChakraProvider>
     </>
   )
 }
