@@ -90,6 +90,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-typescript`,
+    {
+      resolve: '@chakra-ui/gatsby-plugin',
+      options: {
+        resetCSS: true,
+        isUsingColorMode: true,
+        isBaseProvider: false,
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
