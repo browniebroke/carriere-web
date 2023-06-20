@@ -43,7 +43,7 @@ interface IndexPageProps {
 const IndexPage = ({ data }: IndexPageProps) => {
   const homePage = data.datoCmsHomePage
   return (
-    <Layout pt={'0'}>
+    <Layout paddingTop={0}>
       <Row>
         <Carousel
           autoplay={true}

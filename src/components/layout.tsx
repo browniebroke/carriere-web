@@ -1,10 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
-import { ChakraProvider } from '@chakra-ui/react'
+import { Box, ChakraProvider, Container } from '@chakra-ui/react'
 import styled, { ThemeProvider } from 'styled-components'
-import { Container, ContentWrapper } from '@browniebroke/react-ui-components'
-import { Theme } from '@browniebroke/react-ui-components/src/types'
 
 import { Header } from './header'
 import { Footer } from './footer'
@@ -13,24 +11,12 @@ import { GlobalStyles } from './global-styles'
 import { theme } from '../theme'
 import { theme as chakraTheme } from '../utils/theme'
 
-interface PageContentWrapperProps {
-  theme: Theme
-  pt?: string
-}
-
-// TODO: find a better solution
-const PageContentWrapper = styled(ContentWrapper)<PageContentWrapperProps>`
-  padding-top: ${(props) =>
-    props.pt !== undefined ? props.pt : props.theme.spacings[4]};
-  padding-bottom: ${(props) => props.theme.spacings[4]};
-`
-
 interface LayoutProps {
-  pt?: string
+  paddingTop?: number
   children?: React.ReactNode
 }
 
-export const Layout = ({ pt, children }: LayoutProps) => {
+export const Layout = ({ paddingTop = 8, children }: LayoutProps) => {
   const { site } = useStaticQuery(
     graphql`
       query SiteMetaQuery {
@@ -61,14 +47,10 @@ export const Layout = ({ pt, children }: LayoutProps) => {
           />
           <Header />
           <SiteAlert />
-          <Container>
-            <PageContentWrapper
-              headerHeight="130px"
-              footerHeight="120px"
-              pt={pt}
-            >
+          <Container maxWidth="4xl">
+            <Box paddingBottom={8} paddingTop={paddingTop}>
               {children}
-            </PageContentWrapper>
+            </Box>
           </Container>
           <Footer />
         </ThemeProvider>
