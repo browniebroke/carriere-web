@@ -1,38 +1,30 @@
 import React from 'react'
-import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
+import { Box, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
-
-import { Col, Row } from '@browniebroke/react-ui-components'
 
 import { Layout } from '../components/layout'
 // @ts-ignore
 import { makeAlbumUrlPath } from '../utils/routes'
 
-const GalleryLinkWrapper = styled.div`
-  display: flex;
-  position: relative;
-
-  &:hover {
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.2s;
-
-    img {
-      filter: brightness(50%);
-    }
-  }
-`
-
-const GalleryLabel = styled.span`
-  font-weight: 900;
-  font-size: 1.2em;
-  color: white;
-  position: absolute;
-  z-index: 5;
-  bottom: 0.5rem;
-  left: 0.5rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-`
+const GalleryLinkWrapper: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => (
+  <Flex
+    position="relative"
+    sx={{
+      '&:hover': {
+        boxShadow: '1px 1px 6px rgba(0, 0, 0, 0.5)',
+        transition: 'box-shadow 0.2s',
+        img: {
+          filter: 'brightness(50%)',
+        },
+      },
+    }}
+  >
+    {children}
+  </Flex>
+)
 
 interface ProductPageEdge {
   node: {
@@ -57,34 +49,42 @@ const ProductsListPage = ({ data }: ProductListPageProps) => {
   const albumNodesList = data.allDatoCmsAlbum.edges
   return (
     <Layout>
-      <div>
-        <h1>Produits</h1>
-        <p>
+      <Box>
+        <Heading as="h1">Produits</Heading>
+        <Text>
           Voici un aperçu de nos produits. Cliquez sur une catégorie pour en
           savoir plus.
-        </p>
-        <Row>
+        </Text>
+        <SimpleGrid
+          columns={{ base: 2, sm: 3, md: 4 }}
+          spacing={3}
+          marginTop={8}
+        >
           {albumNodesList.map(({ node }) => (
-            <Col
-              width="50%"
-              smMaxWidth={`${100 / 3}%`}
-              mdMaxWidth="25%"
-              sidePadding={1}
-              key={node.id}
-            >
-              <Link to={makeAlbumUrlPath(node.title)}>
-                <GalleryLinkWrapper>
-                  <GatsbyImage
-                    image={node.mainPicture.gatsbyImageData}
-                    alt={node.title}
-                  />
-                  <GalleryLabel>{node.title}</GalleryLabel>
-                </GalleryLinkWrapper>
-              </Link>
-            </Col>
+            <Link to={makeAlbumUrlPath(node.title)}>
+              <GalleryLinkWrapper>
+                <GatsbyImage
+                  image={node.mainPicture.gatsbyImageData}
+                  alt={node.title}
+                />
+                <Text
+                  as="span"
+                  marginBottom={0}
+                  fontWeight="bold"
+                  color="white"
+                  position="absolute"
+                  zIndex="5"
+                  bottom={2}
+                  left={2}
+                  textShadow="1px 1px 3px rgba(0, 0, 0, 0.8)"
+                >
+                  {node.title}
+                </Text>
+              </GalleryLinkWrapper>
+            </Link>
           ))}
-        </Row>
-      </div>
+        </SimpleGrid>
+      </Box>
     </Layout>
   )
 }

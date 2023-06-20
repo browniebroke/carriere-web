@@ -25,7 +25,7 @@ export const Header = () => (
       <Box as="nav" paddingY={4}>
         <Flex justifyContent="space-between" alignItems="center">
           <Link to="/" title="Acceuil" aria-label="Acceuil">
-            <Flex height="60px">
+            <Flex height="site-logo.height">
               <SiteLogo />
               <Box display={{ base: 'none', md: 'inherit' }}>
                 <SiteName />

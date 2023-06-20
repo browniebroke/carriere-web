@@ -28,15 +28,24 @@ const customTheme = {
           color: 'primaryDark',
         },
       },
+      ':where(svg:not([fill]))': {
+        fill: 'currentColor',
+      },
     },
   },
   components: {
     Heading: {
       baseStyle: {
-        marginTop: 0,
+        marginTop: 6,
+        marginBottom: 2,
         lineHeight: '1.1',
         fontWeight: '600',
         textRendering: 'optimizeLegibility',
+      },
+    },
+    Text: {
+      baseStyle: {
+        marginBottom: 2,
       },
     },
     Link: {

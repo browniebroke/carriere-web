@@ -46,7 +46,7 @@ interface IndexPageProps {
 const IndexPage = ({ data }: IndexPageProps) => {
   const homePage = data.datoCmsHomePage
   return (
-    <Layout paddingTop={0}>
+    <Layout marginTop={0}>
       <Carousel
         autoplay={true}
         renderCenterLeftControls={() => false}
@@ -57,22 +57,22 @@ const IndexPage = ({ data }: IndexPageProps) => {
           <GatsbyImage image={carouselImage.image} key={id} alt="" />
         ))}
       </Carousel>
-      <Box paddingY={6} justifyContent="center" textAlign="center">
+      <Box marginY={8} justifyContent="center" textAlign="center">
         <Heading as="h1">{homePage.title}</Heading>
         <Text fontSize="1.5em">{homePage.subtitle}</Text>
       </Box>
       <SimpleGrid columns={{ base: 1, md: 3 }} textAlign="center" spacing={4}>
         <SellingPoint>
           <HandShake />
-          <p>{homePage.handshakeCopy}</p>
+          <Text>{homePage.handshakeCopy}</Text>
         </SellingPoint>
         <SellingPoint>
           <Shield />
-          <p>{homePage.qualityCopy}</p>
+          <Text>{homePage.qualityCopy}</Text>
         </SellingPoint>
         <SellingPoint>
           <HomeBuilding />
-          <p>{homePage.collabCopy}</p>
+          <Text>{homePage.collabCopy}</Text>
         </SellingPoint>
       </SimpleGrid>
     </Layout>

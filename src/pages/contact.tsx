@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { AspectRatio, Box, Heading } from '@chakra-ui/react'
+import { AspectRatio, Box, Heading, Text } from '@chakra-ui/react'
 
 import { Layout } from '../components/layout'
 
@@ -21,11 +21,11 @@ const ContactPage = ({ data }: ContactPageProps) => {
     <Layout>
       <Box>
         <Heading as="h1">{contactPage.title}</Heading>
-        <Box dangerouslySetInnerHTML={{ __html: contactPage.intro }} />
+        <Text dangerouslySetInnerHTML={{ __html: contactPage.intro }} />
       </Box>
       <Box>
         <Heading as="h2">{contactPage.mapTitle}</Heading>
-        <Box
+        <Text
           dangerouslySetInnerHTML={{ __html: contactPage.workshopLocation }}
         />
       </Box>
