@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Box, ChakraProvider, Container } from '@chakra-ui/react'
-import styled, { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 
 import { Header } from './header'
 import { Footer } from './footer'
@@ -48,7 +48,7 @@ export const Layout = ({ paddingTop = 8, children }: LayoutProps) => {
           <Header />
           <SiteAlert />
           <Container maxWidth="4xl">
-            <Box paddingBottom={8} paddingTop={paddingTop}>
+            <Box paddingBottom={8} paddingTop={paddingTop} minHeight="80vh">
               {children}
             </Box>
           </Container>

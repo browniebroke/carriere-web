@@ -7,7 +7,7 @@ import { Layout } from '../components/layout'
 const NotFoundPage = () => (
   <Layout>
     <Flex
-      minHeight="70vh"
+      minHeight="60vh"
       direction="column"
       alignItems="center"
       justifyContent="center"
