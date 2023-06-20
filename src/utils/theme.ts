@@ -39,6 +39,15 @@ const customTheme = {
         textRendering: 'optimizeLegibility',
       },
     },
+    Link: {
+      baseStyle: {
+        color: 'primary',
+        '&:active, &:hover': {
+          textDecoration: 'none',
+          color: 'primaryDark',
+        },
+      },
+    },
   },
 }
 
