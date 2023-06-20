@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { Flex, Heading, Text } from '@chakra-ui/react'
 
 import { Layout } from '../components/layout'
-import { Flex, Heading, Text } from '@chakra-ui/react'
 
 const NotFoundPage = () => (
   <Layout>
