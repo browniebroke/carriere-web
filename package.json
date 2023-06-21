@@ -22,7 +22,6 @@
     "gatsby-plugin-sentry": "1.0.1",
     "gatsby-plugin-sharp": "5.11.0",
     "gatsby-plugin-sitemap": "6.11.0",
-    "gatsby-plugin-styled-components": "6.11.0",
     "gatsby-plugin-typescript": "5.11.0",
     "gatsby-source-datocms": "5.1.2",
     "gatsby-source-filesystem": "5.11.0",
