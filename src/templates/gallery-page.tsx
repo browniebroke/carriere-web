@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import { Heading, Text } from '@chakra-ui/react'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 
@@ -34,11 +35,9 @@ const GalleryPage = ({ data }: GalleryProps) => {
   }
   return (
     <Layout>
-      <div>
-        <h1>{album.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: album.description }} />
-        <Gallery images={album.photos} lightboxOptions={lightboxOptions} />
-      </div>
+      <Heading as="h1">{album.title}</Heading>
+      <Text dangerouslySetInnerHTML={{ __html: album.description }} />
+      <Gallery images={album.photos} lightboxOptions={lightboxOptions} />
     </Layout>
   )
 }

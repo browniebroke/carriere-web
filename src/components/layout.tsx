@@ -1,34 +1,24 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
-import styled, { ThemeProvider } from 'styled-components'
-import { Container, ContentWrapper } from '@browniebroke/react-ui-components'
-import { Theme } from '@browniebroke/react-ui-components/src/types'
+import { Box, ChakraProvider, Container } from '@chakra-ui/react'
 
 import { Header } from './header'
 import { Footer } from './footer'
 import { SiteAlert } from './site-alert'
-import { GlobalStyles } from './global-styles'
-import { theme } from '../theme'
-
-interface PageContentWrapperProps {
-  theme: Theme
-  pt?: string
-}
-
-// TODO: find a better solution
-const PageContentWrapper = styled(ContentWrapper)<PageContentWrapperProps>`
-  padding-top: ${(props) =>
-    props.pt !== undefined ? props.pt : props.theme.spacings[4]};
-  padding-bottom: ${(props) => props.theme.spacings[4]};
-`
+import { theme as chakraTheme } from '../utils/theme'
 
 interface LayoutProps {
-  pt?: string
+  marginTop?: number
   children?: React.ReactNode
 }
 
-export const Layout = ({ pt, children }: LayoutProps) => {
+const defaultMarginY = 10
+
+export const Layout = ({
+  marginTop = defaultMarginY,
+  children,
+}: LayoutProps) => {
   const { site } = useStaticQuery(
     graphql`
       query SiteMetaQuery {
@@ -44,8 +34,7 @@ export const Layout = ({ pt, children }: LayoutProps) => {
   )
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
+      <ChakraProvider theme={chakraTheme}>
         <Helmet
           title={site.siteMetadata.title}
           meta={[
@@ -58,13 +47,17 @@ export const Layout = ({ pt, children }: LayoutProps) => {
         />
         <Header />
         <SiteAlert />
-        <Container>
-          <PageContentWrapper headerHeight="130px" footerHeight="120px" pt={pt}>
+        <Container maxWidth="4xl">
+          <Box
+            marginBottom={defaultMarginY}
+            marginTop={marginTop}
+            minHeight="80vh"
+          >
             {children}
-          </PageContentWrapper>
+          </Box>
         </Container>
         <Footer />
-      </ThemeProvider>
+      </ChakraProvider>
     </>
   )
 }

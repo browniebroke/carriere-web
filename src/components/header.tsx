@@ -1,46 +1,45 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
-import {
-  Header as HeaderContainer,
-  Navigation,
-} from '@browniebroke/react-ui-components'
+import { Box, Container, Flex, Stack } from '@chakra-ui/react'
 
 import SiteLogo from '../images/icons/logo-compact.svg'
 import SiteName from '../images/icons/logo-name.svg'
 
-const StyledLogo = styled(SiteLogo)`
-  height: 60px;
-  path {
-    fill: currentColor;
-  }
-`
-
-const StyledName = styled(SiteName)`
-  height: 60px;
-  path {
-    fill: currentColor;
-  }
-  @media (max-width: ${(props) => props.theme.gridBreakpoints.sm}) {
-    display: none;
-  }
-`
-
-const LogoWrapper = styled.div`
-  display: flex;
-`
-
 export const Header = () => (
-  <HeaderContainer>
-    <Link to="/" title="Acceuil" aria-label="Acceuil">
-      <LogoWrapper>
-        <StyledLogo />
-        <StyledName />
-      </LogoWrapper>
-    </Link>
-    <Navigation direction="row">
-      <Link to="/produits/">Produits</Link>
-      <Link to="/contact/">Contact</Link>
-    </Navigation>
-  </HeaderContainer>
+  <Box
+    as="header"
+    backgroundColor="primary"
+    color="white"
+    sx={{
+      'a, a:visited': {
+        color: 'currentColor',
+        textDecoration: 'none',
+      },
+      'a:hover, a:focus': {
+        color: 'gray.300',
+        textDecoration: 'none',
+      },
+    }}
+  >
+    <Container maxWidth="4xl">
+      <Box as="nav" paddingY={4}>
+        <Flex justifyContent="space-between" alignItems="center">
+          <Link to="/" title="Acceuil" aria-label="Acceuil">
+            <Flex height="site-logo.height">
+              <Box as={SiteLogo} width="site-logo.iconWidth" />
+              <Box
+                as={SiteName}
+                width={{ base: 'inherit', md: 'site-logo.nameWidth' }}
+                display={{ base: 'none', md: 'inherit' }}
+              />
+            </Flex>
+          </Link>
+          <Stack direction="row" spacing={4}>
+            <Link to="/produits/">Produits</Link>
+            <Link to="/contact/">Contact</Link>
+          </Stack>
+        </Flex>
+      </Box>
+    </Container>
+  </Box>
 )
