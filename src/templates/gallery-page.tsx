@@ -9,14 +9,13 @@ import { Gallery, Item } from 'react-photoswipe-gallery'
 import { Layout } from '../components/layout'
 
 interface PhotoData {
-  title: string
-  alt: string
   original: {
     src: string
-    width: number
-    height: number
   }
+  full: IGatsbyImageData
   thumb: IGatsbyImageData
+  caption: string
+  thumbAlt: string
 }
 
 interface GalleryProps {
@@ -31,18 +30,19 @@ interface GalleryProps {
 
 const GalleryPage = ({ data }: GalleryProps) => {
   const album = data.datoCmsAlbum
-  const photoswipeOptions = {
-    closeTitle: 'Fermer',
-    zoomTitle: 'Zoom',
-    arrowPrevTitle: 'Précédente',
-    arrowNextTitle: 'Suivante',
-    errorMsg: "Impossible d'afficher cette image",
+  const lightboxOptions = {
+    imageLoadErrorMessage: 'Impossible de charger cette image',
+    nextLabel: 'Image suivante',
+    prevLabel: 'Image précédente',
+    zoomInLabel: 'Zoomer',
+    zoomOutLabel: 'Dézoomer',
+    closeLabel: 'Fermer',
   }
   return (
     <Layout>
       <Heading as="h1">{album.title}</Heading>
       <Text dangerouslySetInnerHTML={{ __html: album.description }} />
-      <Gallery withCaption options={photoswipeOptions}>
+      <Gallery>
         <SimpleGrid
           columns={{ base: 2, sm: 3, md: 4 }}
           spacing={3}
@@ -52,17 +52,10 @@ const GalleryPage = ({ data }: GalleryProps) => {
             <Item
               original={photo.original.src}
               thumbnail={photo.thumb.images.fallback?.src}
-              width={photo.original.width}
-              height={photo.original.height}
-              caption={photo.title}
-              alt={photo.alt}
             >
               {({ ref, open }) => (
-                <Box
-                  ref={ref as React.MutableRefObject<HTMLImageElement>}
-                  onClick={open}
-                >
-                  <GatsbyImage image={photo.thumb} alt={photo.alt} />
+                <Box ref={ref} onClick={open}>
+                  <GatsbyImage image={photo.thumb} alt={photo.thumbAlt} />
                 </Box>
               )}
             </Item>
@@ -79,19 +72,18 @@ export const galleryPageQuery = graphql`
       title
       description
       photos {
-        title
-        alt
-        original: fluid(maxHeight: 1000, maxWidth: 2000) {
+        original: fixed(width: 1024) {
           src
-          width
-          height
         }
+        full: gatsbyImageData(layout: FULL_WIDTH)
         thumb: gatsbyImageData(
           width: 270
           height: 270
           placeholder: BLURRED
           imgixParams: { fit: "crop", w: "270", h: "270" }
         )
+        caption: title
+        thumbAlt: alt
       }
     }
   }
