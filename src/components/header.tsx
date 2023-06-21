@@ -26,10 +26,12 @@ export const Header = () => (
         <Flex justifyContent="space-between" alignItems="center">
           <Link to="/" title="Acceuil" aria-label="Acceuil">
             <Flex height="site-logo.height">
-              <SiteLogo />
-              <Box display={{ base: 'none', md: 'inherit' }}>
-                <SiteName />
-              </Box>
+              <Box as={SiteLogo} width="site-logo.iconWidth" />
+              <Box
+                as={SiteName}
+                width={{ base: 'inherit', md: 'site-logo.nameWidth' }}
+                display={{ base: 'none', md: 'inherit' }}
+              />
             </Flex>
           </Link>
           <Stack direction="row" spacing={4}>

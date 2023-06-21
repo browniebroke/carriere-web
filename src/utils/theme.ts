@@ -12,6 +12,8 @@ const customTheme = {
   sizes: {
     'site-logo': {
       height: '60px',
+      iconWidth: '60px',
+      nameWidth: '121px',
     },
   },
   styles: {
