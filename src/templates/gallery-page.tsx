@@ -1,16 +1,22 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import { Heading, Text } from '@chakra-ui/react'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
-import Gallery from '@browniebroke/gatsby-image-gallery'
+import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
+
+import 'photoswipe/dist/photoswipe.css'
+import { Gallery, Item } from 'react-photoswipe-gallery'
 
 import { Layout } from '../components/layout'
 
 interface PhotoData {
-  full: IGatsbyImageData
+  title: string
+  alt: string
+  original: {
+    src: string
+    width: number
+    height: number
+  }
   thumb: IGatsbyImageData
-  caption: string
-  thumbAlt: string
 }
 
 interface GalleryProps {
@@ -25,19 +31,44 @@ interface GalleryProps {
 
 const GalleryPage = ({ data }: GalleryProps) => {
   const album = data.datoCmsAlbum
-  const lightboxOptions = {
-    imageLoadErrorMessage: 'Impossible de charger cette image',
-    nextLabel: 'Image suivante',
-    prevLabel: 'Image précédente',
-    zoomInLabel: 'Zoomer',
-    zoomOutLabel: 'Dézoomer',
-    closeLabel: 'Fermer',
+  const photoswipeOptions = {
+    closeTitle: 'Fermer',
+    zoomTitle: 'Zoom',
+    arrowPrevTitle: 'Précédente',
+    arrowNextTitle: 'Suivante',
+    errorMsg: "Impossible d'afficher cette image",
   }
   return (
     <Layout>
       <Heading as="h1">{album.title}</Heading>
       <Text dangerouslySetInnerHTML={{ __html: album.description }} />
-      <Gallery images={album.photos} lightboxOptions={lightboxOptions} />
+      <Gallery withCaption options={photoswipeOptions}>
+        <SimpleGrid
+          columns={{ base: 2, sm: 3, md: 4 }}
+          spacing={3}
+          marginTop={8}
+        >
+          {album.photos.map((photo, index) => (
+            <Item
+              original={photo.original.src}
+              thumbnail={photo.thumb.images.fallback?.src}
+              width={photo.original.width}
+              height={photo.original.height}
+              caption={photo.title}
+              alt={photo.alt}
+            >
+              {({ ref, open }) => (
+                <Box
+                  ref={ref as React.MutableRefObject<HTMLImageElement>}
+                  onClick={open}
+                >
+                  <GatsbyImage image={photo.thumb} alt={photo.alt} />
+                </Box>
+              )}
+            </Item>
+          ))}
+        </SimpleGrid>
+      </Gallery>
     </Layout>
   )
 }
@@ -48,15 +79,19 @@ export const galleryPageQuery = graphql`
       title
       description
       photos {
-        full: gatsbyImageData(layout: FULL_WIDTH)
+        title
+        alt
+        original: fluid(maxHeight: 1000, maxWidth: 2000) {
+          src
+          width
+          height
+        }
         thumb: gatsbyImageData(
           width: 270
           height: 270
           placeholder: BLURRED
           imgixParams: { fit: "crop", w: "270", h: "270" }
         )
-        caption: title
-        thumbAlt: alt
       }
     }
   }
