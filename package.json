@@ -26,7 +26,7 @@
     "gatsby-source-filesystem": "5.11.0",
     "gatsby-transformer-sharp": "5.11.0",
     "nuka-carousel": "6.0.3",
-    "photoswipe": "5.3.7",
+    "photoswipe": "5.3.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet": "6.1.0",
