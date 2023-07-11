@@ -19,19 +19,17 @@ export const Layout = ({
   marginTop = defaultMarginY,
   children,
 }: LayoutProps) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query SiteMetaQuery {
-        site {
-          siteMetadata {
-            title
-            description
-            keywords
-          }
+  const { site } = useStaticQuery(graphql`
+    query SiteMetaQuery {
+      site {
+        siteMetadata {
+          title
+          description
+          keywords
         }
       }
-    `
-  )
+    }
+  `)
   return (
     <>
       <ChakraProvider theme={chakraTheme}>
