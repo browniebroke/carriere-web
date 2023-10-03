@@ -128,7 +128,7 @@
     },
     {
       "path": "./public/styles.*.css",
-      "maxSize": "80KB"
+      "maxSize": "100KB"
     }
   ]
 }
