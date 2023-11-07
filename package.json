@@ -35,9 +35,9 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@types/react": "18.2.36",
-    "@types/react-dom": "18.2.14",
-    "@types/react-helmet": "6.1.8",
+    "@types/react": "18.2.37",
+    "@types/react-dom": "18.2.15",
+    "@types/react-helmet": "6.1.9",
     "@typescript-eslint/parser": "6.10.0",
     "bundlewatch": "0.3.3",
     "eslint": "8.53.0",
