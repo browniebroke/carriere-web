@@ -5,8 +5,8 @@ const baseUrl =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:8000'
     : process.env.REVIEW_ID
-    ? `https://deploy-preview-${process.env.REVIEW_ID}--carriere-alla.netlify.app`
-    : `https://www.carriere-alla.fr`
+      ? `https://deploy-preview-${process.env.REVIEW_ID}--carriere-alla.netlify.app`
+      : `https://www.carriere-alla.fr`
 const gaTrackingId =
   process.env.PRODUCTION_DEPLOY === 'true' ? 'G-7XHZBQDB2E' : 'G-xxx'
 
