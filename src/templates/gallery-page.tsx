@@ -58,10 +58,7 @@ const GalleryPage = ({ data }: GalleryProps) => {
               alt={photo.alt}
             >
               {({ ref, open }) => (
-                <Box
-                  ref={ref as React.MutableRefObject<HTMLImageElement>}
-                  onClick={open}
-                >
+                <Box ref={ref} onClick={open}>
                   <GatsbyImage image={photo.thumb} alt={photo.alt} />
                 </Box>
               )}
