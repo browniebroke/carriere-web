@@ -9,7 +9,7 @@
     "@emotion/react": "11.13.3",
     "@emotion/styled": "11.13.0",
     "@fontsource/montserrat": "5.1.0",
-    "framer-motion": "11.11.11",
+    "framer-motion": "11.11.13",
     "gatsby": "5.14.0",
     "gatsby-plugin-google-gtag": "5.14.0",
     "gatsby-plugin-image": "3.14.0",
