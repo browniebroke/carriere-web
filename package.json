@@ -40,7 +40,7 @@
     "@types/react": "18.3.23",
     "@types/react-dom": "18.3.7",
     "@types/react-helmet": "6.1.11",
-    "@typescript-eslint/parser": "8.36.0",
+    "@typescript-eslint/parser": "8.37.0",
     "bundlewatch": "0.4.1",
     "eslint": "9.31.0",
     "eslint-config-prettier": "9.1.0",
