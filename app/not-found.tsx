@@ -1,11 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'next/link'
 import { Flex, Heading, Text } from '@chakra-ui/react'
 
-import { Layout } from '../components/layout'
-
-const NotFoundPage = () => (
-  <Layout>
+export default function NotFound() {
+  return (
     <Flex
       minHeight="60vh"
       direction="column"
@@ -17,10 +15,8 @@ const NotFoundPage = () => (
         Cette page n'existe pas... <br />
       </Text>
       <Text>
-        <Link to="/">Retour à l'acceuil</Link>
+        <Link href="/">Retour à l'acceuil</Link>
       </Text>
     </Flex>
-  </Layout>
-)
-
-export default NotFoundPage
+  )
+}

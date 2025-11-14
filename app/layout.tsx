@@ -1,0 +1,45 @@
+'use client'
+
+import React from 'react'
+import { GoogleAnalytics } from '@next/third-parties/google'
+import { ChakraProvider, Box, Container } from '@chakra-ui/react'
+import { Header } from '../src/components/header'
+import { Footer } from '../src/components/footer'
+import { theme as chakraTheme } from '../src/utils/theme'
+import '@fontsource/montserrat'
+import '@fontsource/montserrat/400-italic.css'
+import '@fontsource/montserrat/600.css'
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  const gaTrackingId = process.env.GA_TRACKING_ID || ''
+
+  return (
+    <html lang="fr">
+      <head>
+        <meta name="theme-color" content="#f7e4bc" />
+        <link rel="manifest" href="/manifest.json" />
+        <title>S.A.R.L Carrière Alla</title>
+        <meta name="description" content="Carrière et atelier de taille de pierre situé à Sauclières, Aveyron" />
+        <meta name="keywords" content="taille de pierre, construction, carrière, murs, piliers, voûtes" />
+      </head>
+      <body>
+        <ChakraProvider theme={chakraTheme}>
+          <Header />
+          <Container maxWidth="4xl">
+            <Box marginBottom={10} marginTop={10} minHeight="80vh">
+              {children}
+            </Box>
+          </Container>
+          <Footer />
+        </ChakraProvider>
+        {gaTrackingId && gaTrackingId !== 'G-xxx' && (
+          <GoogleAnalytics gaId={gaTrackingId} />
+        )}
+      </body>
+    </html>
+  )
+}
