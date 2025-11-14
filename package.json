@@ -5,13 +5,11 @@
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
     "@chakra-ui/react": "2.10.9",
-    "@datocms/cma-client-browser": "^5.1.27",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
     "@fontsource/montserrat": "5.2.8",
     "@next/third-parties": "^16.0.3",
     "@svgr/webpack": "^8.1.0",
-    "datocms-client": "^3.5.24",
     "framer-motion": "12.23.24",
     "graphql": "^16.12.0",
     "graphql-request": "^7.3.3",
@@ -29,6 +27,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.39.1",
+    "@types/node": "^24.10.1",
     "@types/react": "18.3.26",
     "@types/react-dom": "18.3.7",
     "@typescript-eslint/parser": "8.46.4",
