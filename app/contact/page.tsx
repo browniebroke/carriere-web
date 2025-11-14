@@ -3,7 +3,7 @@ import { AspectRatio, Box, Heading, Text } from '@chakra-ui/react'
 import { fetchDatoCMS } from '../../src/utils/datocms'
 
 interface ContactPageData {
-  datoCmsContactPage: {
+  contactPage: {
     title: string
     intro: string
     mapTitle: string
@@ -15,7 +15,7 @@ async function getContactPageData(): Promise<ContactPageData> {
   try {
     const query = `
       query contactPageQuery {
-        datoCmsContactPage {
+        contactPage {
           title
           intro
           mapTitle
@@ -27,7 +27,7 @@ async function getContactPageData(): Promise<ContactPageData> {
   } catch (error) {
     console.error('Error fetching contact page data:', error)
     return {
-      datoCmsContactPage: {
+      contactPage: {
         title: 'Contact',
         intro: "Contactez-nous pour plus d'informations.",
         mapTitle: 'Où nous trouver',
@@ -39,7 +39,7 @@ async function getContactPageData(): Promise<ContactPageData> {
 
 export default async function ContactPage() {
   const data = await getContactPageData()
-  const contactPage = data.datoCmsContactPage
+  const contactPage = data.contactPage
 
   return (
     <>

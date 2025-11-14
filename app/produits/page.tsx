@@ -36,14 +36,14 @@ interface Album {
 }
 
 interface ProductListPageData {
-  allDatoCmsAlbum: Album[]
+  allAlbums: Album[]
 }
 
 async function getProductsData(): Promise<ProductListPageData> {
   try {
     const query = `
       query GalleriesList {
-        allDatoCmsAlbum(orderBy: title_ASC) {
+        allAlbums(orderBy: title_ASC) {
           id
           title
           description
@@ -59,14 +59,14 @@ async function getProductsData(): Promise<ProductListPageData> {
   } catch (error) {
     console.error('Error fetching products data:', error)
     return {
-      allDatoCmsAlbum: [],
+      allAlbums: [],
     }
   }
 }
 
 export default async function ProductsListPage() {
   const data = await getProductsData()
-  const albumNodesList = data.allDatoCmsAlbum
+  const albumNodesList = data.allAlbums
 
   return (
     <Box>

@@ -31,7 +31,7 @@ interface CarouselImage {
 }
 
 interface HomePageData {
-  datoCmsHomePage: {
+  homePage: {
     carousel: { url: string; width: number; height: number; alt: string }[]
     title: string
     subtitle: string
@@ -45,7 +45,7 @@ async function getHomePageData(): Promise<HomePageData> {
   try {
     const query = `
       query homePageQuery {
-        datoCmsHomePage {
+        homePage {
           carousel {
             url(imgixParams: {fit: crop, w: "1700", h: "980", auto: format})
             width
@@ -65,7 +65,7 @@ async function getHomePageData(): Promise<HomePageData> {
     console.error('Error fetching home page data:', error)
     // Return mock data for build time
     return {
-      datoCmsHomePage: {
+      homePage: {
         carousel: [],
         title: 'S.A.R.L Carrière Alla',
         subtitle: 'Carrière et atelier de taille de pierre',
@@ -79,7 +79,7 @@ async function getHomePageData(): Promise<HomePageData> {
 
 export default async function HomePage() {
   const data = await getHomePageData()
-  const homePage = data.datoCmsHomePage
+  const homePage = data.homePage
 
   return (
     <>

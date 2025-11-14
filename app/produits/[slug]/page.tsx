@@ -20,7 +20,7 @@ interface Album {
 }
 
 interface GalleryPageData {
-  datoCmsAlbum: Album
+  album: Album
 }
 
 async function getAlbumData(slug: string): Promise<GalleryPageData | null> {
@@ -28,17 +28,17 @@ async function getAlbumData(slug: string): Promise<GalleryPageData | null> {
     // First get all albums to match slug to ID
     const allAlbumsQuery = `
       query {
-        allDatoCmsAlbum {
+        allAlbums {
           id
           title
         }
       }
     `
     const allAlbumsData: {
-      allDatoCmsAlbum: Array<{ id: string; title: string }>
+      allAlbums: Array<{ id: string; title: string }>
     } = await fetchDatoCMS(allAlbumsQuery)
 
-    const album = allAlbumsData.allDatoCmsAlbum.find(
+    const album = allAlbumsData.allAlbums.find(
       (a) =>
         slugify(a.title, { lower: true, remove: /[*+~.()'"!:@]/g }) === slug
     )
@@ -49,7 +49,7 @@ async function getAlbumData(slug: string): Promise<GalleryPageData | null> {
 
     const query = `
       query GalleryData($albumId: ItemId!) {
-        datoCmsAlbum(filter: {id: {eq: $albumId}}) {
+        album(filter: {id: {eq: $albumId}}) {
           title
           description
           photos {
@@ -74,15 +74,15 @@ export async function generateStaticParams() {
   try {
     const query = `
       query {
-        allDatoCmsAlbum {
+        allAlbums {
           title
         }
       }
     `
-    const data: { allDatoCmsAlbum: Array<{ title: string }> } =
+    const data: { allAlbums: Array<{ title: string }> } =
       await fetchDatoCMS(query)
 
-    return data.allDatoCmsAlbum.map((album) => ({
+    return data.allAlbums.map((album) => ({
       slug: slugify(album.title, { lower: true, remove: /[*+~.()'"!:@]/g }),
     }))
   } catch (error) {
@@ -111,7 +111,7 @@ export default async function GalleryPage({
     return <div>Album not found</div>
   }
 
-  const album = data.datoCmsAlbum
+  const album = data.album
 
   return (
     <>
