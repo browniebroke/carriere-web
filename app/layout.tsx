@@ -23,8 +23,14 @@ export default function RootLayout({
         <meta name="theme-color" content="#f7e4bc" />
         <link rel="manifest" href="/manifest.json" />
         <title>S.A.R.L Carrière Alla</title>
-        <meta name="description" content="Carrière et atelier de taille de pierre situé à Sauclières, Aveyron" />
-        <meta name="keywords" content="taille de pierre, construction, carrière, murs, piliers, voûtes" />
+        <meta
+          name="description"
+          content="Carrière et atelier de taille de pierre situé à Sauclières, Aveyron"
+        />
+        <meta
+          name="keywords"
+          content="taille de pierre, construction, carrière, murs, piliers, voûtes"
+        />
       </head>
       <body>
         <ChakraProvider theme={chakraTheme}>

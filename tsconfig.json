@@ -1,5 +1,10 @@
 {
-  "include": ["./src/**/*", "./app/**/*", "next-env.d.ts", ".next/types/**/*.ts"],
+  "include": [
+    "./src/**/*",
+    "./app/**/*",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "target": "ES2017",

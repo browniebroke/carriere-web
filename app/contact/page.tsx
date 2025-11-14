@@ -29,7 +29,7 @@ async function getContactPageData(): Promise<ContactPageData> {
     return {
       datoCmsContactPage: {
         title: 'Contact',
-        intro: 'Contactez-nous pour plus d\'informations.',
+        intro: "Contactez-nous pour plus d'informations.",
         mapTitle: 'Où nous trouver',
         workshopLocation: 'Sauclières, Aveyron',
       },

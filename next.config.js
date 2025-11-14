@@ -19,15 +19,18 @@ const nextConfig = {
   env: {
     SITE_TITLE: title,
     SITE_DESCRIPTION: description,
-    SITE_KEYWORDS: 'taille de pierre, construction, carrière, murs, piliers, voûtes',
-    DATOCMS_API_TOKEN: process.env.DATOCMS_API_TOKEN || '5c9510728aa44244b58d9c5fe89f7b',
-    GA_TRACKING_ID: process.env.PRODUCTION_DEPLOY === 'true' ? 'G-7XHZBQDB2E' : 'G-xxx',
+    SITE_KEYWORDS:
+      'taille de pierre, construction, carrière, murs, piliers, voûtes',
+    DATOCMS_API_TOKEN:
+      process.env.DATOCMS_API_TOKEN || '5c9510728aa44244b58d9c5fe89f7b',
+    GA_TRACKING_ID:
+      process.env.PRODUCTION_DEPLOY === 'true' ? 'G-7XHZBQDB2E' : 'G-xxx',
     SENTRY_DSN: 'https://7b2edbed4f49486685ed4d9cdce45b0a@sentry.io/1368012',
   },
   webpack: (config) => {
     // Find the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.('.svg'),
+      rule.test?.test?.('.svg')
     )
 
     config.module.rules.push(
@@ -43,7 +46,7 @@ const nextConfig = {
         issuer: fileLoaderRule.issuer,
         resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
         use: ['@svgr/webpack'],
-      },
+      }
     )
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.

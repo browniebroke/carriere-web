@@ -34,13 +34,15 @@ async function getAlbumData(slug: string): Promise<GalleryPageData | null> {
         }
       }
     `
-    const allAlbumsData: { allDatoCmsAlbum: Array<{ id: string; title: string }> } = 
-      await fetchDatoCMS(allAlbumsQuery)
-    
+    const allAlbumsData: {
+      allDatoCmsAlbum: Array<{ id: string; title: string }>
+    } = await fetchDatoCMS(allAlbumsQuery)
+
     const album = allAlbumsData.allDatoCmsAlbum.find(
-      (a) => slugify(a.title, { lower: true, remove: /[*+~.()'"!:@]/g }) === slug
+      (a) =>
+        slugify(a.title, { lower: true, remove: /[*+~.()'"!:@]/g }) === slug
     )
-    
+
     if (!album) {
       return null
     }
@@ -77,13 +79,16 @@ export async function generateStaticParams() {
         }
       }
     `
-    const data: { allDatoCmsAlbum: Array<{ title: string }> } = await fetchDatoCMS(query)
-    
+    const data: { allDatoCmsAlbum: Array<{ title: string }> } =
+      await fetchDatoCMS(query)
+
     return data.allDatoCmsAlbum.map((album) => ({
       slug: slugify(album.title, { lower: true, remove: /[*+~.()'"!:@]/g }),
     }))
   } catch (error) {
-    console.warn('Could not fetch albums for static generation, using mock data')
+    console.warn(
+      'Could not fetch albums for static generation, using mock data'
+    )
     // Use mock data for build time
     const { mockAlbums } = await import('../../../src/utils/mock-albums')
     return mockAlbums.map((title) => ({
@@ -101,11 +106,11 @@ export default async function GalleryPage({
   params: { slug: string }
 }) {
   const data = await getAlbumData(params.slug)
-  
+
   if (!data) {
     return <div>Album not found</div>
   }
-  
+
   const album = data.datoCmsAlbum
 
   return (

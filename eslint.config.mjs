@@ -17,7 +17,14 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ['**/node_modules', '**/public', '**/.cache', '**/.vscode', '**/.next', '**/out'],
+    ignores: [
+      '**/node_modules',
+      '**/public',
+      '**/.cache',
+      '**/.vscode',
+      '**/.next',
+      '**/out',
+    ],
   },
   ...compat.extends('prettier'),
   {

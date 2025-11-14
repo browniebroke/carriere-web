@@ -1,6 +1,7 @@
 import { GraphQLClient } from 'graphql-request'
 
-const API_TOKEN = process.env.DATOCMS_API_TOKEN || '5c9510728aa44244b58d9c5fe89f7b'
+const API_TOKEN =
+  process.env.DATOCMS_API_TOKEN || '5c9510728aa44244b58d9c5fe89f7b'
 
 export const datoCmsClient = new GraphQLClient('https://graphql.datocms.com/', {
   headers: {
@@ -8,7 +9,10 @@ export const datoCmsClient = new GraphQLClient('https://graphql.datocms.com/', {
   },
 })
 
-export async function fetchDatoCMS(query: string, variables?: Record<string, any>) {
+export async function fetchDatoCMS(
+  query: string,
+  variables?: Record<string, any>
+) {
   try {
     return await datoCmsClient.request(query, variables)
   } catch (error) {

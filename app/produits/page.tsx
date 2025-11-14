@@ -75,11 +75,7 @@ export default async function ProductsListPage() {
         Voici un aperçu de nos produits. Cliquez sur une catégorie pour en
         savoir plus.
       </Text>
-      <SimpleGrid
-        columns={{ base: 2, sm: 3, md: 4 }}
-        spacing={3}
-        marginTop={8}
-      >
+      <SimpleGrid columns={{ base: 2, sm: 3, md: 4 }} spacing={3} marginTop={8}>
         {albumNodesList.map((node) => (
           <Link key={node.id} href={makeAlbumUrlPath(node.title)}>
             <GalleryLinkWrapper>
