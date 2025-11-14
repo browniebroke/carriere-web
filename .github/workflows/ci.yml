@@ -20,5 +20,6 @@ jobs:
     uses: browniebroke/github-actions/.github/workflows/netlify-deploy.yml@v1
     with:
       netlify_site_id: '10c50357-1953-4307-9c1b-c40f1f826885'
+      publish_dir: 'public'
     secrets:
       netlify_auth_token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
