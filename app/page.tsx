@@ -16,7 +16,7 @@ const SellingPoint = ({ children }: { children: React.ReactNode }) => (
         margin: 'auto',
         marginBottom: 4,
       },
-      path: { fill: 'primary' },
+      path: { fill: '{colors.primary}' },
     }}
   >
     {children}

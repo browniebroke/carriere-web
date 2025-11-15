@@ -20,11 +20,11 @@ export const Footer = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Icon as={Facebook} marginRight={2} />
+              <Icon as={Facebook} boxSize={5} marginRight={2} />
               Facebook
             </Link>
             <Link href="tel:+33565621365">
-              <Icon as={Phone} marginRight={2} />
+              <Icon as={Phone} boxSize={5} marginRight={2} />
               Tel: 05 65 62 13 65
             </Link>
           </Stack>
