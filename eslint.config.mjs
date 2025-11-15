@@ -26,7 +26,7 @@ export default [
       '**/out',
     ],
   },
-  ...compat.extends('prettier'),
+  ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier'),
   {
     files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     plugins: {

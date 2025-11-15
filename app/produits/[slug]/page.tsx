@@ -98,13 +98,12 @@ export async function generateStaticParams() {
 }
 
 export const dynamic = 'error'
-export const dynamicParams = true
+export const dynamicParams = false
 
-export default async function GalleryPage({
-  params,
-}: {
-  params: { slug: string }
+export default async function GalleryPage(props: {
+  params: Promise<{ slug: string }>
 }) {
+  const params = await props.params
   const data = await getAlbumData(params.slug)
 
   if (!data) {
