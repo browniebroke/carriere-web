@@ -17,7 +17,8 @@ export const Footer = () => (
             <Link
               href="https://www.facebook.com/carrierealla/"
               title="Notre Page Facebook"
-              isExternal
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Icon as={Facebook} marginRight={2} />
               Facebook
@@ -32,7 +33,8 @@ export const Footer = () => (
           <Link
             href="https://www.infogreffe.fr/entreprise-societe/812786986"
             title="Info Greffe"
-            isExternal
+            target="_blank"
+            rel="noopener noreferrer"
           >
             SIRET 812 786 986 R.C.S. RODEZ
           </Link>
@@ -44,26 +46,34 @@ export const Footer = () => (
           <Link
             href="http://creativecommons.org/licenses/by/3.0/"
             title="Creative Commons BY 3.0"
-            isExternal
+            target="_blank"
+            rel="noopener noreferrer"
           >
             CC 3.0 BY
           </Link>
           ):
           <Stack direction="row">
-            <Link href="https://www.freepik.com/" title="Freepik" isExternal>
+            <Link
+              href="https://www.freepik.com/"
+              title="Freepik"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Freepik
             </Link>
             <Link
               href="https://www.flaticon.com/authors/gregor-cresnar"
               title=""
-              isExternal
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Gregor Cresnar
             </Link>
             <Link
               href="https://www.flaticon.com/authors/pixel-perfect"
               title=""
-              isExternal
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Pixel perfect
             </Link>
