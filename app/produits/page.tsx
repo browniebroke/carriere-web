@@ -17,7 +17,7 @@ const GalleryLinkWrapper: React.FC<{ children: React.ReactNode }> = ({
 }) => (
   <Flex
     position="relative"
-    sx={{
+    css={{
       '&:hover': {
         boxShadow: '1px 1px 6px rgba(0, 0, 0, 0.5)',
         transition: 'box-shadow 0.2s',
@@ -83,11 +83,7 @@ export default async function ProductsListPage() {
           Voici un aperçu de nos produits. Cliquez sur une catégorie pour en
           savoir plus.
         </Text>
-        <SimpleGrid
-          columns={{ base: 2, sm: 3, md: 4 }}
-          spacing={3}
-          marginTop={8}
-        >
+        <SimpleGrid columns={{ base: 2, sm: 3, md: 4 }} gap={3} marginTop={8}>
           {albumNodesList.map((node) => (
             <Link key={node.id} href={makeAlbumUrlPath(node.title)}>
               <GalleryLinkWrapper>

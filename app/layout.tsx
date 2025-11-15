@@ -5,7 +5,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { ChakraProvider } from '@chakra-ui/react'
 import { Header } from '../src/components/header'
 import { Footer } from '../src/components/footer'
-import { theme as chakraTheme } from '../src/utils/theme'
+import { system } from '../src/utils/theme'
 import '@fontsource/montserrat'
 import '@fontsource/montserrat/400-italic.css'
 import '@fontsource/montserrat/600.css'
@@ -35,7 +35,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <ChakraProvider theme={chakraTheme}>
+        <ChakraProvider value={system}>
           <Header />
           {children}
           <Footer />

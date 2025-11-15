@@ -10,7 +10,7 @@ export const Header = () => (
     as="header"
     backgroundColor="primary"
     color="white"
-    sx={{
+    css={{
       'a, a:visited': {
         color: 'currentColor',
         textDecoration: 'none',
@@ -34,7 +34,7 @@ export const Header = () => (
               />
             </Flex>
           </Link>
-          <Stack direction="row" spacing={4}>
+          <Stack direction="row" gap={4}>
             <Link href="/produits/">Produits</Link>
             <Link href="/contact/">Contact</Link>
           </Stack>
