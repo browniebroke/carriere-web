@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { GoogleAnalytics } from '@next/third-parties/google'
-import { ChakraProvider, Box, Container } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import { Header } from '../src/components/header'
 import { Footer } from '../src/components/footer'
 import { theme as chakraTheme } from '../src/utils/theme'
