@@ -4,42 +4,32 @@
   "version": "1.0.0",
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
-    "@chakra-ui/gatsby-plugin": "3.1.3",
     "@chakra-ui/react": "2.10.9",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
     "@fontsource/montserrat": "5.2.8",
+    "@next/third-parties": "^16.0.3",
+    "@svgr/webpack": "^8.1.0",
     "framer-motion": "12.23.24",
-    "gatsby": "5.15.0",
-    "gatsby-plugin-google-gtag": "5.15.0",
-    "gatsby-plugin-image": "3.15.0",
-    "gatsby-plugin-manifest": "5.15.0",
-    "gatsby-plugin-netlify": "5.1.1",
-    "gatsby-plugin-offline": "6.15.0",
-    "gatsby-plugin-react-helmet": "6.15.0",
-    "gatsby-plugin-react-svg": "3.3.0",
-    "gatsby-plugin-sentry": "1.0.1",
-    "gatsby-plugin-sharp": "5.15.0",
-    "gatsby-plugin-sitemap": "6.15.0",
-    "gatsby-plugin-typescript": "5.15.0",
-    "gatsby-source-datocms": "5.1.5",
-    "gatsby-source-filesystem": "5.15.0",
-    "gatsby-transformer-sharp": "5.15.0",
+    "graphql": "^16.12.0",
+    "graphql-request": "^7.3.3",
+    "next": "^14.2.33",
+    "next-seo": "^7.0.1",
     "nuka-carousel": "7.0.0",
     "photoswipe": "5.4.4",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-helmet": "6.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-photoswipe-gallery": "3.1.1",
+    "sharp": "^0.34.5",
     "slugify": "1.6.6",
     "typescript": "5.9.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.39.1",
+    "@types/node": "^24.10.1",
     "@types/react": "18.3.26",
     "@types/react-dom": "18.3.7",
-    "@types/react-helmet": "6.1.11",
     "@typescript-eslint/parser": "8.46.4",
     "bundlewatch": "0.4.1",
     "eslint": "9.39.1",
@@ -50,14 +40,14 @@
     "prettier": "3.6.2"
   },
   "keywords": [
-    "gatsby"
+    "nextjs"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "serve": "gatsby serve",
+    "build": "next build",
+    "serve": "next start",
     "bundlewatch": "bundlewatch",
-    "develop": "gatsby develop",
+    "develop": "next dev",
     "format": "prettier --write .",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
@@ -75,32 +65,8 @@
   },
   "bundlewatch": [
     {
-      "path": "./public/app-*.js",
-      "maxSize": "150KB"
-    },
-    {
-      "path": "./public/component---src-pages-404-*.js",
-      "maxSize": "500B"
-    },
-    {
-      "path": "./public/component---src-pages-contact-*.js",
-      "maxSize": "1KB"
-    },
-    {
-      "path": "./public/component---src-pages-produits-*.js",
-      "maxSize": "10KB"
-    },
-    {
-      "path": "./public/component---src-pages-index-*.js",
-      "maxSize": "25KB"
-    },
-    {
-      "path": "./public/component---src-templates-gallery-page-*.js",
-      "maxSize": "5KB"
-    },
-    {
-      "path": "./public/styles.*.css",
-      "maxSize": "100KB"
+      "path": "./out/_next/static/chunks/*.js",
+      "maxSize": "200KB"
     }
   ]
 }

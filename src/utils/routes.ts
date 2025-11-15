@@ -1,6 +1,6 @@
-const slugify = require('slugify')
+import slugify from 'slugify'
 
-exports.makeAlbumUrlPath = (title) => {
+export function makeAlbumUrlPath(title: string): string {
   const slug = slugify(title, { lower: true, remove: /[*+~.()'"!:@]/g })
   return `/produits/${slug}/`
 }

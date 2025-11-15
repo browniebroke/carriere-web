@@ -1,0 +1,16 @@
+{
+  "name": "S.A.R.L Carrière Alla",
+  "short_name": "Carrière Alla",
+  "description": "Carrière et atelier de taille de pierre situé à Sauclières, Aveyron",
+  "start_url": "/",
+  "background_color": "#fff",
+  "theme_color": "#f7e4bc",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

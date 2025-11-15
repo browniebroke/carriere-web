@@ -4,6 +4,9 @@ node_modules
 yarn-error.log
 
 # Build directory
-/public
+/out
+/.next
 .DS_Store
 /.python-version
+next-env.d.ts
+tsconfig.tsbuildinfo

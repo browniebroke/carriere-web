@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'next/link'
 import { Box, Container, Flex, Stack } from '@chakra-ui/react'
 
 import SiteLogo from '../images/icons/logo-compact.svg'
@@ -24,7 +24,7 @@ export const Header = () => (
     <Container maxWidth="4xl">
       <Box as="nav" paddingY={4}>
         <Flex justifyContent="space-between" alignItems="center">
-          <Link to="/" title="Acceuil" aria-label="Acceuil">
+          <Link href="/" title="Acceuil" aria-label="Acceuil">
             <Flex height="site-logo.height">
               <Box as={SiteLogo} width="site-logo.iconWidth" />
               <Box
@@ -35,8 +35,8 @@ export const Header = () => (
             </Flex>
           </Link>
           <Stack direction="row" spacing={4}>
-            <Link to="/produits/">Produits</Link>
-            <Link to="/contact/">Contact</Link>
+            <Link href="/produits/">Produits</Link>
+            <Link href="/contact/">Contact</Link>
           </Stack>
         </Flex>
       </Box>
