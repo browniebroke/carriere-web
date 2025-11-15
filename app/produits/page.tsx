@@ -91,14 +91,27 @@ export default async function ProductsListPage() {
           {albumNodesList.map((node) => (
             <Link key={node.id} href={makeAlbumUrlPath(node.title)}>
               <GalleryLinkWrapper>
-                <Box position="relative" width="100%" height="270px">
-                  <Image
-                    src={node.mainPicture.url}
-                    alt={node.title}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    sizes="270px"
-                  />
+                <Box
+                  position="relative"
+                  width="100%"
+                  paddingBottom="100%"
+                  overflow="hidden"
+                >
+                  <Box
+                    position="absolute"
+                    top={0}
+                    left={0}
+                    right={0}
+                    bottom={0}
+                  >
+                    <Image
+                      src={node.mainPicture.url}
+                      alt={node.title}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="270px"
+                    />
+                  </Box>
                 </Box>
                 <Text
                   as="span"

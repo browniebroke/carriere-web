@@ -47,16 +47,19 @@ export function GalleryClient({ photos }: GalleryClientProps) {
                 onClick={open}
                 position="relative"
                 width="100%"
-                height="270px"
+                paddingBottom="100%"
                 cursor="pointer"
+                overflow="hidden"
               >
-                <Image
-                  src={photo.thumbUrl}
-                  alt={photo.alt}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="270px"
-                />
+                <Box position="absolute" top={0} left={0} right={0} bottom={0}>
+                  <Image
+                    src={photo.thumbUrl}
+                    alt={photo.alt}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="270px"
+                  />
+                </Box>
               </Box>
             )}
           </Item>
