@@ -22,6 +22,8 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#f7e4bc" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/icon.png" />
         <title>S.A.R.L Carrière Alla</title>
         <meta
           name="description"
@@ -35,11 +37,7 @@ export default function RootLayout({
       <body>
         <ChakraProvider theme={chakraTheme}>
           <Header />
-          <Container maxWidth="4xl">
-            <Box marginBottom={10} marginTop={10} minHeight="80vh">
-              {children}
-            </Box>
-          </Container>
+          {children}
           <Footer />
         </ChakraProvider>
         {gaTrackingId && gaTrackingId !== 'G-xxx' && (

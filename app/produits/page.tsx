@@ -1,6 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
-import { Box, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react'
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  SimpleGrid,
+  Text,
+} from '@chakra-ui/react'
 import Image from 'next/image'
 import { fetchDatoCMS } from '../../src/utils/datocms'
 import { makeAlbumUrlPath } from '../../src/utils/routes'
@@ -69,42 +76,48 @@ export default async function ProductsListPage() {
   const albumNodesList = data.allAlbums
 
   return (
-    <Box>
-      <Heading as="h1">Produits</Heading>
-      <Text>
-        Voici un aperçu de nos produits. Cliquez sur une catégorie pour en
-        savoir plus.
-      </Text>
-      <SimpleGrid columns={{ base: 2, sm: 3, md: 4 }} spacing={3} marginTop={8}>
-        {albumNodesList.map((node) => (
-          <Link key={node.id} href={makeAlbumUrlPath(node.title)}>
-            <GalleryLinkWrapper>
-              <Box position="relative" width="100%" height="270px">
-                <Image
-                  src={node.mainPicture.url}
-                  alt={node.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="270px"
-                />
-              </Box>
-              <Text
-                as="span"
-                marginBottom={0}
-                fontWeight="bold"
-                color="white"
-                position="absolute"
-                zIndex="5"
-                bottom={2}
-                left={2}
-                textShadow="1px 1px 3px rgba(0, 0, 0, 0.8)"
-              >
-                {node.title}
-              </Text>
-            </GalleryLinkWrapper>
-          </Link>
-        ))}
-      </SimpleGrid>
-    </Box>
+    <Container maxWidth="4xl">
+      <Box marginTop={10} marginBottom={10} minHeight="80vh">
+        <Heading as="h1">Produits</Heading>
+        <Text>
+          Voici un aperçu de nos produits. Cliquez sur une catégorie pour en
+          savoir plus.
+        </Text>
+        <SimpleGrid
+          columns={{ base: 2, sm: 3, md: 4 }}
+          spacing={3}
+          marginTop={8}
+        >
+          {albumNodesList.map((node) => (
+            <Link key={node.id} href={makeAlbumUrlPath(node.title)}>
+              <GalleryLinkWrapper>
+                <Box position="relative" width="100%" height="270px">
+                  <Image
+                    src={node.mainPicture.url}
+                    alt={node.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="270px"
+                  />
+                </Box>
+                <Text
+                  as="span"
+                  marginBottom={0}
+                  fontWeight="bold"
+                  color="white"
+                  position="absolute"
+                  zIndex="5"
+                  bottom={2}
+                  left={2}
+                  textShadow="1px 1px 3px rgba(0, 0, 0, 0.8)"
+                >
+                  {node.title}
+                </Text>
+              </GalleryLinkWrapper>
+            </Link>
+          ))}
+        </SimpleGrid>
+      </Box>
+    </Container>
   )
 }

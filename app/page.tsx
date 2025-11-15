@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Container, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 import { fetchDatoCMS } from '../src/utils/datocms'
 import { HomeCarousel } from '../src/components/home-carousel'
 
@@ -86,24 +86,31 @@ export default async function HomePage() {
       <Box marginTop={0}>
         <HomeCarousel images={homePage.carousel} />
       </Box>
-      <Box marginY={8} justifyContent="center" textAlign="center">
-        <Heading as="h1">{homePage.title}</Heading>
-        <Text fontSize="1.5em">{homePage.subtitle}</Text>
-      </Box>
-      <SimpleGrid columns={{ base: 1, md: 3 }} textAlign="center" spacing={4}>
-        <SellingPoint>
-          <HandShake />
-          <Text>{homePage.handshakeCopy}</Text>
-        </SellingPoint>
-        <SellingPoint>
-          <Shield />
-          <Text>{homePage.qualityCopy}</Text>
-        </SellingPoint>
-        <SellingPoint>
-          <HomeBuilding />
-          <Text>{homePage.collabCopy}</Text>
-        </SellingPoint>
-      </SimpleGrid>
+      <Container maxWidth="4xl">
+        <Box marginY={8} justifyContent="center" textAlign="center">
+          <Heading as="h1">{homePage.title}</Heading>
+          <Text fontSize="1.5em">{homePage.subtitle}</Text>
+        </Box>
+        <SimpleGrid
+          columns={{ base: 1, md: 3 }}
+          textAlign="center"
+          spacing={4}
+          marginBottom={10}
+        >
+          <SellingPoint>
+            <HandShake />
+            <Text>{homePage.handshakeCopy}</Text>
+          </SellingPoint>
+          <SellingPoint>
+            <Shield />
+            <Text>{homePage.qualityCopy}</Text>
+          </SellingPoint>
+          <SellingPoint>
+            <HomeBuilding />
+            <Text>{homePage.collabCopy}</Text>
+          </SellingPoint>
+        </SimpleGrid>
+      </Container>
     </>
   )
 }

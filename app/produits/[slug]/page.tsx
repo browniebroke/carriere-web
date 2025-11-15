@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text } from '@chakra-ui/react'
+import { Container, Heading, Text } from '@chakra-ui/react'
 import { fetchDatoCMS } from '../../../src/utils/datocms'
 import { GalleryClient } from '../../../src/components/gallery-client'
 import slugify from 'slugify'
@@ -114,10 +114,10 @@ export default async function GalleryPage({
   const album = data.album
 
   return (
-    <>
+    <Container maxWidth="4xl" marginTop={10} marginBottom={10} minHeight="80vh">
       <Heading as="h1">{album.title}</Heading>
       <Text dangerouslySetInnerHTML={{ __html: album.description }} />
       <GalleryClient photos={album.photos} />
-    </>
+    </Container>
   )
 }
