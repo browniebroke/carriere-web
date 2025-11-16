@@ -10,13 +10,14 @@ import Shield from '../src/images/icons/shield.svg'
 const SellingPoint = ({ children }: { children: React.ReactNode }) => (
   <Box
     css={{
+      '--icon-color': '{colors.primary}',
       svg: {
         width: '100%',
         maxHeight: '8rem',
         margin: 'auto',
         marginBottom: 4,
       },
-      path: { fill: '{colors.primary}' },
+      path: { fill: 'var(--icon-color)' },
     }}
   >
     {children}
