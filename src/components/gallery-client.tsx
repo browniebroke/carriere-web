@@ -30,7 +30,7 @@ export function GalleryClient({ photos }: GalleryClientProps) {
 
   return (
     <Gallery withCaption options={photoswipeOptions}>
-      <SimpleGrid columns={{ base: 2, sm: 3, md: 4 }} spacing={3} marginTop={8}>
+      <SimpleGrid columns={{ base: 2, sm: 3, md: 4 }} gap={3} marginTop={8}>
         {photos.map((photo, index) => (
           <Item
             key={index}
