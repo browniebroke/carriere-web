@@ -11,7 +11,7 @@ export const datoCmsClient = new GraphQLClient('https://graphql.datocms.com/', {
 
 export async function fetchDatoCMS(
   query: string,
-  variables?: Record<string, any>
+  variables?: Record<string, unknown>
 ) {
   try {
     return await datoCmsClient.request(query, variables)

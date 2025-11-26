@@ -43,7 +43,7 @@ export function GalleryClient({ photos }: GalleryClientProps) {
           >
             {({ ref, open }) => (
               <Box
-                ref={ref as any}
+                ref={ref}
                 onClick={open}
                 position="relative"
                 width="100%"
