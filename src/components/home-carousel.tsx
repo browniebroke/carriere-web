@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Box } from '@chakra-ui/react'
 import { Carousel } from 'nuka-carousel'
 import Image from 'next/image'
 

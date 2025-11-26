@@ -85,7 +85,7 @@ export async function generateStaticParams() {
     return data.allAlbums.map((album) => ({
       slug: slugify(album.title, { lower: true, remove: /[*+~.()'"!:@]/g }),
     }))
-  } catch (error) {
+  } catch {
     console.warn(
       'Could not fetch albums for static generation, using mock data'
     )

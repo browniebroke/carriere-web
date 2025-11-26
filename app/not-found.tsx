@@ -15,10 +15,10 @@ export default function NotFound() {
       >
         <Heading as="h1">Page introuvable</Heading>
         <Text>
-          Cette page n'existe pas... <br />
+          Cette page n&apos;existe pas... <br />
         </Text>
         <Text>
-          <Link href="/">Retour à l'acceuil</Link>
+          <Link href="/">Retour à l&apos;acceuil</Link>
         </Text>
       </Flex>
     </Container>
