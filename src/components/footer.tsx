@@ -19,13 +19,17 @@ export const Footer = () => (
               title="Notre Page Facebook"
               target="_blank"
               rel="noopener noreferrer"
+              justifyContent={{ base: 'center', md: 'inherit' }}
             >
               <Icon boxSize={5} marginRight={2}>
                 <Facebook />
               </Icon>
               Facebook
             </Link>
-            <Link href="tel:+33565621365">
+            <Link
+              href="tel:+33565621365"
+              justifyContent={{ base: 'center', md: 'inherit' }}
+            >
               <Icon boxSize={5} marginRight={2}>
                 <Phone />
               </Icon>
