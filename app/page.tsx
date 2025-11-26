@@ -9,14 +9,14 @@ import Shield from '../src/images/icons/shield.svg'
 
 const SellingPoint = ({ children }: { children: React.ReactNode }) => (
   <Box
-    sx={{
-      svg: {
+    css={{
+      '& svg': {
         width: '100%',
         maxHeight: '8rem',
         margin: 'auto',
         marginBottom: 4,
+        '& path': { fill: 'primary' },
       },
-      path: { fill: 'primary' },
     }}
   >
     {children}
@@ -81,13 +81,15 @@ export default async function HomePage() {
       </Box>
       <Container maxWidth="4xl">
         <Box marginY={8} justifyContent="center" textAlign="center">
-          <Heading as="h1">{homePage.title}</Heading>
+          <Heading as="h1" fontSize="2.25em">
+            {homePage.title}
+          </Heading>
           <Text fontSize="1.5em">{homePage.subtitle}</Text>
         </Box>
         <SimpleGrid
           columns={{ base: 1, md: 3 }}
           textAlign="center"
-          spacing={4}
+          gap={4}
           marginBottom={10}
         >
           <SellingPoint>

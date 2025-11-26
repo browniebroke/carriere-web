@@ -10,12 +10,12 @@ export const Header = () => (
     as="header"
     backgroundColor="primary"
     color="white"
-    sx={{
-      'a, a:visited': {
+    css={{
+      '& a, & a:visited': {
         color: 'currentColor',
         textDecoration: 'none',
       },
-      'a:hover, a:focus': {
+      '& a:hover, & a:focus': {
         color: 'gray.300',
         textDecoration: 'none',
       },
@@ -25,16 +25,16 @@ export const Header = () => (
       <Box as="nav" paddingY={4}>
         <Flex justifyContent="space-between" alignItems="center">
           <Link href="/" title="Acceuil" aria-label="Acceuil">
-            <Flex height="site-logo.height">
-              <Box as={SiteLogo} width="site-logo.iconWidth" />
+            <Flex height="60px">
+              <Box as={SiteLogo} width="60px" />
               <Box
                 as={SiteName}
-                width={{ base: 'inherit', md: 'site-logo.nameWidth' }}
+                width={{ base: 'inherit', md: '121px' }}
                 display={{ base: 'none', md: 'inherit' }}
               />
             </Flex>
           </Link>
-          <Stack direction="row" spacing={4}>
+          <Stack direction="row" gap={4}>
             <Link href="/produits/">Produits</Link>
             <Link href="/contact/">Contact</Link>
           </Stack>
