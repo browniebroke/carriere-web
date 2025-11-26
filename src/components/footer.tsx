@@ -5,7 +5,7 @@ import Facebook from '../images/icons/facebook.svg'
 import Phone from '../images/icons/phone.svg'
 
 export const Footer = () => (
-  <Box as="footer" color="black" backgroundColor="secondary" paddingY={9}>
+  <Box as="footer" backgroundColor="secondary" paddingY={9}>
     <Container maxWidth="4xl">
       <Flex
         justifyContent="space-between"
@@ -45,7 +45,7 @@ export const Footer = () => (
         </Box>
       </Flex>
       <Flex justifyContent="center">
-        <Box textAlign="center" fontSize="0.8em">
+        <Box textAlign="center" fontSize="0.7em">
           Icônes (
           <Link
             href="http://creativecommons.org/licenses/by/3.0/"
