@@ -42,10 +42,10 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "next build --webpack",
+    "build": "next build",
     "serve": "next start",
     "bundlewatch": "bundlewatch",
-    "develop": "next dev --webpack",
+    "develop": "next dev",
     "format": "prettier --write .",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
