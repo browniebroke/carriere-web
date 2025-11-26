@@ -7,11 +7,11 @@
     "@chakra-ui/react": "3.30.0",
     "@emotion/react": "11.14.0",
     "@fontsource/montserrat": "5.2.8",
-    "@next/third-parties": "15.5.6",
+    "@next/third-parties": "^16.0.4",
     "@svgr/webpack": "8.1.0",
     "graphql": "16.12.0",
     "graphql-request": "7.3.5",
-    "next": "15.5.6",
+    "next": "^16.0.4",
     "next-seo": "7.0.1",
     "nuka-carousel": "8.2.0",
     "photoswipe": "5.4.4",
@@ -30,7 +30,7 @@
     "@typescript-eslint/parser": "8.48.0",
     "bundlewatch": "0.4.1",
     "eslint": "9.39.1",
-    "eslint-config-next": "15.5.6",
+    "eslint-config-next": "^16.0.4",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.4",
     "eslint-plugin-react": "7.37.5",
@@ -42,14 +42,15 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "next build",
+    "build": "next build --webpack",
     "serve": "next start",
     "bundlewatch": "bundlewatch",
-    "develop": "next dev",
+    "develop": "next dev --webpack",
     "format": "prettier --write .",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
-    "lint:tsc": "tsc"
+    "lint:tsc": "tsc",
+    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:tsc"
   },
   "renovate": {
     "extends": [

@@ -5,11 +5,6 @@ const description =
 const title = 'S.A.R.L Carrière Alla'
 
 const nextConfig = {
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
-  },
   output: 'export',
   trailingSlash: true,
   images: {
