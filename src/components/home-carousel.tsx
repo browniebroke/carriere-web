@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Box } from '@chakra-ui/react'
-import Carousel from 'nuka-carousel'
+import { Carousel } from 'nuka-carousel'
 import Image from 'next/image'
 
 interface CarouselImage {
@@ -24,9 +24,9 @@ export function HomeCarousel({ images }: HomeCarouselProps) {
   return (
     <Carousel
       autoplay={true}
-      renderCenterLeftControls={() => null}
-      renderCenterRightControls={() => null}
-      wrapAround={true}
+      wrapMode="wrap"
+      showArrows={false}
+      showDots={false}
     >
       {images.map((carouselImage, id) => (
         <Box key={id} position="relative" width="100%" height="500px">
