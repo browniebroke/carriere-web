@@ -1,11 +1,10 @@
 'use client'
 
 import React from 'react'
-import { Box } from '@chakra-ui/react'
-import Carousel from 'nuka-carousel'
+import { Carousel } from 'nuka-carousel'
 import Image from 'next/image'
 
-interface CarouselImage {
+export interface CarouselImage {
   url: string
   width: number
   height: number
@@ -23,22 +22,22 @@ export function HomeCarousel({ images }: HomeCarouselProps) {
 
   return (
     <Carousel
-      autoplay={true}
-      renderCenterLeftControls={() => null}
-      renderCenterRightControls={() => null}
-      wrapAround={true}
+      autoplay
+      autoplayInterval={3000}
+      wrapMode="wrap"
+      showArrows
+      showDots
     >
       {images.map((carouselImage, id) => (
-        <Box key={id} position="relative" width="100%" height="500px">
-          <Image
-            src={carouselImage.url}
-            alt={carouselImage.alt || ''}
-            fill
-            style={{ objectFit: 'cover' }}
-            sizes="(max-width: 1700px) 100vw, 1700px"
-            priority={id === 0}
-          />
-        </Box>
+        <Image
+          key={id}
+          src={carouselImage.url}
+          alt={carouselImage.alt || ''}
+          sizes="(max-width: 1700px) 100vw, 1700px"
+          width={1700}
+          height={600}
+          priority={id === 0}
+        />
       ))}
     </Carousel>
   )

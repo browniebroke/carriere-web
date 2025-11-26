@@ -85,7 +85,7 @@ export async function generateStaticParams() {
     return data.allAlbums.map((album) => ({
       slug: slugify(album.title, { lower: true, remove: /[*+~.()'"!:@]/g }),
     }))
-  } catch (error) {
+  } catch {
     console.warn(
       'Could not fetch albums for static generation, using mock data'
     )
@@ -98,13 +98,12 @@ export async function generateStaticParams() {
 }
 
 export const dynamic = 'error'
-export const dynamicParams = true
+export const dynamicParams = false
 
-export default async function GalleryPage({
-  params,
-}: {
-  params: { slug: string }
+export default async function GalleryPage(props: {
+  params: Promise<{ slug: string }>
 }) {
+  const params = await props.params
   const data = await getAlbumData(params.slug)
 
   if (!data) {

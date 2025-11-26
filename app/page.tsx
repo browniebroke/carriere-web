@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Container, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 import { fetchDatoCMS } from '../src/utils/datocms'
-import { HomeCarousel } from '../src/components/home-carousel'
+import { CarouselImage, HomeCarousel } from '../src/components/home-carousel'
 
 import HandShake from '../src/images/icons/hand-shake.svg'
 import HomeBuilding from '../src/images/icons/home-building.svg'
@@ -23,16 +23,9 @@ const SellingPoint = ({ children }: { children: React.ReactNode }) => (
   </Box>
 )
 
-interface CarouselImage {
-  url: string
-  width: number
-  height: number
-  alt: string
-}
-
 interface HomePageData {
   homePage: {
-    carousel: { url: string; width: number; height: number; alt: string }[]
+    carousel: CarouselImage[]
     title: string
     subtitle: string
     handshakeCopy: string
