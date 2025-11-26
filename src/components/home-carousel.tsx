@@ -30,16 +30,15 @@ export function HomeCarousel({ images }: HomeCarouselProps) {
       showDots
     >
       {images.map((carouselImage, id) => (
-        <Box key={id} width="100%" height="600px">
-          <Image
-            key={id}
-            src={carouselImage.url}
-            alt={carouselImage.alt || ''}
-            fill
-            sizes="(max-width: 1700px) 100vw, 1700px"
-            priority={id === 0}
-          />
-        </Box>
+        <Image
+          key={id}
+          src={carouselImage.url}
+          alt={carouselImage.alt || ''}
+          sizes="(max-width: 1700px) 100vw, 1700px"
+          width={1700}
+          height={600}
+          priority={id === 0}
+        />
       ))}
     </Carousel>
   )
