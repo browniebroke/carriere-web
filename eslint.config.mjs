@@ -1,3 +1,5 @@
+import nextCoreWebVitals from 'eslint-config-next/core-web-vitals'
+import nextTypescript from 'eslint-config-next/typescript'
 import react from 'eslint-plugin-react'
 import prettier from 'eslint-plugin-prettier'
 import globals from 'globals'
@@ -26,7 +28,9 @@ const config = [
       '**/out',
     ],
   },
-  ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier'),
+  ...nextCoreWebVitals,
+  ...nextTypescript,
+  ...compat.extends('prettier'),
   {
     files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     plugins: {
