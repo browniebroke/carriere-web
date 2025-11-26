@@ -11,11 +11,11 @@ export const Header = () => (
     backgroundColor="primary"
     color="white"
     css={{
-      'a, a:visited': {
+      '& a, & a:visited': {
         color: 'currentColor',
         textDecoration: 'none',
       },
-      'a:hover, a:focus': {
+      '& a:hover, & a:focus': {
         color: 'gray.300',
         textDecoration: 'none',
       },
