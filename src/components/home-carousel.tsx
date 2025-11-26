@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/react'
 import { Carousel } from 'nuka-carousel'
 import Image from 'next/image'
 
-interface CarouselImage {
+export interface CarouselImage {
   url: string
   width: number
   height: number
@@ -23,18 +23,19 @@ export function HomeCarousel({ images }: HomeCarouselProps) {
 
   return (
     <Carousel
-      autoplay={true}
+      autoplay
+      autoplayInterval={3000}
       wrapMode="wrap"
-      showArrows={false}
-      showDots={false}
+      showArrows
+      showDots
     >
       {images.map((carouselImage, id) => (
-        <Box key={id} position="relative" width="100%" height="500px">
+        <Box key={id} width="100%" height="600px">
           <Image
+            key={id}
             src={carouselImage.url}
             alt={carouselImage.alt || ''}
             fill
-            style={{ objectFit: 'cover' }}
             sizes="(max-width: 1700px) 100vw, 1700px"
             priority={id === 0}
           />
