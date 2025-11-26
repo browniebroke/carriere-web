@@ -11,7 +11,7 @@ const SellingPoint = ({ children }: { children: React.ReactNode }) => (
   <Box
     color="primary"
     css={{
-      svg: {
+      '& svg': {
         width: '100%',
         maxHeight: '8rem',
         margin: 'auto',
