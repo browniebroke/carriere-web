@@ -20,7 +20,7 @@
     "react-photoswipe-gallery": "4.0.0",
     "sharp": "0.34.5",
     "slugify": "1.6.9",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "devDependencies": {
     "@eslint/js": "9.39.4",
