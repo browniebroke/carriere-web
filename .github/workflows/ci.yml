@@ -17,7 +17,7 @@ jobs:
     secrets:
       bundlewatch_token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
   deploy:
-    uses: browniebroke/github-actions/.github/workflows/netlify-deploy.yml@v1
+    uses: browniebroke/github-actions/.github/workflows/netlify-deploy.yml@a4a8428c6f76ab8848c94c5a649fa809aacf8688 # v1
     with:
       netlify_site_id: '10c50357-1953-4307-9c1b-c40f1f826885'
       publish_dir: 'out'
