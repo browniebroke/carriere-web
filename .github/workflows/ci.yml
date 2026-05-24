@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   lint:
-    uses: browniebroke/github-actions/.github/workflows/ts-lint.yml@v1
+    uses: browniebroke/github-actions/.github/workflows/ts-lint.yml@a4a8428c6f76ab8848c94c5a649fa809aacf8688 # v1
   bundlewatch:
     uses: browniebroke/github-actions/.github/workflows/bundlewatch.yml@a4a8428c6f76ab8848c94c5a649fa809aacf8688 # v1
     secrets:
