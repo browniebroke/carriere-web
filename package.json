@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
-    "@chakra-ui/react": "3.36.0",
+    "@chakra-ui/react": "3.36.1",
     "@emotion/react": "11.14.0",
     "@fontsource/montserrat": "5.3.0",
     "@next/third-parties": "16.2.10",
