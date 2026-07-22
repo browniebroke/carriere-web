@@ -11,13 +11,13 @@ concurrency:
 
 jobs:
   lint:
-    uses: browniebroke/github-actions/.github/workflows/ts-lint.yml@2e443406e88fd4e9f1d23620f0908f425220b38a # v1.25.0
+    uses: browniebroke/github-actions/.github/workflows/ts-lint.yml@f62ef26d5b2705fbcbf9c48ed4619f055efa3481 # v1.26.0
   bundlewatch:
-    uses: browniebroke/github-actions/.github/workflows/bundlewatch.yml@2e443406e88fd4e9f1d23620f0908f425220b38a # v1.25.0
+    uses: browniebroke/github-actions/.github/workflows/bundlewatch.yml@f62ef26d5b2705fbcbf9c48ed4619f055efa3481 # v1.26.0
     secrets:
       bundlewatch_token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
   deploy:
-    uses: browniebroke/github-actions/.github/workflows/netlify-deploy.yml@2e443406e88fd4e9f1d23620f0908f425220b38a # v1.25.0
+    uses: browniebroke/github-actions/.github/workflows/netlify-deploy.yml@f62ef26d5b2705fbcbf9c48ed4619f055efa3481 # v1.26.0
     with:
       netlify_site_id: '10c50357-1953-4307-9c1b-c40f1f826885'
       publish_dir: 'out'
