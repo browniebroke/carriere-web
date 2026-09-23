@@ -23,19 +23,12 @@
     "typescript": "5.9.3"
   },
   "devDependencies": {
-    "@eslint/js": "9.39.5",
     "@types/node": "24.13.6",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "@typescript-eslint/parser": "8.70.1",
     "bundlewatch": "0.4.2",
-    "eslint": "9.39.5",
-    "eslint-config-next": "16.3.6",
-    "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-prettier": "5.5.6",
-    "eslint-plugin-react": "7.37.5",
-    "globals": "16.5.0",
-    "prettier": "3.9.9"
+    "oxfmt": "0.70.0",
+    "oxlint": "1.85.0"
   },
   "keywords": [
     "nextjs"
@@ -46,20 +39,15 @@
     "serve": "next start",
     "bundlewatch": "bundlewatch",
     "develop": "next dev",
-    "format": "prettier --write .",
-    "check:lint": "eslint .",
-    "check:format": "prettier --check .",
+    "format": "oxfmt",
+    "check:lint": "oxlint",
+    "check:format": "oxfmt --check",
     "check:types": "tsc"
   },
   "renovate": {
     "extends": [
       "github>browniebroke/renovate-configs:js-app"
     ]
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5"
   },
   "bundlewatch": [
     {

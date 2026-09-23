@@ -1,12 +1,12 @@
 [build]
-  base    = ""
-  publish = "out"
-  command = "npm run build"
+base = ""
+publish = "out"
+command = "npm run build"
 
 [[redirects]]
-  from = "/photos/"
-  to = "/produits/"
+from = "/photos/"
+to = "/produits/"
 
 [[redirects]]
-  from = "/photos/:slug/"
-  to = "/produits/:slug/"
+from = "/photos/:slug/"
+to = "/produits/:slug/"
