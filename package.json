@@ -28,7 +28,7 @@
     "@types/react-dom": "19.3.0",
     "bundlewatch": "0.4.2",
     "oxfmt": "0.72.0",
-    "oxlint": "1.87.0"
+    "oxlint": "1.88.0"
   },
   "keywords": [
     "nextjs"
